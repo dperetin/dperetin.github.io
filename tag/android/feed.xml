@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
+  <link href="http://localhost:4000/tag/android/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2020-02-23T23:39:47+00:00</updated>
+  <id>http://localhost:4000/tag/android/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">dejanperetin.com | </title>
+  
+
+  
+    <subtitle>Writing things down so I don't forget. SDE at AWS. Opinions expressed are my own.</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">Kako napraviti svoj build LZS android aplikacije</title>
+      <link href="http://localhost:4000/lzs-app-build-howto" rel="alternate" type="text/html" title="Kako napraviti svoj build LZS android aplikacije" />
+      <published>2013-10-10T11:33:37+01:00</published>
+      <updated>2013-10-10T11:33:37+01:00</updated>
+      <id>http://localhost:4000/lzs-app-build-howto</id>
+      <content type="html" xml:base="http://localhost:4000/lzs-app-build-howto">&lt;p&gt;Dobio sam nekoliko mailova od ljudi koji su pokušali sami napraviti build aplikacije prema uputama na wiki stranicama te naišli na probleme. 
+Te upute su dosta stare i grube pa se bez nekog iskustva s eclipsom po 
+njima niti nije mogao napraviti build. Detaljnija i korisnija uputsva su očito potrebna pa sam ih odlučio i napisati.&lt;/p&gt;
+
+&lt;h2 id=&quot;instalacija-i-konfiguracija-softvera&quot;&gt;Instalacija i konfiguracija softvera&lt;/h2&gt;
+
+&lt;p&gt;Pretpostavljam da na računalu postoji dobro konfigurirana instalacija gita.Build se može provesti i bez gita, ali mislim da je ideja iza pokušaja builda i neki doprinos projektu, za što je git nužan. Uputstva za konfiguriranje gita se mogu pronaći na &lt;a href=&quot;https://help.github.com/articles/set-up-git&quot;&gt;github stranici&lt;/a&gt;.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Skinuti &lt;a href=&quot;http://developer.android.com/sdk/index.html&quot;&gt;Android SDK&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Raspakirati arhivu i pokrenuti eclipse (&lt;code class=&quot;highlighter-rouge&quot;&gt;eclipse/eclipse&lt;/code&gt;).&lt;/p&gt;
+
+    &lt;p&gt;Ako imate 64 bitan linux i koristite 64 bitan ADT dobit ćete error da se ne može pokrenuti &lt;code class=&quot;highlighter-rouge&quot;&gt;sdk/platform-tools/adb&lt;/code&gt;. Kako bi se to zaobišlo na ubuntuu i derivatima, dovoljno je instalirati paket &lt;code class=&quot;highlighter-rouge&quot;&gt;ia32-libs&lt;/code&gt;. Za detalje pogledati &lt;a href=&quot;http://stackoverflow.com/questions/2710499/android-sdk-on-a-64-bit-linux-machine&quot;&gt;ovaj stackoverflow thread&lt;/a&gt; i &lt;a href=&quot;http://developer.android.com/sdk/installing/index.html#troubleshooting&quot;&gt;android upute za instalaciju SDK-a&lt;/a&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Iz eclipsa pokrenuti &lt;em&gt;Android SDK Manager&lt;/em&gt; (&lt;em&gt;Window -&amp;gt; Android SDK Manager&lt;/em&gt;) i instalirati potrebne pakete. Treba nam zadnja verzija &lt;em&gt;SDK Platform&lt;/em&gt; paketa (najsvježija verzija je obična instalirana po defaultu). Budući da app koristi ActionBarSherlock library &lt;em&gt;SDK Platform&lt;/em&gt; paket treba instalirati i u Android 4.0 varijanti (API 14). Također nam treba i Android Support Library, ali taj paket je instaliran po defaultu.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;izvorni-kod&quot;&gt;Izvorni kod&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Dohvatiti izvorni kod aplikacije:&lt;/p&gt;
+
+    &lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git clone https://github.com/linuxzasve/androidApp.git
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Dohvatiti izvorni kod ActionBarSherlock librarija i to 4.4.0 tag:&lt;/p&gt;
+
+    &lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git clone https://github.com/JakeWharton/ActionBarSherlock.git
+cd ActionBarSherlock
+git checkout 4.4.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Importati gornja dva projekta u eclipse:&lt;/p&gt;
+
+    &lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; File -&amp;gt; Import -&amp;gt; Android -&amp;gt; Existing Android Code into workspace
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;U slučaju LZS appa za root direktorij odabrati &lt;code class=&quot;highlighter-rouge&quot;&gt;androidApp/LinuxZaSve_mobile&lt;/code&gt; direktorij. Kod ActionBarSherlock projekta odabrati &lt;code class=&quot;highlighter-rouge&quot;&gt;ActionBarSherlock/actionbarsherlock&lt;/code&gt; direktorij.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Skinuti sljedeće jarove u &lt;code class=&quot;highlighter-rouge&quot;&gt;androidApp/LinuxZaSve_mobile/libs&lt;/code&gt; direktorij (ako direktorij ne postoji potrebno ga je kreirati):&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://repository.sonatype.org/service/local/artifact/maven/redirect?r=central-proxy&amp;amp;g=com.koushikdutta.urlimageviewhelper&amp;amp;a=urlimageviewhelper&amp;amp;v=LATEST&quot;&gt;UrlImageViewHelper&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://jsoup.org/packages/jsoup-1.7.2.jar&quot;&gt;jsoup&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Ako eclipse i dalje tvrdi da ne može pronaći jarove, potrebno je osvježiti &lt;em&gt;LinuxZaSve_mobile&lt;/em&gt; projekt (&lt;em&gt;desni klik na projekt -&amp;gt; Refresh&lt;/em&gt;).&lt;/p&gt;
+
+&lt;h2 id=&quot;izrada-apk-datoteke&quot;&gt;Izrada apk datoteke&lt;/h2&gt;
+
+&lt;p&gt;Najsvježija verzija aplikacije je commitana u projekt i nalazi se u &lt;code class=&quot;highlighter-rouge&quot;&gt;LinuxZaSve_mobile\bin&lt;/code&gt; direktoriju. Da bi se riješili te datoteke i ujedno provjerili prolazi li build prvo je potrebno napraviti &lt;em&gt;clean&lt;/em&gt; (&lt;em&gt;Build -&amp;gt; Clean -&amp;gt; Clean all projects&lt;/em&gt;). Ovo neće kreirati novi apk. Nova apk datoteka se može kreirati na nekoliko načina, najjednostavnije je &lt;a href=&quot;http://developer.android.com/tools/devices/index.html&quot;&gt;pokrenuti Android Virtual Device&lt;/a&gt; ili &lt;a href=&quot;http://developer.android.com/tools/device.html&quot;&gt;spojiti na računalo neki android device&lt;/a&gt; i kliknuti na run.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>dperetin</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="Android" />
+      
+
+      
+        <summary type="html">Dobio sam nekoliko mailova od ljudi koji su pokušali sami napraviti build aplikacije prema uputama na wiki stranicama te naišli na probleme. Te upute su dosta stare i grube pa se bez nekog iskustva s eclipsom po njima niti nije mogao napraviti build. Detaljnija i korisnija uputsva su očito potrebna pa sam ih odlučio i napisati.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">KDM i Grub stavke kod restarta</title>
+      <link href="http://localhost:4000/kdm-grub-listings-hr" rel="alternate" type="text/html" title="KDM i Grub stavke kod restarta" />
+      <published>2013-04-08T11:33:37+01:00</published>
+      <updated>2013-04-08T11:33:37+01:00</updated>
+      <id>http://localhost:4000/kdm-grub-listings-hr</id>
+      <content type="html" xml:base="http://localhost:4000/kdm-grub-listings-hr">&lt;p&gt;Za ljude koji imaju više stavki na GRUB izborniku i često ih koriste. U datoteci &lt;code class=&quot;highlighter-rouge&quot;&gt;/usr/share/kde4/config/kdm/kdmrc&lt;/code&gt; postoji linija koja se odnosi na &lt;code class=&quot;highlighter-rouge&quot;&gt;BootManager&lt;/code&gt; (zadnja u donjem kodu):&lt;/p&gt;
+
+&lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ cat /usr/share/kde4/config/kdm/kdmrc | grep -i &quot;boot\s*manager&quot;
+# The boot manager KDM should use for offering boot options in the
+# &quot;None&quot; - no boot manager 
+# &quot;Grub&quot; - Grub boot manager
+# &quot;Grub2&quot; - Grub2 boot manager
+# &quot;Burg&quot; - Burg boot manager
+# &quot;Lilo&quot; - Lilo boot manager (Linux on i386 &amp;amp; x86-64 only)
+#BootManager=Grub
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Ako se otkomentira i umjesto &lt;code class=&quot;highlighter-rouge&quot;&gt;Grub&lt;/code&gt; stavi boot manager koji je instaliran (default kod opensuse-a 12.3 je &lt;code class=&quot;highlighter-rouge&quot;&gt;Grub2&lt;/code&gt;), kod restarta se dobije izbornik sa stavkama Gruba, sustav se boota u ono sto se izabere. Pri restartu izbor izgleda kao na slici ispod.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/restart_grub_items_large.png&quot; alt=&quot;restart_grub_items_large.png&quot; /&gt;&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>dperetin</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="Android" />
+      
+
+      
+        <summary type="html">Za ljude koji imaju više stavki na GRUB izborniku i često ih koriste. U datoteci /usr/share/kde4/config/kdm/kdmrc postoji linija koja se odnosi na BootManager (zadnja u donjem kodu):</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Android 4.2 developer options</title>
+      <link href="http://localhost:4000/android-42-developer-options-hr" rel="alternate" type="text/html" title="Android 4.2 developer options" />
+      <published>2013-01-27T10:33:37+00:00</published>
+      <updated>2013-01-27T10:33:37+00:00</updated>
+      <id>http://localhost:4000/android-42-developer-options-hr</id>
+      <content type="html" xml:base="http://localhost:4000/android-42-developer-options-hr">&lt;p&gt;Nedavno sam ulovio vremena da na svoj Galaxy S mudrofon konačno stavim Android 4.2.1 i to kao &lt;a href=&quot;http://www.cyanogenmod.org/blog/cm-10-1-m-series-builds-have-arrived&quot;&gt;CM 10.1 M&lt;/a&gt;.Stvar radi savšeno i za sad nisam naišao na probleme u svakodnevnom korištenju. No, kad sam pokušao vidjeti kako se &lt;a href=&quot;https://github.com/linuxzasve/androidApp&quot;&gt;Linux za sve android app&lt;/a&gt; ponaša na novoj verziji Androida, nisam uspio uključiti debugging mod. Naime, Android 4.2 nema u &lt;code class=&quot;highlighter-rouge&quot;&gt;Settings&lt;/code&gt; izborniku stavke &lt;code class=&quot;highlighter-rouge&quot;&gt;Developer options&lt;/code&gt;, gdje se uključuje &lt;code class=&quot;highlighter-rouge&quot;&gt;Android debugging&lt;/code&gt; opcija koja omogućava debugiranje android aplikacija direktno na uređaju koji je USB-om spojen na računalo, umjesto da se koristi emulator.&lt;/p&gt;
+
+&lt;p&gt;Radi se o tome da je Google namjerno isključio tu stavku pod izlikom da ne treba nikome osim developerima, a ovi pak znaju kako riješiti takve problemčiće.&lt;/p&gt;
+
+&lt;p&gt;Da bi se omogućila stavka &lt;code class=&quot;highlighter-rouge&quot;&gt;Developer options&lt;/code&gt; potrebno je sedam puta kliknuti na &lt;code class=&quot;highlighter-rouge&quot;&gt;Build number&lt;/code&gt; stavku u &lt;code class=&quot;highlighter-rouge&quot;&gt;Settings -&amp;gt; About phone&lt;/code&gt; izborniku.&lt;/p&gt;
+
+&lt;p&gt;Čak se pojavi i zgodan &lt;a href=&quot;http://developer.android.com/guide/topics/ui/notifiers/toasts.html&quot;&gt;toast&lt;/a&gt; popup koji odbrojava klikove, odnosono ispiše poruku ako se klikne na &lt;code class=&quot;highlighter-rouge&quot;&gt;Build number&lt;/code&gt; kad je već stavka uključena.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/android_42_enable_developer_options_large.png&quot; alt=&quot;android_42_enable_developer_options_large.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Da bi se sada uređaj mogao koristiti za debugiranje potrebno je napraviti sljedeće:&lt;/p&gt;
+
+&lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Settings -&amp;gt; Developer Options -&amp;gt; Android debugging (staviti kvacicu)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Ako se sad pokuša pokrenuti app dobije se:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/android_prije_rulova_large.png&quot; alt=&quot;android_prije_rulova_large.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Detaljne upute za rješavanje ovog problema mogu se pronaći na &lt;a href=&quot;http://developer.android.com/tools/device.html&quot;&gt;Android developers&lt;/a&gt; stranici.&lt;/p&gt;
+
+&lt;p&gt;Ukratko, treba generirati fajl&lt;/p&gt;
+
+&lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/etc/udev/rules.d/42-android-devices.rules
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Sadržaja:&lt;/p&gt;
+
+&lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;SUBSYSTEM==&quot;usb&quot;, ATTR{idVendor}==&quot;04e8&quot;, MODE=&quot;0666&quot;, GROUP=&quot;users&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Uređaj još uvijek nije prepoznat jer je &lt;code class=&quot;highlighter-rouge&quot;&gt;04e8&lt;/code&gt; Samsung oznaka. Budući da je na mobitel sada instaliran CyanogenMod, radi se o Google uređaju, pa je za vendor vrijednost potrebno staviti &lt;code class=&quot;highlighter-rouge&quot;&gt;18d1&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Uređaj je sada uredno prepoznat.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>dperetin</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="Android" />
+      
+
+      
+        <summary type="html">Nedavno sam ulovio vremena da na svoj Galaxy S mudrofon konačno stavim Android 4.2.1 i to kao CM 10.1 M.Stvar radi savšeno i za sad nisam naišao na probleme u svakodnevnom korištenju. No, kad sam pokušao vidjeti kako se Linux za sve android app ponaša na novoj verziji Androida, nisam uspio uključiti debugging mod. Naime, Android 4.2 nema u Settings izborniku stavke Developer options, gdje se uključuje Android debugging opcija koja omogućava debugiranje android aplikacija direktno na uređaju koji je USB-om spojen na računalo, umjesto da se koristi emulator.</summary>
+      
+
+      
+      
+    </entry>
+  
+</feed>

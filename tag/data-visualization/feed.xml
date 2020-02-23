@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
+  <link href="http://localhost:4000/tag/data-visualization/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2020-02-23T23:39:47+00:00</updated>
+  <id>http://localhost:4000/tag/data-visualization/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">dejanperetin.com | </title>
+  
+
+  
+    <subtitle>Writing things down so I don't forget. SDE at AWS. Opinions expressed are my own.</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">Why I Don’t Vote</title>
+      <link href="http://localhost:4000/why-i-dont-vote" rel="alternate" type="text/html" title="Why I Don't Vote" />
+      <published>2020-01-05T10:33:37+00:00</published>
+      <updated>2020-01-05T10:33:37+00:00</updated>
+      <id>http://localhost:4000/why-i-dont-vote</id>
+      <content type="html" xml:base="http://localhost:4000/why-i-dont-vote">&lt;p&gt;Wolfram Mathematica is an amazing software that I love using, but the choice to use it for any meaningful application is 
+difficult to justify due to its cost and licence. Presidential elections in Croatia seemed like a good excuse to fire it
+up and generate some graphs. Which I did. And here is the winner of the election per administrative subdivisions: &lt;img src=&quot;assets/images/why_i_dont_vote/finalni_rezultati_po_opcinama.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/why_i_dont_vote/milanovic_drugi_krug.png&quot; alt=&quot;&quot; width=&quot;365px&quot; /&gt; &lt;img src=&quot;assets/images/why_i_dont_vote/kolinda_drugi_krug.png&quot; alt=&quot;&quot; width=&quot;365px&amp;quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Mathematica 12 updated the built in database of geographic entities, so I was optimistic about using it to generate graphs
+showing results of the elections, broken down by Croatian administrative subdivisions (&lt;em&gt;županije&lt;/em&gt; and &lt;em&gt;općine&lt;/em&gt;).&lt;/p&gt;
+
+&lt;p&gt;First step was to map the subdivision names from the election results onto Mathematica entities. Election results are broken down by first administrative level (&lt;em&gt;županije&lt;/em&gt;) and by second administrative level (&lt;em&gt;općine&lt;/em&gt;). There is also a breakdown by country, for Croatian citizens living abroad.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;There is only 21 first level  administrative units, so I just mapped those by hand.&lt;/li&gt;
+  &lt;li&gt;People voted in 48 different countries and I wanted to avoid mapping those by hand. Passing the Croatian names to the translate API first worked well. This mapped all of the countries bar a few where abbreviated name was used in the results (Croatian abbreviation for USA is SAD, which was translated to &lt;em&gt;now&lt;/em&gt;) or where the country name changed recently (like Macedonia).&lt;/li&gt;
+  &lt;li&gt;There are 556 second level administrative units in Croatia. Luckily Mathematica doesn’t translate these name, so a simple removal of whitespace and replacement of special Croatian characters mapped around 540 of them out of the box.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The full mapping of Croatian names to Mathematica entities is available on &lt;a href=&quot;https://github.com/dperetin/MathematicaCroatianGeoEntities/blob/master/croatian_admin_subdivisions.wl&quot;&gt;GitHub&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;To use it you simply checkout the package, import entities with:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-mathematica&quot;&gt;NotebookEvaluate[&quot;PATH_TO_CHECKOUT_REPO/MathematicaCroatianGeoEntities/\
+croatian_admin_subdivisions.wl&quot;]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You can then generate the graphs with:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-mathematica&quot;&gt;GeoListPlot[Values[adminDivisions1]]
+GeoListPlot[
+ Flatten[Values[
+   Join[adminDivisions2[#] &amp;amp; /@ Keys[adminDivisions2]]]]]
+GeoListPlot[Values[adminDivisions2[&quot;KARLOVAČKA ŽUPANIJA&quot;]], 
+ GeoBackground -&amp;gt; GeoStyling[&quot;StreetMap&quot;]]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This will create maps with all subdivision borders:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/why_i_dont_vote/zupanije_prazno_1.png&quot; alt=&quot;&quot; width=&quot;243px&quot; /&gt; &lt;img src=&quot;assets/images/why_i_dont_vote/opcine_prazno_1.png&quot; alt=&quot;&quot; width=&quot;243px&quot; /&gt; &lt;img src=&quot;assets/images/why_i_dont_vote/karlovac_prazno_1.png&quot; alt=&quot;&quot; width=&quot;240px&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;There is immediately a problem visible on the last map, one subdivision is missing. In fact, Wolfram dataset has 9 subdivisions missing and a bunch of non-existent subdivisions included. Three of them are called &lt;em&gt;Unknown_1&lt;/em&gt;, &lt;em&gt;Unknown_2&lt;/em&gt;, &lt;em&gt;Unknown_3&lt;/em&gt;, which doesn’t sound good.&lt;/p&gt;
+
+&lt;p&gt;I tried finding a more complete and up do date dataset, but was unsuccessful. I checked data available on:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://gadm.org/index.html&quot;&gt;https://gadm.org/index.html&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.diva-gis.org/&quot;&gt;http://www.diva-gis.org/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.naturalearthdata.com/&quot;&gt;http://www.naturalearthdata.com/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://geonode.iwlearn.org/layers/geonode:croatia_admin_boundaries#more&quot;&gt;http://geonode.iwlearn.org/layers/geonode:croatia_admin_boundaries#more&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;All of them have the same incomplete dataset.&lt;/p&gt;
+
+&lt;p&gt;So while I’m hunting down the most up to date polygon data for Croatian admin subdivisions, here are some more graphs.&lt;/p&gt;
+
+&lt;h3 id=&quot;winner-by-subdivision-in-the-first-round-of-election&quot;&gt;Winner by Subdivision in the First Round of Election&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/why_i_dont_vote/zupanije_prvi_krug.png&quot; alt=&quot;&quot; width=&quot;365px&quot; /&gt; &lt;img src=&quot;assets/images/why_i_dont_vote/opcine_prvi_krug.png&quot; alt=&quot;&quot; width=&quot;365px&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;percentage-of-votes-for-top-3-candidates-in-the-first-round-of-election&quot;&gt;Percentage of Votes for Top 3 Candidates in the First Round of Election&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/why_i_dont_vote/milanovic_prvi_krug.png&quot; alt=&quot;&quot; width=&quot;365px&quot; /&gt; &lt;img src=&quot;assets/images/why_i_dont_vote/kolinda_prvi_krug.png&quot; alt=&quot;&quot; width=&quot;365px&quot; /&gt; &lt;img src=&quot;assets/images/why_i_dont_vote/skoro_prvi_krug.png&quot; alt=&quot;&quot; width=&quot;365px&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;winner-by-country-in-the-first-round-of-election&quot;&gt;Winner by Country in the First Round of Election&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/why_i_dont_vote/zemlje_prvi_krug.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>dperetin</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="Coding" />
+      
+        <category term="Data Visualization" />
+      
+
+      
+        <summary type="html">Wolfram Mathematica is an amazing software that I love using, but the choice to use it for any meaningful application is difficult to justify due to its cost and licence. Presidential elections in Croatia seemed like a good excuse to fire it up and generate some graphs. Which I did. And here is the winner of the election per administrative subdivisions:</summary>
+      
+
+      
+      
+    </entry>
+  
+</feed>

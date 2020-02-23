@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-02-23T23:39:47+00:00</updated><id>http://localhost:4000/</id><title type="html">dejanperetin.com</title><subtitle>Writing things down so I don't forget. SDE at AWS. Opinions expressed are my own.</subtitle><entry><title type="html">Why I Don’t Vote</title><link href="http://localhost:4000/why-i-dont-vote" rel="alternate" type="text/html" title="Why I Don't Vote" /><published>2020-01-05T10:33:37+00:00</published><updated>2020-01-05T10:33:37+00:00</updated><id>http://localhost:4000/why-i-dont-vote</id><content type="html" xml:base="http://localhost:4000/why-i-dont-vote">&lt;p&gt;Wolfram Mathematica is an amazing software that I love using, but the choice to use it for any meaningful application is 
+difficult to justify due to its cost and licence. Presidential elections in Croatia seemed like a good excuse to fire it
+up and generate some graphs. Which I did. And here is the winner of the election per administrative subdivisions: &lt;img src=&quot;assets/images/why_i_dont_vote/finalni_rezultati_po_opcinama.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/why_i_dont_vote/milanovic_drugi_krug.png&quot; alt=&quot;&quot; width=&quot;365px&quot; /&gt; &lt;img src=&quot;assets/images/why_i_dont_vote/kolinda_drugi_krug.png&quot; alt=&quot;&quot; width=&quot;365px&amp;quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Mathematica 12 updated the built in database of geographic entities, so I was optimistic about using it to generate graphs
+showing results of the elections, broken down by Croatian administrative subdivisions (&lt;em&gt;županije&lt;/em&gt; and &lt;em&gt;općine&lt;/em&gt;).&lt;/p&gt;
+
+&lt;p&gt;First step was to map the subdivision names from the election results onto Mathematica entities. Election results are broken down by first administrative level (&lt;em&gt;županije&lt;/em&gt;) and by second administrative level (&lt;em&gt;općine&lt;/em&gt;). There is also a breakdown by country, for Croatian citizens living abroad.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;There is only 21 first level  administrative units, so I just mapped those by hand.&lt;/li&gt;
+  &lt;li&gt;People voted in 48 different countries and I wanted to avoid mapping those by hand. Passing the Croatian names to the translate API first worked well. This mapped all of the countries bar a few where abbreviated name was used in the results (Croatian abbreviation for USA is SAD, which was translated to &lt;em&gt;now&lt;/em&gt;) or where the country name changed recently (like Macedonia).&lt;/li&gt;
+  &lt;li&gt;There are 556 second level administrative units in Croatia. Luckily Mathematica doesn’t translate these name, so a simple removal of whitespace and replacement of special Croatian characters mapped around 540 of them out of the box.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The full mapping of Croatian names to Mathematica entities is available on &lt;a href=&quot;https://github.com/dperetin/MathematicaCroatianGeoEntities/blob/master/croatian_admin_subdivisions.wl&quot;&gt;GitHub&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;To use it you simply checkout the package, import entities with:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-mathematica&quot;&gt;NotebookEvaluate[&quot;PATH_TO_CHECKOUT_REPO/MathematicaCroatianGeoEntities/\
+croatian_admin_subdivisions.wl&quot;]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You can then generate the graphs with:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-mathematica&quot;&gt;GeoListPlot[Values[adminDivisions1]]
+GeoListPlot[
+ Flatten[Values[
+   Join[adminDivisions2[#] &amp;amp; /@ Keys[adminDivisions2]]]]]
+GeoListPlot[Values[adminDivisions2[&quot;KARLOVAČKA ŽUPANIJA&quot;]], 
+ GeoBackground -&amp;gt; GeoStyling[&quot;StreetMap&quot;]]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This will create maps with all subdivision borders:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/why_i_dont_vote/zupanije_prazno_1.png&quot; alt=&quot;&quot; width=&quot;243px&quot; /&gt; &lt;img src=&quot;assets/images/why_i_dont_vote/opcine_prazno_1.png&quot; alt=&quot;&quot; width=&quot;243px&quot; /&gt; &lt;img src=&quot;assets/images/why_i_dont_vote/karlovac_prazno_1.png&quot; alt=&quot;&quot; width=&quot;240px&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;There is immediately a problem visible on the last map, one subdivision is missing. In fact, Wolfram dataset has 9 subdivisions missing and a bunch of non-existent subdivisions included. Three of them are called &lt;em&gt;Unknown_1&lt;/em&gt;, &lt;em&gt;Unknown_2&lt;/em&gt;, &lt;em&gt;Unknown_3&lt;/em&gt;, which doesn’t sound good.&lt;/p&gt;
+
+&lt;p&gt;I tried finding a more complete and up do date dataset, but was unsuccessful. I checked data available on:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://gadm.org/index.html&quot;&gt;https://gadm.org/index.html&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.diva-gis.org/&quot;&gt;http://www.diva-gis.org/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.naturalearthdata.com/&quot;&gt;http://www.naturalearthdata.com/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://geonode.iwlearn.org/layers/geonode:croatia_admin_boundaries#more&quot;&gt;http://geonode.iwlearn.org/layers/geonode:croatia_admin_boundaries#more&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;All of them have the same incomplete dataset.&lt;/p&gt;
+
+&lt;p&gt;So while I’m hunting down the most up to date polygon data for Croatian admin subdivisions, here are some more graphs.&lt;/p&gt;
+
+&lt;h3 id=&quot;winner-by-subdivision-in-the-first-round-of-election&quot;&gt;Winner by Subdivision in the First Round of Election&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/why_i_dont_vote/zupanije_prvi_krug.png&quot; alt=&quot;&quot; width=&quot;365px&quot; /&gt; &lt;img src=&quot;assets/images/why_i_dont_vote/opcine_prvi_krug.png&quot; alt=&quot;&quot; width=&quot;365px&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;percentage-of-votes-for-top-3-candidates-in-the-first-round-of-election&quot;&gt;Percentage of Votes for Top 3 Candidates in the First Round of Election&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/why_i_dont_vote/milanovic_prvi_krug.png&quot; alt=&quot;&quot; width=&quot;365px&quot; /&gt; &lt;img src=&quot;assets/images/why_i_dont_vote/kolinda_prvi_krug.png&quot; alt=&quot;&quot; width=&quot;365px&quot; /&gt; &lt;img src=&quot;assets/images/why_i_dont_vote/skoro_prvi_krug.png&quot; alt=&quot;&quot; width=&quot;365px&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;winner-by-country-in-the-first-round-of-election&quot;&gt;Winner by Country in the First Round of Election&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/why_i_dont_vote/zemlje_prvi_krug.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>dperetin</name></author><category term="Coding" /><category term="Data Visualization" /><summary type="html">Wolfram Mathematica is an amazing software that I love using, but the choice to use it for any meaningful application is difficult to justify due to its cost and licence. Presidential elections in Croatia seemed like a good excuse to fire it up and generate some graphs. Which I did. And here is the winner of the election per administrative subdivisions:</summary></entry><entry><title type="html">Nobody Reads Shit</title><link href="http://localhost:4000/nobody-reads-shit" rel="alternate" type="text/html" title="Nobody Reads Shit" /><published>2019-12-16T11:28:37+00:00</published><updated>2019-12-16T11:28:37+00:00</updated><id>http://localhost:4000/nobody-reads-shit</id><content type="html" xml:base="http://localhost:4000/nobody-reads-shit">&lt;p&gt;Watched an &lt;a href=&quot;https://www.youtube.com/watch?v=UE-6zvdRapY&amp;amp;feature=youtu.be&amp;amp;t=391&quot;&gt;H3 podcast&lt;/a&gt; 
+episode yesterday and they were commenting 
+on how YouTube is announcing policy changes on a blog instead of via video. 
+Comments were premised by the fact that YouTube is
+a video company, but the question of who reads blogs (or anything for that matter) was raised. 
+This reminded me that I have a blog of my
+own. Blog that I didn’t look at for more than 5 years.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-state-of-it&quot;&gt;The State of It&lt;/h2&gt;
+
+&lt;p&gt;Blog was still up. Domain &lt;a href=&quot;https://dejanperetin.com&quot;&gt;dejanperetin.com&lt;/a&gt; was being auto renewed every year on Route53. 
+Blog was hosted on GitHub Pages and they did a great job of not making any backward 
+incompatible changes.&lt;/p&gt;
+
+&lt;p&gt;Unsurprisingly, nobody is reading it.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/nobody_reads_shit/google_analytics.png&quot; alt=&quot;Google analytics screenshots&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;what-changed&quot;&gt;What Changed?&lt;/h2&gt;
+
+&lt;p&gt;Page was generated with &lt;a href=&quot;https://blog.getpelican.com/&quot;&gt;Pelican&lt;/a&gt;, with 
+all of the generated html, css and js committed in the repo. This made it difficult to read so I 
+just scrapped it and migrated to &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;. GitHub Pages will now 
+build your page, if you use one of the supported themes (I just picked the simplest one).
+This means the repo can contain only the config files and blog posts, the actual page is 
+generated by GitHub Pages.&lt;/p&gt;
+
+&lt;p&gt;Various security checks are done on dependencies and build warnings are delivered via email.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/nobody_reads_shit/github_warnings.png&quot; alt=&quot;Github pages build warnings&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Blog can be configured in the repo settings page. Domain can be set there and themes can be changed. Any change made there will be committed to the code base, which is a nice touch.&lt;/p&gt;
+
+&lt;p&gt;HTTPS can be enforced. Enabling this will generate a certificate for your custom domain with
+&lt;a href=&quot;https://github.blog/2018-05-01-github-pages-custom-domains-https/&quot;&gt;Let’s Encrypt&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Initially I was thinking of moving the blog to S3, but given all of the above, plus the &lt;a href=&quot;https://stackoverflow.com/questions/23463679/s3-static-pages-without-html-extension&quot;&gt;hassle of keeping the URLs the same on S3&lt;/a&gt;, I stayed with GitHub Pages.&lt;/p&gt;
+
+&lt;p&gt;One thing I found lacking on GitHub Pages is the visibility into availability and performance
+of the blog. For that I setup a &lt;a href=&quot;https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_Canaries.html&quot;&gt;CloudWatch Synthetics&lt;/a&gt; canary.&lt;/p&gt;
+
+&lt;p&gt;Canary detected the moment when I nuked the repo and re-created it with Jekyll:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/nobody_reads_shit/cloudwatch_synthetic.png&quot; alt=&quot;CloudWatch Synthetics graph&quot; /&gt;&lt;/p&gt;</content><author><name>dperetin</name></author><category term="Blog" /><summary type="html">Watched an H3 podcast episode yesterday and they were commenting on how YouTube is announcing policy changes on a blog instead of via video. Comments were premised by the fact that YouTube is a video company, but the question of who reads blogs (or anything for that matter) was raised. This reminded me that I have a blog of my own. Blog that I didn’t look at for more than 5 years.</summary></entry><entry><title type="html">CVS merge in Eclipse</title><link href="http://localhost:4000/cvs_merge" rel="alternate" type="text/html" title="CVS merge in Eclipse" /><published>2014-03-23T10:33:37+00:00</published><updated>2014-03-23T10:33:37+00:00</updated><id>http://localhost:4000/cvs_merge</id><content type="html" xml:base="http://localhost:4000/cvs_merge">&lt;p&gt;Ever so often a need for merging CVS branches arises  and since the task can be a bit touchy, writing down some basic concepts seems like a good idea. So here are a few basic steps the process boils down to.&lt;/p&gt;
+
+&lt;h1 id=&quot;branching&quot;&gt;Branching&lt;/h1&gt;
+&lt;p&gt;Creating a branch is done with &lt;em&gt;right clicking on a project -&amp;gt; Team -&amp;gt; Branch&lt;/em&gt;. Leave &lt;em&gt;Start working in the branch&lt;/em&gt; checked so newly created branch will be checked out automatically. Common scenario is that people make some changes on their local version of the code and then realize that they do not want to commit it to the main branch. If you create a branch with uncommitted changes in your workspace, those changes will be available for committing to the branch.&lt;/p&gt;
+
+&lt;h1 id=&quot;merging&quot;&gt;Merging&lt;/h1&gt;
+&lt;p&gt;Lets assume we are to do a merge of a HEAD branch onto some FEATURE branch (HEAD is the &lt;strong&gt;source&lt;/strong&gt; branch and FEATURE is the &lt;strong&gt;target&lt;/strong&gt; branch).&lt;/p&gt;
+
+&lt;p&gt;Procedure:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Checkout the source branch, do a sync, make sure there are no changes between your local version of the source branch and the remote version.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Tag the source branch. Give the tag a name that will provide information about the date of merging and branches that were involved in the merge. (eg. &lt;code class=&quot;highlighter-rouge&quot;&gt;M_yyyymmdd_HEAD_FEATURE&lt;/code&gt;). Tagging is done with &lt;em&gt;right clicking on the project -&amp;gt; Team -&amp;gt; tag as new version&lt;/em&gt;. The purpose of tagging at this point in the process is to avoid situations where somebody makes a commit while you are merging. If this happens, CVS will not be aware of the changes made in that commit.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Checkout the target branch (&lt;em&gt;right click on the project -&amp;gt; Team -&amp;gt; Switch to Another Branch or Version&lt;/em&gt;).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Do the merge.
+    &lt;ul&gt;
+      &lt;li&gt;&lt;em&gt;right click on the project -&amp;gt; Team -&amp;gt; Merge&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;Select the tag you created in step 2 (M_yyyymmdd_HEAD_FEATURE in this case) as &lt;em&gt;Branch or version to be merged&lt;/em&gt; .&lt;/li&gt;
+      &lt;li&gt;Select the tag you made in step 2 but in the previous merge (if this is the very first merge, select the version created at the branching point) as &lt;em&gt;Common base version&lt;/em&gt;.&lt;/li&gt;
+      &lt;li&gt;Select &lt;em&gt;Preview the merge in the sync view&lt;/em&gt; option.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Resolve conflicts. You can’t automate this step.
+    &lt;ul&gt;
+      &lt;li&gt;Non conflicting changes could be just copied over.&lt;/li&gt;
+      &lt;li&gt;Make changes to conflicting files and mark them as merged.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Commit all new changes. Make the commit message something like:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;- merge changes HEAD -&amp;gt; FEATURE&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Little tip at the end. If a FEATURE branch needs to be merged onto HEAD branch after some development period, its a good idea to merge HEAD branch onto FEATURE branch first. All conflicts will have to be resolved on a FEATURE branch which will make FEATURE to HEAD merge a trivial one.&lt;/p&gt;</content><author><name>dperetin</name></author><category term="Coding" /><summary type="html">Ever so often a need for merging CVS branches arises and since the task can be a bit touchy, writing down some basic concepts seems like a good idea. So here are a few basic steps the process boils down to.</summary></entry><entry><title type="html">Kako napraviti svoj build LZS android aplikacije</title><link href="http://localhost:4000/lzs-app-build-howto" rel="alternate" type="text/html" title="Kako napraviti svoj build LZS android aplikacije" /><published>2013-10-10T11:33:37+01:00</published><updated>2013-10-10T11:33:37+01:00</updated><id>http://localhost:4000/lzs-app-build-howto</id><content type="html" xml:base="http://localhost:4000/lzs-app-build-howto">&lt;p&gt;Dobio sam nekoliko mailova od ljudi koji su pokušali sami napraviti build aplikacije prema uputama na wiki stranicama te naišli na probleme. 
+Te upute su dosta stare i grube pa se bez nekog iskustva s eclipsom po 
+njima niti nije mogao napraviti build. Detaljnija i korisnija uputsva su očito potrebna pa sam ih odlučio i napisati.&lt;/p&gt;
+
+&lt;h2 id=&quot;instalacija-i-konfiguracija-softvera&quot;&gt;Instalacija i konfiguracija softvera&lt;/h2&gt;
+
+&lt;p&gt;Pretpostavljam da na računalu postoji dobro konfigurirana instalacija gita.Build se može provesti i bez gita, ali mislim da je ideja iza pokušaja builda i neki doprinos projektu, za što je git nužan. Uputstva za konfiguriranje gita se mogu pronaći na &lt;a href=&quot;https://help.github.com/articles/set-up-git&quot;&gt;github stranici&lt;/a&gt;.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Skinuti &lt;a href=&quot;http://developer.android.com/sdk/index.html&quot;&gt;Android SDK&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Raspakirati arhivu i pokrenuti eclipse (&lt;code class=&quot;highlighter-rouge&quot;&gt;eclipse/eclipse&lt;/code&gt;).&lt;/p&gt;
+
+    &lt;p&gt;Ako imate 64 bitan linux i koristite 64 bitan ADT dobit ćete error da se ne može pokrenuti &lt;code class=&quot;highlighter-rouge&quot;&gt;sdk/platform-tools/adb&lt;/code&gt;. Kako bi se to zaobišlo na ubuntuu i derivatima, dovoljno je instalirati paket &lt;code class=&quot;highlighter-rouge&quot;&gt;ia32-libs&lt;/code&gt;. Za detalje pogledati &lt;a href=&quot;http://stackoverflow.com/questions/2710499/android-sdk-on-a-64-bit-linux-machine&quot;&gt;ovaj stackoverflow thread&lt;/a&gt; i &lt;a href=&quot;http://developer.android.com/sdk/installing/index.html#troubleshooting&quot;&gt;android upute za instalaciju SDK-a&lt;/a&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Iz eclipsa pokrenuti &lt;em&gt;Android SDK Manager&lt;/em&gt; (&lt;em&gt;Window -&amp;gt; Android SDK Manager&lt;/em&gt;) i instalirati potrebne pakete. Treba nam zadnja verzija &lt;em&gt;SDK Platform&lt;/em&gt; paketa (najsvježija verzija je obična instalirana po defaultu). Budući da app koristi ActionBarSherlock library &lt;em&gt;SDK Platform&lt;/em&gt; paket treba instalirati i u Android 4.0 varijanti (API 14). Također nam treba i Android Support Library, ali taj paket je instaliran po defaultu.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;izvorni-kod&quot;&gt;Izvorni kod&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Dohvatiti izvorni kod aplikacije:&lt;/p&gt;
+
+    &lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git clone https://github.com/linuxzasve/androidApp.git
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Dohvatiti izvorni kod ActionBarSherlock librarija i to 4.4.0 tag:&lt;/p&gt;
+
+    &lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git clone https://github.com/JakeWharton/ActionBarSherlock.git
+cd ActionBarSherlock
+git checkout 4.4.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Importati gornja dva projekta u eclipse:&lt;/p&gt;
+
+    &lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; File -&amp;gt; Import -&amp;gt; Android -&amp;gt; Existing Android Code into workspace
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;U slučaju LZS appa za root direktorij odabrati &lt;code class=&quot;highlighter-rouge&quot;&gt;androidApp/LinuxZaSve_mobile&lt;/code&gt; direktorij. Kod ActionBarSherlock projekta odabrati &lt;code class=&quot;highlighter-rouge&quot;&gt;ActionBarSherlock/actionbarsherlock&lt;/code&gt; direktorij.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Skinuti sljedeće jarove u &lt;code class=&quot;highlighter-rouge&quot;&gt;androidApp/LinuxZaSve_mobile/libs&lt;/code&gt; direktorij (ako direktorij ne postoji potrebno ga je kreirati):&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://repository.sonatype.org/service/local/artifact/maven/redirect?r=central-proxy&amp;amp;g=com.koushikdutta.urlimageviewhelper&amp;amp;a=urlimageviewhelper&amp;amp;v=LATEST&quot;&gt;UrlImageViewHelper&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://jsoup.org/packages/jsoup-1.7.2.jar&quot;&gt;jsoup&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Ako eclipse i dalje tvrdi da ne može pronaći jarove, potrebno je osvježiti &lt;em&gt;LinuxZaSve_mobile&lt;/em&gt; projekt (&lt;em&gt;desni klik na projekt -&amp;gt; Refresh&lt;/em&gt;).&lt;/p&gt;
+
+&lt;h2 id=&quot;izrada-apk-datoteke&quot;&gt;Izrada apk datoteke&lt;/h2&gt;
+
+&lt;p&gt;Najsvježija verzija aplikacije je commitana u projekt i nalazi se u &lt;code class=&quot;highlighter-rouge&quot;&gt;LinuxZaSve_mobile\bin&lt;/code&gt; direktoriju. Da bi se riješili te datoteke i ujedno provjerili prolazi li build prvo je potrebno napraviti &lt;em&gt;clean&lt;/em&gt; (&lt;em&gt;Build -&amp;gt; Clean -&amp;gt; Clean all projects&lt;/em&gt;). Ovo neće kreirati novi apk. Nova apk datoteka se može kreirati na nekoliko načina, najjednostavnije je &lt;a href=&quot;http://developer.android.com/tools/devices/index.html&quot;&gt;pokrenuti Android Virtual Device&lt;/a&gt; ili &lt;a href=&quot;http://developer.android.com/tools/device.html&quot;&gt;spojiti na računalo neki android device&lt;/a&gt; i kliknuti na run.&lt;/p&gt;</content><author><name>dperetin</name></author><category term="Android" /><summary type="html">Dobio sam nekoliko mailova od ljudi koji su pokušali sami napraviti build aplikacije prema uputama na wiki stranicama te naišli na probleme. Te upute su dosta stare i grube pa se bez nekog iskustva s eclipsom po njima niti nije mogao napraviti build. Detaljnija i korisnija uputsva su očito potrebna pa sam ih odlučio i napisati.</summary></entry><entry><title type="html">KDM i Grub stavke kod restarta</title><link href="http://localhost:4000/kdm-grub-listings-hr" rel="alternate" type="text/html" title="KDM i Grub stavke kod restarta" /><published>2013-04-08T11:33:37+01:00</published><updated>2013-04-08T11:33:37+01:00</updated><id>http://localhost:4000/kdm-grub-listings-hr</id><content type="html" xml:base="http://localhost:4000/kdm-grub-listings-hr">&lt;p&gt;Za ljude koji imaju više stavki na GRUB izborniku i često ih koriste. U datoteci &lt;code class=&quot;highlighter-rouge&quot;&gt;/usr/share/kde4/config/kdm/kdmrc&lt;/code&gt; postoji linija koja se odnosi na &lt;code class=&quot;highlighter-rouge&quot;&gt;BootManager&lt;/code&gt; (zadnja u donjem kodu):&lt;/p&gt;
+
+&lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ cat /usr/share/kde4/config/kdm/kdmrc | grep -i &quot;boot\s*manager&quot;
+# The boot manager KDM should use for offering boot options in the
+# &quot;None&quot; - no boot manager 
+# &quot;Grub&quot; - Grub boot manager
+# &quot;Grub2&quot; - Grub2 boot manager
+# &quot;Burg&quot; - Burg boot manager
+# &quot;Lilo&quot; - Lilo boot manager (Linux on i386 &amp;amp; x86-64 only)
+#BootManager=Grub
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Ako se otkomentira i umjesto &lt;code class=&quot;highlighter-rouge&quot;&gt;Grub&lt;/code&gt; stavi boot manager koji je instaliran (default kod opensuse-a 12.3 je &lt;code class=&quot;highlighter-rouge&quot;&gt;Grub2&lt;/code&gt;), kod restarta se dobije izbornik sa stavkama Gruba, sustav se boota u ono sto se izabere. Pri restartu izbor izgleda kao na slici ispod.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/restart_grub_items_large.png&quot; alt=&quot;restart_grub_items_large.png&quot; /&gt;&lt;/p&gt;</content><author><name>dperetin</name></author><category term="Android" /><summary type="html">Za ljude koji imaju više stavki na GRUB izborniku i često ih koriste. U datoteci /usr/share/kde4/config/kdm/kdmrc postoji linija koja se odnosi na BootManager (zadnja u donjem kodu):</summary></entry><entry><title type="html">Android 4.2 developer options</title><link href="http://localhost:4000/android-42-developer-options-hr" rel="alternate" type="text/html" title="Android 4.2 developer options" /><published>2013-01-27T10:33:37+00:00</published><updated>2013-01-27T10:33:37+00:00</updated><id>http://localhost:4000/android-42-developer-options-hr</id><content type="html" xml:base="http://localhost:4000/android-42-developer-options-hr">&lt;p&gt;Nedavno sam ulovio vremena da na svoj Galaxy S mudrofon konačno stavim Android 4.2.1 i to kao &lt;a href=&quot;http://www.cyanogenmod.org/blog/cm-10-1-m-series-builds-have-arrived&quot;&gt;CM 10.1 M&lt;/a&gt;.Stvar radi savšeno i za sad nisam naišao na probleme u svakodnevnom korištenju. No, kad sam pokušao vidjeti kako se &lt;a href=&quot;https://github.com/linuxzasve/androidApp&quot;&gt;Linux za sve android app&lt;/a&gt; ponaša na novoj verziji Androida, nisam uspio uključiti debugging mod. Naime, Android 4.2 nema u &lt;code class=&quot;highlighter-rouge&quot;&gt;Settings&lt;/code&gt; izborniku stavke &lt;code class=&quot;highlighter-rouge&quot;&gt;Developer options&lt;/code&gt;, gdje se uključuje &lt;code class=&quot;highlighter-rouge&quot;&gt;Android debugging&lt;/code&gt; opcija koja omogućava debugiranje android aplikacija direktno na uređaju koji je USB-om spojen na računalo, umjesto da se koristi emulator.&lt;/p&gt;
+
+&lt;p&gt;Radi se o tome da je Google namjerno isključio tu stavku pod izlikom da ne treba nikome osim developerima, a ovi pak znaju kako riješiti takve problemčiće.&lt;/p&gt;
+
+&lt;p&gt;Da bi se omogućila stavka &lt;code class=&quot;highlighter-rouge&quot;&gt;Developer options&lt;/code&gt; potrebno je sedam puta kliknuti na &lt;code class=&quot;highlighter-rouge&quot;&gt;Build number&lt;/code&gt; stavku u &lt;code class=&quot;highlighter-rouge&quot;&gt;Settings -&amp;gt; About phone&lt;/code&gt; izborniku.&lt;/p&gt;
+
+&lt;p&gt;Čak se pojavi i zgodan &lt;a href=&quot;http://developer.android.com/guide/topics/ui/notifiers/toasts.html&quot;&gt;toast&lt;/a&gt; popup koji odbrojava klikove, odnosono ispiše poruku ako se klikne na &lt;code class=&quot;highlighter-rouge&quot;&gt;Build number&lt;/code&gt; kad je već stavka uključena.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/android_42_enable_developer_options_large.png&quot; alt=&quot;android_42_enable_developer_options_large.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Da bi se sada uređaj mogao koristiti za debugiranje potrebno je napraviti sljedeće:&lt;/p&gt;
+
+&lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Settings -&amp;gt; Developer Options -&amp;gt; Android debugging (staviti kvacicu)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Ako se sad pokuša pokrenuti app dobije se:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/android_prije_rulova_large.png&quot; alt=&quot;android_prije_rulova_large.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Detaljne upute za rješavanje ovog problema mogu se pronaći na &lt;a href=&quot;http://developer.android.com/tools/device.html&quot;&gt;Android developers&lt;/a&gt; stranici.&lt;/p&gt;
+
+&lt;p&gt;Ukratko, treba generirati fajl&lt;/p&gt;
+
+&lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/etc/udev/rules.d/42-android-devices.rules
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Sadržaja:&lt;/p&gt;
+
+&lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;SUBSYSTEM==&quot;usb&quot;, ATTR{idVendor}==&quot;04e8&quot;, MODE=&quot;0666&quot;, GROUP=&quot;users&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Uređaj još uvijek nije prepoznat jer je &lt;code class=&quot;highlighter-rouge&quot;&gt;04e8&lt;/code&gt; Samsung oznaka. Budući da je na mobitel sada instaliran CyanogenMod, radi se o Google uređaju, pa je za vendor vrijednost potrebno staviti &lt;code class=&quot;highlighter-rouge&quot;&gt;18d1&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Uređaj je sada uredno prepoznat.&lt;/p&gt;</content><author><name>dperetin</name></author><category term="Android" /><summary type="html">Nedavno sam ulovio vremena da na svoj Galaxy S mudrofon konačno stavim Android 4.2.1 i to kao CM 10.1 M.Stvar radi savšeno i za sad nisam naišao na probleme u svakodnevnom korištenju. No, kad sam pokušao vidjeti kako se Linux za sve android app ponaša na novoj verziji Androida, nisam uspio uključiti debugging mod. Naime, Android 4.2 nema u Settings izborniku stavke Developer options, gdje se uključuje Android debugging opcija koja omogućava debugiranje android aplikacija direktno na uređaju koji je USB-om spojen na računalo, umjesto da se koristi emulator.</summary></entry><entry><title type="html">Raspberry Pi - prvi dojmovi</title><link href="http://localhost:4000/rpi-prvi-dojmovi-hr" rel="alternate" type="text/html" title="Raspberry Pi - prvi dojmovi" /><published>2012-06-06T11:33:37+01:00</published><updated>2012-06-06T11:33:37+01:00</updated><id>http://localhost:4000/rpi-prvi-dojmovi-hr</id><content type="html" xml:base="http://localhost:4000/rpi-prvi-dojmovi-hr">&lt;p&gt;Raspberry Pi (&lt;em&gt;u daljnjem tekstu RPi&lt;/em&gt;) je stigao. Malo računalo u maloj kutiji.&lt;/p&gt;
+
+&lt;p&gt;Planirano je da RPi dolazi u dvije varijanete, Model A i Model B. Model A je jeftinija varijanta, zvanična cijena mu je 25 USD  no zasad se proizvodi samo model B i to po cijeni od 35 USD. Koliki su stvarni troškovi dok dođe na kućna vrata, saznajte u nastavku.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/RPi_box_large.jpg&quot; alt=&quot;RPi_box_large.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/RPi_closeup_large.jpg&quot; alt=&quot;RPi_closeup_large.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.raspberrypi.org/&quot;&gt;Raspberry Pi&lt;/a&gt; model B pogoni Broadcom BCM2835 procesor koji kuca na 700 MHz. Model B također ima modul od 256 Mb radne memorije koja se dijeli između centralnog procesora i grafičkog procesora. Po defaultu centralnom procesoru ostaje 186 MB. Prisutna su dva USB 2.0 priključka, HDMI izlaz, 3.5mm audio i RCA kompozitni izlaz. Raspberry Pi se na mrežu može spojiti putem RJ45 ethernet porta koji dolazi isključivo u modelu B.&lt;/p&gt;
+
+&lt;p&gt;Na slici ispod vidimo RPi model B, spojen analogno na TV, spojeni miš, tipkovnica i eksterni disk:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/RPi_large.jpg&quot; alt=&quot;RPi_large.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ono što nećete dobiti uz RPi, a nužno je za njegov rad, je SD memorijska kartica.&lt;/p&gt;
+
+&lt;p&gt;SD kartica s predinstaliranim operativnim sustavom se može naručiti prilikom kupnje no u trenutku naručivanja ovog uređaja bile su rasprodane. Dakle, za pokretanje RPi-a potrebno je imati pri ruci jednu SD karticu kapaciteta barem 2 GB te se na nju mora nasnimiti ISO slika koja sadrži operacijski sustav. Na &lt;a href=&quot;http://www.raspberrypi.org/downloads&quot;&gt;službenim download stranicama&lt;/a&gt; RPi-a dostupne su tri takve slike, od kojih se za početak preporučuje Debian Squeeze, pa sam odlučio svoje druženje s RPi-om započeti upravo s Debianom.&lt;/p&gt;
+
+&lt;h2 id=&quot;instalacija-slike&quot;&gt;Instalacija slike&lt;/h2&gt;
+
+&lt;p&gt;Prvo je potrebno skinuti ISO sliku koju planiramo staviti na SD karticu. U ovom slučaju to je &lt;code class=&quot;highlighter-rouge&quot;&gt;debian6-19-04-2012.zip&lt;/code&gt; koja se nalazi na &lt;a href=&quot;http://www.raspberrypi.org/downloads&quot;&gt;službenoj download stranici&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Zatim sliku treba otpakirati&lt;/p&gt;
+
+&lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ unzip debian6-19-04-2012.zip
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Time se dobije &lt;code class=&quot;highlighter-rouge&quot;&gt;debian6-19-04-2012.img&lt;/code&gt; datoteka koja sadrži sliku.&lt;/p&gt;
+
+&lt;p&gt;Da bi na SD karticu stavili sliku, potrebno je imati neki čitač kartica i spojiti karticu na računalo. Zatim moramo utvrditi pod kojim imenom je kartica prepoznata: Naredbom &lt;code class=&quot;highlighter-rouge&quot;&gt;df -h&lt;/code&gt; možemo vidjeti novo mountane diskove te prepoznati našu SD karticu. Ako izvršimo tu naredbu prije i poslije umetanja kartice možemo uočiti nove zapise i prepoznati karticu&lt;/p&gt;
+
+&lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ df -h
+Filesystem      Size  Used Avail Use% Mounted on
+rootfs           19G  7.5G   10G  43% /
+devtmpfs        2.0G   36K  2.0G   1% /dev
+tmpfs           2.0G  2.6M  2.0G   1% /dev/shm
+tmpfs           2.0G  716K  2.0G   1% /run
+/dev/sda6        19G  7.5G   10G  43% /
+tmpfs           2.0G     0  2.0G   0% /sys/fs/cgroup
+tmpfs           2.0G  716K  2.0G   1% /var/lock
+tmpfs           2.0G  716K  2.0G   1% /var/run
+tmpfs           2.0G     0  2.0G   0% /media
+/dev/sda7       244G   30G  203G  13% /home
+/dev/sda2       196G  127G   69G  65% /windows/C
+/dev/sdd1        63M  6.0M   58M  10% /media/B757-8716
+/dev/sdd3       7.2G  1.6G  5.2G  24% /media/14fa9af4-552a-4f53-88ad-3259f189fccf
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Vidimo da je kartica prepoznata kao &lt;code class=&quot;highlighter-rouge&quot;&gt;/dev/sdd&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Prije nastavka potrebno je unmountati sve particije koje se nalaze na kartici, u ovom slučaju to su &lt;code class=&quot;highlighter-rouge&quot;&gt;/dev/sdd1&lt;/code&gt; i &lt;code class=&quot;highlighter-rouge&quot;&gt;/dev/sdd3&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ umount /dev/sdd1
+$ umount /dev/sdd3
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Slika se sada snimi na karticu s naredbom&lt;/p&gt;
+
+&lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# dd bs=1M if=debian6-19-04-2012.img of=/dev/sdd
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;pa onda&lt;/p&gt;
+
+&lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# sync
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Ovako pripremljena kartica je dovoljna da se RPi boota. Nema on/off gumba, stvar se ušteka i radi. RPi s ovom Debian slikom se boota u terminal i prvi boot traje oko 4.5 minute, a svaki sljedeći oko jedne minute.&lt;/p&gt;
+
+&lt;p&gt;Defaultni username za ovu sliku je &lt;code class=&quot;highlighter-rouge&quot;&gt;pi&lt;/code&gt; i pripadni password je &lt;code class=&quot;highlighter-rouge&quot;&gt;raspberry&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Prvo što upada u oči nakon boota je činjenica da ovakav način pripremanja kartice koristi samo onaj dio kartice koji je predviđen slikom, odnosno 2 GB. Iako je moja testna kartica kapaciteta 8 GB, RPi vidi i koristi samo 2 GB, što korisniku ostavlja na koristenje cijelih 298 MB. Neke druge slike kao primjerice raspbmc pobrinu se da je cijela kartica raspoloživa. Nakon prvog boota diskovna situacija izgleda ovako:&lt;/p&gt;
+
+&lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pi@raspberrypi:~$ df -h
+Filesystem            Size  Used Avail Use% Mounted on
+tmpfs                  94M     0   94M   0% /lib/init/rw
+udev                   10M  152K  9.9M   2% /dev
+tmpfs                  94M     0   94M   0% /dev/shm
+rootfs                1.6G  1.2G  298M  80% /
+/dev/mmcblk0p1         75M   28M   47M  37% /boot
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Da bi doskočili ovom problemu potrebno je promijeniti veličinu root particije: (&lt;a href=&quot;https://www.youtube.com/watch?v=R4VovMDnsIE&quot;&gt;izvor&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;Disk na kojem je particija kojoj želimo promijeniti veličinu je &lt;code class=&quot;highlighter-rouge&quot;&gt;/dev/mmcblk0&lt;/code&gt;, sufiksi &lt;code class=&quot;highlighter-rouge&quot;&gt;p1&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;p2&lt;/code&gt; itd. su oznake particije.&lt;/p&gt;
+
+&lt;p&gt;Sve ovo radimo direktno na RPi-u:&lt;/p&gt;
+
+&lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# fdisk -uc /dev/mmcblk0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;naredbom &lt;code class=&quot;highlighter-rouge&quot;&gt;p&lt;/code&gt; izlistamo informacije o particijama.&lt;/p&gt;
+
+&lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Command (m for help): p
+
+Disk /dev/mmcblk0: 7969 MB, 7969177600 bytes
+4 heads, 32 sectors/track, 121600 cylinders, total 15564800 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk identifier: 0x000ee283
+
+        Device Boot      Start         End      Blocks   Id  System
+/dev/mmcblk0p1            2048      155647       76800    c  FAT32 (LBA)
+/dev/mmcblk0p2          157696     3414015     1628160   83  Linux
+/dev/mmcblk0p3         3416064     3807231      195584   82  Liswap / Solaris
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Mijenjamo veličinu particiji &lt;code class=&quot;highlighter-rouge&quot;&gt;/dev/mmcblk0p2&lt;/code&gt;. 
+Prvo izbrišemo particiju komandom &lt;code class=&quot;highlighter-rouge&quot;&gt;d&lt;/code&gt; i damo mu broj particije (2 i 3 u ovom slučaju)&lt;/p&gt;
+
+&lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Command (m for help): d
+Partition number (1-4): 2
+
+Command (m for help): d
+Partition number (1-4): 3
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Sada napravimo particiju
+(&lt;code class=&quot;highlighter-rouge&quot;&gt;n p 2&lt;/code&gt;) i za početak sektora stavimo početak stare particije te za veličinu izaberemo defaultnu ponuđenu vrijednost, kako bi se particija proširila na ostatak diska:&lt;/p&gt;
+
+&lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;        Device Boot      Start         End      Blocks   Id  System
+/dev/mmcblk0p1            2048      155647       76800    c  W95 FAT32 (LBA)
+/dev/mmcblk0p2          157696     3414015     1628160   83  Linux
+/dev/mmcblk0p3         3416064     3807231      195584   82  Linux swap / Solaris
+
+Command (m for help): d
+Partition number (1-4): 2
+
+Command (m for help): d
+Partition number (1-4): 3
+
+Command (m for help): n
+Command action
+   e   extended
+   p   primary partition (1-4)
+p
+Partition number (1-4): p
+Partition number (1-4): 2
+First sector (155648-15564799, default 155648): 157696
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Naredbom &lt;code class=&quot;highlighter-rouge&quot;&gt;w&lt;/code&gt; snimimo promjene. Također je potrebno ponovno pokrenutu RPi.&lt;/p&gt;
+
+&lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# reboot
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Nakon ponovnog ulogiravanja napravimo &lt;code class=&quot;highlighter-rouge&quot;&gt;resize&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# resize2fs /dev/mmcblk0p2
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Root particija je sada rastegnuta preko cijele kartice:&lt;/p&gt;
+
+&lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pi@raspberrypi:~$ df -h
+Filesystem            Size  Used Avail Use% Mounted on
+tmpfs                  94M     0   94M   0% /lib/init/rw
+udev                   10M  148K  9.9M   2% /dev
+tmpfs                  94M     0   94M   0% /dev/shm
+rootfs                7.3G  1.2G  5.8G  17% /
+/dev/mmcblk0p1         75M   28M   47M  37% /boot
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;U jednom od prethodnih koraka odabrali smo opciju da se root particija proširi na cijeli disk pa sada nema mjesta za swap particiju (budući da RPi ima svega 256 MB radne memorije, malo swapa neće škoditi). To ćemo riješiti ovako&lt;/p&gt;
+
+&lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# dd if=/dev/zero of=/var/swapfile bs=1M count=128
+# mkswap /var/swapfile
+# swapon /var/swapfile
+# reboot
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Editirati datoteku: &lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/fstab&lt;/code&gt; iz ovog:&lt;/p&gt;
+
+&lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;proc            /proc           proc    defaults        0       0
+/dev/mmcblk0p1  /boot           vfat    defaults        0       0
+#/dev/mmcblk0p3  none            swap    sw              0       0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;u ovo:&lt;/p&gt;
+
+&lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;proc            /proc           proc    defaults                                0       0
+/dev/mmcblk0p1  /boot           vfat    defaults                                0       0
+/dev/mmcblk0p2  /               ext4    defaults,noatime,nodiratime             0       0
+/var/swapfile   none            swap    sw                                      0       0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Debian radi uredno. Repozitoriji su dostupni i bez nekih problema sam uspio instalirati nekoliko paketa. Debian dolazi s LXDE-om, ali X server ne diže pri bootu. Dizanje X-a traje oko 20 sekundi, što i nije pretjerano dugo. Prvo dizanje Midorija nakon boota traje oko dvije i pol minute, ali svako sljedeće je puno brže, oko 8 sekundi. Ono što ne radi, odnosno ne radi dobro &lt;em&gt;out of the box&lt;/em&gt;, je multimedija. Umjesto da pokušavam natjerati multimediju da se pristojno ponaša na Debianu, posegnuo sam za popularnom alternativom, Raspbmc-om.&lt;/p&gt;
+
+&lt;h2 id=&quot;raspbmc&quot;&gt;Raspbmc&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.raspbmc.com/&quot;&gt;Raspbmc&lt;/a&gt; je napravljen s jednom svrhom, a to je multimedija. Napravljen je povrh Debiana te koristi XBMC za upravljanje sadržajem.&lt;/p&gt;
+
+&lt;p&gt;Slika Raspbmc se može skinuti s &lt;a href=&quot;http://download.raspbmc.com/downloads/bin/ramdistribution/installer-testing.img.gz&quot;&gt;ove poveznice&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Smještanje slike na karticu se odvija isto kao kod Debiana. Za razliku od Debiana, tim postupkom se na karticu postavi instalacijski alat. Za dovršetak instalacije dovoljno je upaliti RPi i spojiti ga na mrežu. Instaler će sam odraditi ostatak posla.&lt;/p&gt;
+
+&lt;p&gt;Za razliku od Debiana, raspbmc će iskoristiti cijeli kapacitet SD kartice.&lt;/p&gt;
+
+&lt;p&gt;Multimedija radi iznenađujuće dobro. RPi je dovoljno snažan da glatko vrti filmove HD kvalitete. Mali bug primjećen je kod reprodukcije glazbe. Naime, ako pjesma ne odsvira do kraja već prebacimo na drugu, ona neće svirati.&lt;/p&gt;
+
+&lt;p&gt;XBMC povremeno u terminal zapiše neku poruku (najčešće opis neke greške zapiše na &lt;code class=&quot;highlighter-rouge&quot;&gt;stderr&lt;/code&gt;). Ako se u tom trenutku reproducira neki film, koji je takvog formata da slika nije prikazana preko cijelog ekrana, onda se ta poruka vidi u crnom predjelu ispod i iznad slike.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/RPi_stderr_large.jpg&quot; alt=&quot;RPi_stderr_large.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Korisna napomena; ako se RPi ne spaja na TV (ili monitor) preko HDMI-a, nego analogno, onda se obavezno u postavkama XBMC-a audio output mora staviti na analog, u suprotnom se pri pokretanju filma dobije ovo:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/RPi_audio_analog_large.jpg&quot; alt=&quot;RPi_audio_analog_large.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Zgodna je činjenica da raspbmc po defalutu pokreće SSH server pa, ako se nekako može dokučiti IP adresa stroja, jedino što je potrebno da bi se na RPi-u nešto radilo je RJ45 kabel, dok su kod Debiana potrebni ekran i tipkovnica barem kod prvog boota.&lt;/p&gt;
+
+&lt;h2 id=&quot;dojmovi&quot;&gt;Dojmovi&lt;/h2&gt;
+
+&lt;p&gt;RPi se uredno spojio na mrežu (DHCP), tipkovnica i miš su također uredno prepoznati. RPi je bio spojen na stari TV i slika i zvuk su uredno preneseni. USB konektori su smješteni jako blizu jedan drugom, pa ako planirate imati spojen uređaj koji je malo deblji, kao npr. USB stick ili WiFi adapter, potrebno je imati nekakav produžni ili hub.&lt;/p&gt;
+
+&lt;p&gt;Debian radi poprilično dobro, rad u terminalu je malčice spor, ali je RPi za tu svrhu definitivno upotrebljiv. Rad u grafičkom sučelju je osjetno sporiji. Kao glavna uloga RPi-a ističe se ona edukacijska i to u svrhu učenja programiranja. Ovo zahtjeva mnogo posjeta tražilicama i najčešće otvoreno nekoliko (desetaka) tabova, pa bih učenje programiranja uz RPi predložio samo ljudima koji imaju puno strpljenja i kvalitetnu literaturu u tiskanom obliku.&lt;/p&gt;
+
+&lt;p&gt;Kao jedna od najpopularnijih primjena RPi-a se spominje ona gdje RPi glumi media centar. Softver koji ga nekako najbliže dovodi tom cilju, raspbmc, još ipak nije spreman. Iako se filmovi vrte glatko, samo sučelje XBMC-a malo zapinje. Nedostatak podrške za neke kodeke i sitni iritanti bugovi su dovoljni razlozi da zaključavanje svog HTPC-a na tavan odgodite na još barem neko vrijeme.&lt;/p&gt;
+
+&lt;h2 id=&quot;i-koliko-košta-pi-od-35-dolara&quot;&gt;I koliko košta Pi od 35 dolara?&lt;/h2&gt;
+
+&lt;p&gt;Raspberry Pi, punjač, dva kabela za spojiti na TV i dostava dođe oko 350 kuna. Carina je oko 250 kuna. RPi je neupotrebljiv bez SD kartice, koja se može dobiti za nekih 66 kuna (8 GB, class 10). Ukupno oko 666 kn.&lt;/p&gt;</content><author><name>dperetin</name></author><category term="RaspberryPi" /><summary type="html">Raspberry Pi (u daljnjem tekstu RPi) je stigao. Malo računalo u maloj kutiji.</summary></entry></feed>
