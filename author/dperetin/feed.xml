@@ -1,4 +1,43 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-02-24T00:09:39+00:00</updated><id>http://localhost:4000/</id><title type="html">dejanperetin.com</title><subtitle>Writing things down so I don't forget. SDE at AWS. Opinions expressed are my own.</subtitle><entry><title type="html">Why I Don’t Vote</title><link href="http://localhost:4000/why-i-dont-vote" rel="alternate" type="text/html" title="Why I Don't Vote" /><published>2020-01-05T10:33:37+00:00</published><updated>2020-01-05T10:33:37+00:00</updated><id>http://localhost:4000/why-i-dont-vote</id><content type="html" xml:base="http://localhost:4000/why-i-dont-vote">&lt;p&gt;Wolfram Mathematica is an amazing software that I love using, but the choice to use it for any meaningful application is 
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
+  <link href="http://localhost:4000/author/dperetin/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2020-02-24T00:09:39+00:00</updated>
+  <id>http://localhost:4000/author/dperetin/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">dejanperetin.com | </title>
+  
+
+  
+    <subtitle>Writing things down so I don't forget. SDE at AWS. Opinions expressed are my own.</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">Why I Don’t Vote</title>
+      <link href="http://localhost:4000/why-i-dont-vote" rel="alternate" type="text/html" title="Why I Don't Vote" />
+      <published>2020-01-05T10:33:37+00:00</published>
+      <updated>2020-01-05T10:33:37+00:00</updated>
+      <id>http://localhost:4000/why-i-dont-vote</id>
+      <content type="html" xml:base="http://localhost:4000/why-i-dont-vote">&lt;p&gt;Wolfram Mathematica is an amazing software that I love using, but the choice to use it for any meaningful application is 
 difficult to justify due to its cost and licence. Presidential elections in Croatia seemed like a good excuse to fire it
 up and generate some graphs. Which I did. And here is the winner of the election per administrative subdivisions: &lt;img src=&quot;assets/images/why_i_dont_vote/finalni_rezultati_po_opcinama.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
@@ -62,7 +101,43 @@ GeoListPlot[Values[adminDivisions2[&quot;KARLOVAČKA ŽUPANIJA&quot;]],
 
 &lt;h3 id=&quot;winner-by-country-in-the-first-round-of-election&quot;&gt;Winner by Country in the First Round of Election&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;assets/images/why_i_dont_vote/zemlje_prvi_krug.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>Dejan Peretin</name></author><category term="Coding" /><category term="Data Visualization" /><summary type="html">Wolfram Mathematica is an amazing software that I love using, but the choice to use it for any meaningful application is difficult to justify due to its cost and licence. Presidential elections in Croatia seemed like a good excuse to fire it up and generate some graphs. Which I did. And here is the winner of the election per administrative subdivisions:</summary></entry><entry><title type="html">Nobody Reads Shit</title><link href="http://localhost:4000/nobody-reads-shit" rel="alternate" type="text/html" title="Nobody Reads Shit" /><published>2019-12-16T11:28:37+00:00</published><updated>2019-12-16T11:28:37+00:00</updated><id>http://localhost:4000/nobody-reads-shit</id><content type="html" xml:base="http://localhost:4000/nobody-reads-shit">&lt;p&gt;Watched an &lt;a href=&quot;https://www.youtube.com/watch?v=UE-6zvdRapY&amp;amp;feature=youtu.be&amp;amp;t=391&quot;&gt;H3 podcast&lt;/a&gt; 
+&lt;p&gt;&lt;img src=&quot;assets/images/why_i_dont_vote/zemlje_prvi_krug.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Dejan Peretin</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="Coding" />
+      
+        <category term="Data Visualization" />
+      
+
+      
+        <summary type="html">Wolfram Mathematica is an amazing software that I love using, but the choice to use it for any meaningful application is difficult to justify due to its cost and licence. Presidential elections in Croatia seemed like a good excuse to fire it up and generate some graphs. Which I did. And here is the winner of the election per administrative subdivisions:</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Nobody Reads Shit</title>
+      <link href="http://localhost:4000/nobody-reads-shit" rel="alternate" type="text/html" title="Nobody Reads Shit" />
+      <published>2019-12-16T11:28:37+00:00</published>
+      <updated>2019-12-16T11:28:37+00:00</updated>
+      <id>http://localhost:4000/nobody-reads-shit</id>
+      <content type="html" xml:base="http://localhost:4000/nobody-reads-shit">&lt;p&gt;Watched an &lt;a href=&quot;https://www.youtube.com/watch?v=UE-6zvdRapY&amp;amp;feature=youtu.be&amp;amp;t=391&quot;&gt;H3 podcast&lt;/a&gt; 
 episode yesterday and they were commenting 
 on how YouTube is announcing policy changes on a blog instead of via video. 
 Comments were premised by the fact that YouTube is
@@ -105,7 +180,41 @@ of the blog. For that I setup a &lt;a href=&quot;https://docs.aws.amazon.com/Ama
 
 &lt;p&gt;Canary detected the moment when I nuked the repo and re-created it with Jekyll:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;assets/images/nobody_reads_shit/cloudwatch_synthetic.png&quot; alt=&quot;CloudWatch Synthetics graph&quot; /&gt;&lt;/p&gt;</content><author><name>Dejan Peretin</name></author><category term="Blog" /><summary type="html">Watched an H3 podcast episode yesterday and they were commenting on how YouTube is announcing policy changes on a blog instead of via video. Comments were premised by the fact that YouTube is a video company, but the question of who reads blogs (or anything for that matter) was raised. This reminded me that I have a blog of my own. Blog that I didn’t look at for more than 5 years.</summary></entry><entry><title type="html">CVS merge in Eclipse</title><link href="http://localhost:4000/cvs_merge" rel="alternate" type="text/html" title="CVS merge in Eclipse" /><published>2014-03-23T10:33:37+00:00</published><updated>2014-03-23T10:33:37+00:00</updated><id>http://localhost:4000/cvs_merge</id><content type="html" xml:base="http://localhost:4000/cvs_merge">&lt;p&gt;Ever so often a need for merging CVS branches arises  and since the task can be a bit touchy, writing down some basic concepts seems like a good idea. So here are a few basic steps the process boils down to.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/images/nobody_reads_shit/cloudwatch_synthetic.png&quot; alt=&quot;CloudWatch Synthetics graph&quot; /&gt;&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Dejan Peretin</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="Blog" />
+      
+
+      
+        <summary type="html">Watched an H3 podcast episode yesterday and they were commenting on how YouTube is announcing policy changes on a blog instead of via video. Comments were premised by the fact that YouTube is a video company, but the question of who reads blogs (or anything for that matter) was raised. This reminded me that I have a blog of my own. Blog that I didn’t look at for more than 5 years.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">CVS merge in Eclipse</title>
+      <link href="http://localhost:4000/cvs_merge" rel="alternate" type="text/html" title="CVS merge in Eclipse" />
+      <published>2014-03-23T10:33:37+00:00</published>
+      <updated>2014-03-23T10:33:37+00:00</updated>
+      <id>http://localhost:4000/cvs_merge</id>
+      <content type="html" xml:base="http://localhost:4000/cvs_merge">&lt;p&gt;Ever so often a need for merging CVS branches arises  and since the task can be a bit touchy, writing down some basic concepts seems like a good idea. So here are a few basic steps the process boils down to.&lt;/p&gt;
 
 &lt;h1 id=&quot;branching&quot;&gt;Branching&lt;/h1&gt;
 &lt;p&gt;Creating a branch is done with &lt;em&gt;right clicking on a project -&amp;gt; Team -&amp;gt; Branch&lt;/em&gt;. Leave &lt;em&gt;Start working in the branch&lt;/em&gt; checked so newly created branch will be checked out automatically. Common scenario is that people make some changes on their local version of the code and then realize that they do not want to commit it to the main branch. If you create a branch with uncommitted changes in your workspace, those changes will be available for committing to the branch.&lt;/p&gt;
@@ -146,7 +255,41 @@ of the blog. For that I setup a &lt;a href=&quot;https://docs.aws.amazon.com/Ama
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;Little tip at the end. If a FEATURE branch needs to be merged onto HEAD branch after some development period, its a good idea to merge HEAD branch onto FEATURE branch first. All conflicts will have to be resolved on a FEATURE branch which will make FEATURE to HEAD merge a trivial one.&lt;/p&gt;</content><author><name>Dejan Peretin</name></author><category term="Coding" /><summary type="html">Ever so often a need for merging CVS branches arises and since the task can be a bit touchy, writing down some basic concepts seems like a good idea. So here are a few basic steps the process boils down to.</summary></entry><entry><title type="html">Kako napraviti svoj build LZS android aplikacije</title><link href="http://localhost:4000/lzs-app-build-howto" rel="alternate" type="text/html" title="Kako napraviti svoj build LZS android aplikacije" /><published>2013-10-10T11:33:37+01:00</published><updated>2013-10-10T11:33:37+01:00</updated><id>http://localhost:4000/lzs-app-build-howto</id><content type="html" xml:base="http://localhost:4000/lzs-app-build-howto">&lt;p&gt;Dobio sam nekoliko mailova od ljudi koji su pokušali sami napraviti build aplikacije prema uputama na wiki stranicama te naišli na probleme. 
+&lt;p&gt;Little tip at the end. If a FEATURE branch needs to be merged onto HEAD branch after some development period, its a good idea to merge HEAD branch onto FEATURE branch first. All conflicts will have to be resolved on a FEATURE branch which will make FEATURE to HEAD merge a trivial one.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Dejan Peretin</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="Coding" />
+      
+
+      
+        <summary type="html">Ever so often a need for merging CVS branches arises and since the task can be a bit touchy, writing down some basic concepts seems like a good idea. So here are a few basic steps the process boils down to.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Kako napraviti svoj build LZS android aplikacije</title>
+      <link href="http://localhost:4000/lzs-app-build-howto" rel="alternate" type="text/html" title="Kako napraviti svoj build LZS android aplikacije" />
+      <published>2013-10-10T11:33:37+01:00</published>
+      <updated>2013-10-10T11:33:37+01:00</updated>
+      <id>http://localhost:4000/lzs-app-build-howto</id>
+      <content type="html" xml:base="http://localhost:4000/lzs-app-build-howto">&lt;p&gt;Dobio sam nekoliko mailova od ljudi koji su pokušali sami napraviti build aplikacije prema uputama na wiki stranicama te naišli na probleme. 
 Te upute su dosta stare i grube pa se bez nekog iskustva s eclipsom po 
 njima niti nije mogao napraviti build. Detaljnija i korisnija uputsva su očito potrebna pa sam ih odlučio i napisati.&lt;/p&gt;
 
@@ -203,7 +346,41 @@ git checkout 4.4.0
 
 &lt;h2 id=&quot;izrada-apk-datoteke&quot;&gt;Izrada apk datoteke&lt;/h2&gt;
 
-&lt;p&gt;Najsvježija verzija aplikacije je commitana u projekt i nalazi se u &lt;code class=&quot;highlighter-rouge&quot;&gt;LinuxZaSve_mobile\bin&lt;/code&gt; direktoriju. Da bi se riješili te datoteke i ujedno provjerili prolazi li build prvo je potrebno napraviti &lt;em&gt;clean&lt;/em&gt; (&lt;em&gt;Build -&amp;gt; Clean -&amp;gt; Clean all projects&lt;/em&gt;). Ovo neće kreirati novi apk. Nova apk datoteka se može kreirati na nekoliko načina, najjednostavnije je &lt;a href=&quot;http://developer.android.com/tools/devices/index.html&quot;&gt;pokrenuti Android Virtual Device&lt;/a&gt; ili &lt;a href=&quot;http://developer.android.com/tools/device.html&quot;&gt;spojiti na računalo neki android device&lt;/a&gt; i kliknuti na run.&lt;/p&gt;</content><author><name>Dejan Peretin</name></author><category term="Android" /><summary type="html">Dobio sam nekoliko mailova od ljudi koji su pokušali sami napraviti build aplikacije prema uputama na wiki stranicama te naišli na probleme. Te upute su dosta stare i grube pa se bez nekog iskustva s eclipsom po njima niti nije mogao napraviti build. Detaljnija i korisnija uputsva su očito potrebna pa sam ih odlučio i napisati.</summary></entry><entry><title type="html">KDM i Grub stavke kod restarta</title><link href="http://localhost:4000/kdm-grub-listings-hr" rel="alternate" type="text/html" title="KDM i Grub stavke kod restarta" /><published>2013-04-08T11:33:37+01:00</published><updated>2013-04-08T11:33:37+01:00</updated><id>http://localhost:4000/kdm-grub-listings-hr</id><content type="html" xml:base="http://localhost:4000/kdm-grub-listings-hr">&lt;p&gt;Za ljude koji imaju više stavki na GRUB izborniku i često ih koriste. U datoteci &lt;code class=&quot;highlighter-rouge&quot;&gt;/usr/share/kde4/config/kdm/kdmrc&lt;/code&gt; postoji linija koja se odnosi na &lt;code class=&quot;highlighter-rouge&quot;&gt;BootManager&lt;/code&gt; (zadnja u donjem kodu):&lt;/p&gt;
+&lt;p&gt;Najsvježija verzija aplikacije je commitana u projekt i nalazi se u &lt;code class=&quot;highlighter-rouge&quot;&gt;LinuxZaSve_mobile\bin&lt;/code&gt; direktoriju. Da bi se riješili te datoteke i ujedno provjerili prolazi li build prvo je potrebno napraviti &lt;em&gt;clean&lt;/em&gt; (&lt;em&gt;Build -&amp;gt; Clean -&amp;gt; Clean all projects&lt;/em&gt;). Ovo neće kreirati novi apk. Nova apk datoteka se može kreirati na nekoliko načina, najjednostavnije je &lt;a href=&quot;http://developer.android.com/tools/devices/index.html&quot;&gt;pokrenuti Android Virtual Device&lt;/a&gt; ili &lt;a href=&quot;http://developer.android.com/tools/device.html&quot;&gt;spojiti na računalo neki android device&lt;/a&gt; i kliknuti na run.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Dejan Peretin</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="Android" />
+      
+
+      
+        <summary type="html">Dobio sam nekoliko mailova od ljudi koji su pokušali sami napraviti build aplikacije prema uputama na wiki stranicama te naišli na probleme. Te upute su dosta stare i grube pa se bez nekog iskustva s eclipsom po njima niti nije mogao napraviti build. Detaljnija i korisnija uputsva su očito potrebna pa sam ih odlučio i napisati.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">KDM i Grub stavke kod restarta</title>
+      <link href="http://localhost:4000/kdm-grub-listings-hr" rel="alternate" type="text/html" title="KDM i Grub stavke kod restarta" />
+      <published>2013-04-08T11:33:37+01:00</published>
+      <updated>2013-04-08T11:33:37+01:00</updated>
+      <id>http://localhost:4000/kdm-grub-listings-hr</id>
+      <content type="html" xml:base="http://localhost:4000/kdm-grub-listings-hr">&lt;p&gt;Za ljude koji imaju više stavki na GRUB izborniku i često ih koriste. U datoteci &lt;code class=&quot;highlighter-rouge&quot;&gt;/usr/share/kde4/config/kdm/kdmrc&lt;/code&gt; postoji linija koja se odnosi na &lt;code class=&quot;highlighter-rouge&quot;&gt;BootManager&lt;/code&gt; (zadnja u donjem kodu):&lt;/p&gt;
 
 &lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ cat /usr/share/kde4/config/kdm/kdmrc | grep -i &quot;boot\s*manager&quot;
 # The boot manager KDM should use for offering boot options in the
@@ -217,7 +394,41 @@ git checkout 4.4.0
 
 &lt;p&gt;Ako se otkomentira i umjesto &lt;code class=&quot;highlighter-rouge&quot;&gt;Grub&lt;/code&gt; stavi boot manager koji je instaliran (default kod opensuse-a 12.3 je &lt;code class=&quot;highlighter-rouge&quot;&gt;Grub2&lt;/code&gt;), kod restarta se dobije izbornik sa stavkama Gruba, sustav se boota u ono sto se izabere. Pri restartu izbor izgleda kao na slici ispod.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;assets/images/restart_grub_items_large.png&quot; alt=&quot;restart_grub_items_large.png&quot; /&gt;&lt;/p&gt;</content><author><name>Dejan Peretin</name></author><category term="Android" /><summary type="html">Za ljude koji imaju više stavki na GRUB izborniku i često ih koriste. U datoteci /usr/share/kde4/config/kdm/kdmrc postoji linija koja se odnosi na BootManager (zadnja u donjem kodu):</summary></entry><entry><title type="html">Android 4.2 developer options</title><link href="http://localhost:4000/android-42-developer-options-hr" rel="alternate" type="text/html" title="Android 4.2 developer options" /><published>2013-01-27T10:33:37+00:00</published><updated>2013-01-27T10:33:37+00:00</updated><id>http://localhost:4000/android-42-developer-options-hr</id><content type="html" xml:base="http://localhost:4000/android-42-developer-options-hr">&lt;p&gt;Nedavno sam ulovio vremena da na svoj Galaxy S mudrofon konačno stavim Android 4.2.1 i to kao &lt;a href=&quot;http://www.cyanogenmod.org/blog/cm-10-1-m-series-builds-have-arrived&quot;&gt;CM 10.1 M&lt;/a&gt;.Stvar radi savšeno i za sad nisam naišao na probleme u svakodnevnom korištenju. No, kad sam pokušao vidjeti kako se &lt;a href=&quot;https://github.com/linuxzasve/androidApp&quot;&gt;Linux za sve android app&lt;/a&gt; ponaša na novoj verziji Androida, nisam uspio uključiti debugging mod. Naime, Android 4.2 nema u &lt;code class=&quot;highlighter-rouge&quot;&gt;Settings&lt;/code&gt; izborniku stavke &lt;code class=&quot;highlighter-rouge&quot;&gt;Developer options&lt;/code&gt;, gdje se uključuje &lt;code class=&quot;highlighter-rouge&quot;&gt;Android debugging&lt;/code&gt; opcija koja omogućava debugiranje android aplikacija direktno na uređaju koji je USB-om spojen na računalo, umjesto da se koristi emulator.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/images/restart_grub_items_large.png&quot; alt=&quot;restart_grub_items_large.png&quot; /&gt;&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Dejan Peretin</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="Android" />
+      
+
+      
+        <summary type="html">Za ljude koji imaju više stavki na GRUB izborniku i često ih koriste. U datoteci /usr/share/kde4/config/kdm/kdmrc postoji linija koja se odnosi na BootManager (zadnja u donjem kodu):</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Android 4.2 developer options</title>
+      <link href="http://localhost:4000/android-42-developer-options-hr" rel="alternate" type="text/html" title="Android 4.2 developer options" />
+      <published>2013-01-27T10:33:37+00:00</published>
+      <updated>2013-01-27T10:33:37+00:00</updated>
+      <id>http://localhost:4000/android-42-developer-options-hr</id>
+      <content type="html" xml:base="http://localhost:4000/android-42-developer-options-hr">&lt;p&gt;Nedavno sam ulovio vremena da na svoj Galaxy S mudrofon konačno stavim Android 4.2.1 i to kao &lt;a href=&quot;http://www.cyanogenmod.org/blog/cm-10-1-m-series-builds-have-arrived&quot;&gt;CM 10.1 M&lt;/a&gt;.Stvar radi savšeno i za sad nisam naišao na probleme u svakodnevnom korištenju. No, kad sam pokušao vidjeti kako se &lt;a href=&quot;https://github.com/linuxzasve/androidApp&quot;&gt;Linux za sve android app&lt;/a&gt; ponaša na novoj verziji Androida, nisam uspio uključiti debugging mod. Naime, Android 4.2 nema u &lt;code class=&quot;highlighter-rouge&quot;&gt;Settings&lt;/code&gt; izborniku stavke &lt;code class=&quot;highlighter-rouge&quot;&gt;Developer options&lt;/code&gt;, gdje se uključuje &lt;code class=&quot;highlighter-rouge&quot;&gt;Android debugging&lt;/code&gt; opcija koja omogućava debugiranje android aplikacija direktno na uređaju koji je USB-om spojen na računalo, umjesto da se koristi emulator.&lt;/p&gt;
 
 &lt;p&gt;Radi se o tome da je Google namjerno isključio tu stavku pod izlikom da ne treba nikome osim developerima, a ovi pak znaju kako riješiti takve problemčiće.&lt;/p&gt;
 
@@ -248,7 +459,41 @@ git checkout 4.4.0
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;Uređaj još uvijek nije prepoznat jer je &lt;code class=&quot;highlighter-rouge&quot;&gt;04e8&lt;/code&gt; Samsung oznaka. Budući da je na mobitel sada instaliran CyanogenMod, radi se o Google uređaju, pa je za vendor vrijednost potrebno staviti &lt;code class=&quot;highlighter-rouge&quot;&gt;18d1&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;Uređaj je sada uredno prepoznat.&lt;/p&gt;</content><author><name>Dejan Peretin</name></author><category term="Android" /><summary type="html">Nedavno sam ulovio vremena da na svoj Galaxy S mudrofon konačno stavim Android 4.2.1 i to kao CM 10.1 M.Stvar radi savšeno i za sad nisam naišao na probleme u svakodnevnom korištenju. No, kad sam pokušao vidjeti kako se Linux za sve android app ponaša na novoj verziji Androida, nisam uspio uključiti debugging mod. Naime, Android 4.2 nema u Settings izborniku stavke Developer options, gdje se uključuje Android debugging opcija koja omogućava debugiranje android aplikacija direktno na uređaju koji je USB-om spojen na računalo, umjesto da se koristi emulator.</summary></entry><entry><title type="html">Raspberry Pi - prvi dojmovi</title><link href="http://localhost:4000/rpi-prvi-dojmovi-hr" rel="alternate" type="text/html" title="Raspberry Pi - prvi dojmovi" /><published>2012-06-06T11:33:37+01:00</published><updated>2012-06-06T11:33:37+01:00</updated><id>http://localhost:4000/rpi-prvi-dojmovi-hr</id><content type="html" xml:base="http://localhost:4000/rpi-prvi-dojmovi-hr">&lt;p&gt;Raspberry Pi (&lt;em&gt;u daljnjem tekstu RPi&lt;/em&gt;) je stigao. Malo računalo u maloj kutiji.&lt;/p&gt;
+&lt;p&gt;Uređaj je sada uredno prepoznat.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Dejan Peretin</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="Android" />
+      
+
+      
+        <summary type="html">Nedavno sam ulovio vremena da na svoj Galaxy S mudrofon konačno stavim Android 4.2.1 i to kao CM 10.1 M.Stvar radi savšeno i za sad nisam naišao na probleme u svakodnevnom korištenju. No, kad sam pokušao vidjeti kako se Linux za sve android app ponaša na novoj verziji Androida, nisam uspio uključiti debugging mod. Naime, Android 4.2 nema u Settings izborniku stavke Developer options, gdje se uključuje Android debugging opcija koja omogućava debugiranje android aplikacija direktno na uređaju koji je USB-om spojen na računalo, umjesto da se koristi emulator.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Raspberry Pi - prvi dojmovi</title>
+      <link href="http://localhost:4000/rpi-prvi-dojmovi-hr" rel="alternate" type="text/html" title="Raspberry Pi - prvi dojmovi" />
+      <published>2012-06-06T11:33:37+01:00</published>
+      <updated>2012-06-06T11:33:37+01:00</updated>
+      <id>http://localhost:4000/rpi-prvi-dojmovi-hr</id>
+      <content type="html" xml:base="http://localhost:4000/rpi-prvi-dojmovi-hr">&lt;p&gt;Raspberry Pi (&lt;em&gt;u daljnjem tekstu RPi&lt;/em&gt;) je stigao. Malo računalo u maloj kutiji.&lt;/p&gt;
 
 &lt;p&gt;Planirano je da RPi dolazi u dvije varijanete, Model A i Model B. Model A je jeftinija varijanta, zvanična cijena mu je 25 USD  no zasad se proizvodi samo model B i to po cijeni od 35 USD. Koliki su stvarni troškovi dok dođe na kućna vrata, saznajte u nastavku.&lt;/p&gt;
 
@@ -466,4 +711,32 @@ rootfs                7.3G  1.2G  5.8G  17% /
 
 &lt;h2 id=&quot;i-koliko-košta-pi-od-35-dolara&quot;&gt;I koliko košta Pi od 35 dolara?&lt;/h2&gt;
 
-&lt;p&gt;Raspberry Pi, punjač, dva kabela za spojiti na TV i dostava dođe oko 350 kuna. Carina je oko 250 kuna. RPi je neupotrebljiv bez SD kartice, koja se može dobiti za nekih 66 kuna (8 GB, class 10). Ukupno oko 666 kn.&lt;/p&gt;</content><author><name>Dejan Peretin</name></author><category term="RaspberryPi" /><summary type="html">Raspberry Pi (u daljnjem tekstu RPi) je stigao. Malo računalo u maloj kutiji.</summary></entry></feed>
+&lt;p&gt;Raspberry Pi, punjač, dva kabela za spojiti na TV i dostava dođe oko 350 kuna. Carina je oko 250 kuna. RPi je neupotrebljiv bez SD kartice, koja se može dobiti za nekih 66 kuna (8 GB, class 10). Ukupno oko 666 kn.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Dejan Peretin</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="RaspberryPi" />
+      
+
+      
+        <summary type="html">Raspberry Pi (u daljnjem tekstu RPi) je stigao. Malo računalo u maloj kutiji.</summary>
+      
+
+      
+      
+    </entry>
+  
+</feed>

@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="http://localhost:4000/tag/raspberrypi/feed.xml" rel="self" type="application/atom+xml" />
   <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2020-02-23T23:39:47+00:00</updated>
+  <updated>2020-02-24T00:09:39+00:00</updated>
   <id>http://localhost:4000/tag/raspberrypi/feed.xml</id>
 
   
@@ -22,18 +22,6 @@
   
 
   
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
     
       
     
@@ -276,7 +264,7 @@ rootfs                7.3G  1.2G  5.8G  17% /
       
 
       <author>
-          <name>dperetin</name>
+          <name>Dejan Peretin</name>
         
         
       </author>
