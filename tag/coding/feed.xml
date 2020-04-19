@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
-  <link href="http://localhost:4000/tag/coding/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2020-04-19T10:31:16+01:00</updated>
-  <id>http://localhost:4000/tag/coding/feed.xml</id>
+  <link href="https://dejanperetin.com/tag/coding/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://dejanperetin.com/" rel="alternate" type="text/html" />
+  <updated>2020-04-19T10:45:24+01:00</updated>
+  <id>https://dejanperetin.com/tag/coding/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">Why I Don’t Vote</title>
-      <link href="http://localhost:4000/why-i-dont-vote" rel="alternate" type="text/html" title="Why I Don't Vote" />
+      <link href="https://dejanperetin.com/why-i-dont-vote" rel="alternate" type="text/html" title="Why I Don't Vote" />
       <published>2020-01-05T10:33:37+00:00</published>
       <updated>2020-01-05T10:33:37+00:00</updated>
-      <id>http://localhost:4000/why-i-dont-vote</id>
-      <content type="html" xml:base="http://localhost:4000/why-i-dont-vote">&lt;p&gt;Wolfram Mathematica is an amazing software that I love using, but the choice to use it for any meaningful application is 
+      <id>https://dejanperetin.com/why-i-dont-vote</id>
+      <content type="html" xml:base="https://dejanperetin.com/why-i-dont-vote">&lt;p&gt;Wolfram Mathematica is an amazing software that I love using, but the choice to use it for any meaningful application is 
 difficult to justify due to its cost and licence. Presidential elections in Croatia seemed like a good excuse to fire it
 up and generate some graphs. Which I did. And here is the winner of the election per administrative subdivisions: &lt;img src=&quot;assets/images/why_i_dont_vote/finalni_rezultati_po_opcinama.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
@@ -133,11 +133,11 @@ GeoListPlot[Values[adminDivisions2[&quot;KARLOVAČKA ŽUPANIJA&quot;]],
   
     <entry>
       <title type="html">CVS merge in Eclipse</title>
-      <link href="http://localhost:4000/cvs_merge" rel="alternate" type="text/html" title="CVS merge in Eclipse" />
+      <link href="https://dejanperetin.com/cvs_merge" rel="alternate" type="text/html" title="CVS merge in Eclipse" />
       <published>2014-03-23T10:33:37+00:00</published>
       <updated>2014-03-23T10:33:37+00:00</updated>
-      <id>http://localhost:4000/cvs_merge</id>
-      <content type="html" xml:base="http://localhost:4000/cvs_merge">&lt;p&gt;Ever so often a need for merging CVS branches arises  and since the task can be a bit touchy, writing down some basic concepts seems like a good idea. So here are a few basic steps the process boils down to.&lt;/p&gt;
+      <id>https://dejanperetin.com/cvs_merge</id>
+      <content type="html" xml:base="https://dejanperetin.com/cvs_merge">&lt;p&gt;Ever so often a need for merging CVS branches arises  and since the task can be a bit touchy, writing down some basic concepts seems like a good idea. So here are a few basic steps the process boils down to.&lt;/p&gt;
 
 &lt;h1 id=&quot;branching&quot;&gt;Branching&lt;/h1&gt;
 &lt;p&gt;Creating a branch is done with &lt;em&gt;right clicking on a project -&amp;gt; Team -&amp;gt; Branch&lt;/em&gt;. Leave &lt;em&gt;Start working in the branch&lt;/em&gt; checked so newly created branch will be checked out automatically. Common scenario is that people make some changes on their local version of the code and then realize that they do not want to commit it to the main branch. If you create a branch with uncommitted changes in your workspace, those changes will be available for committing to the branch.&lt;/p&gt;
