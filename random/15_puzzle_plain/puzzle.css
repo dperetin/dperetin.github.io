@@ -1,0 +1,58 @@
+.cell {
+    display: inline-block;
+    width: 25%;
+    height: 100%;
+    /* padding-top: 20px; */
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+}
+
+.number_cell {
+    border: 2px solid #000;  
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: #8F00FF;
+    color: #fff;
+    font-size: 48px;
+}
+
+.zero_cell {
+    border: 2px solid #FFDD00; 
+}
+
+.board {
+    /* width: 400px;
+    height: 400px; */
+    display: inline-block;
+    border: 2px solid #000; 
+    background-color: #FFDD00;
+}
+
+body {
+    background-color: #01BEFE;
+}
+
+html {
+    background: #01BEFE;
+}
+
+button {
+    margin-bottom: 40px;
+}
+
+.solved_toast {
+    visibility: hidden;
+}
+
+.solved_toast_visible {
+    visibility: visible;
+}
+
+.selector-for-some-widget {
+    box-sizing: content-box;
+}
+
+.container {
+    background-color: #01BEFE;
+}
