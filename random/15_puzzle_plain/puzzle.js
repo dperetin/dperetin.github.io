@@ -34,7 +34,7 @@ shuffleButton.addEventListener('click', function () {
         [0, 1]
     ]
 
-    for (let i = 0; i < 100; i++) {
+    for (let i = 0; i < 1000; i++) {
 
         let position = Math.floor(Math.random() * 4);
 

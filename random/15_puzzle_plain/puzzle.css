@@ -1,7 +1,7 @@
 .cell {
     display: inline-block;
     width: 25%;
-    height: 100%;
+    height: 70px;
     /* padding-top: 20px; */
     text-align: center;
     vertical-align: middle;
@@ -9,16 +9,16 @@
 }
 
 .number_cell {
-    border: 2px solid #000;  
+    border: 1px solid #000;  
     cursor: pointer;
-    border-radius: 20px;
-    background-color: #8F00FF;
+    border-radius: 10px;
+    background-color: #89ABE3FF;
     color: #fff;
-    font-size: 48px;
+    font-size: 24px;
 }
 
 .zero_cell {
-    border: 2px solid #FFDD00; 
+    border: 1px solid #FCF6F5FF; 
 }
 
 .board {
@@ -26,15 +26,15 @@
     height: 400px; */
     display: inline-block;
     border: 2px solid #000; 
-    background-color: #FFDD00;
+    background-color: #FCF6F5FF;
 }
 
 body {
-    background-color: #01BEFE;
+    background-color: #fff;
 }
 
 html {
-    background: #01BEFE;
+    background: #fff;
 }
 
 button {
@@ -54,5 +54,5 @@ button {
 }
 
 .container {
-    background-color: #01BEFE;
+    background-color: #fff;
 }
