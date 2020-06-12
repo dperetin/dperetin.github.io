@@ -383,7 +383,7 @@ function drawDefaultPaceLine(paper, params, averagePace) {
                 circles[s].visible = true;
             }
 
-            doTheThing(event);
+            // doTheThing(event);
         }
     }
 }
