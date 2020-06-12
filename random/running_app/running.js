@@ -4,8 +4,11 @@ let allKms = [];
 let averagePace;
 let currentPaceLine;
 let circles = [];
+let curves = [];
 
 let scopes = []
+
+let canMove;
 
 let supportedDistances = {
     "10k": 10,
@@ -247,10 +250,8 @@ function drawDefaultPaceLine(paper, params, averagePace) {
 
         curveSet = false;
 
-        let p1;
-        let p2;
-
         tool.onMouseMove = function(event) {
+
             activateTool(paper, event.point, params);
 
             let s = getActiveSegment(event.point, params);
@@ -293,25 +294,60 @@ function drawDefaultPaceLine(paper, params, averagePace) {
                 return;
             }
         
-            if (p1) {
-                p1.remove();
-                p2.remove();
+            let s = getActiveSegment(event.point, params);
+
+            if (s > params.segments - 1) {
+                return;
+            }
+
+            for (let i = 0; i < boxes.length; i++) {
+                boxes[i].fillColor = '#fff';
+                allPaces[i].fillColor = 'black';
+                allKms[i].fillColor = 'black';
+                circles[i].visible = false;
+            }
+
+            if (boxes[s]) {
+                boxes[s].fillColor = '#f7f7fa';
+            }
+
+            if (allPaces[s]) {
+                allPaces[s].fillColor = '#fc5200';
+            }
+            
+
+            if (allKms[s]) {
+                allKms[s].fillColor = '#fc5200';
+            }
+
+            if (circles[s]) {
+                circles[s].visible = true;
+            }
+
+            if (curves[s] && curves[s].p1) {
+                curves[s].p1.remove();
+                curves[s].p2.remove();
+            } else {
+                curves[s] = {
+                    "p1": undefined,
+                    "p2": undefined,
+                }
             }
         
             if (event.point.y < getPaceLine(params, params.pace)) {
-                p1 = getNicerCurve1(
-                    new paper.Point(params.margin + params.segmentLength / 2 + params.segmentLength * i, event.point.y), 
-                    new paper.Point(params.margin + params.segmentLength + params.segmentLength * i, getPaceLine(params, params.pace)));
-                p2 = getNicerCurve2(
-                    new paper.Point(params.margin + params.segmentLength * i, getPaceLine(params, params.pace)), 
-                    new paper.Point(params.margin + params.segmentLength / 2 + params.segmentLength * i, event.point.y));
+                curves[s].p1 = getNicerCurve1(
+                    new paper.Point(params.margin + params.segmentLength / 2 + params.segmentLength * s, event.point.y), 
+                    new paper.Point(params.margin + params.segmentLength + params.segmentLength * s, getPaceLine(params, params.pace)));
+                curves[s].p2 = getNicerCurve2(
+                    new paper.Point(params.margin + params.segmentLength * s, getPaceLine(params, params.pace)), 
+                    new paper.Point(params.margin + params.segmentLength / 2 + params.segmentLength * s, event.point.y));
             } else {
-                p1 = getNicerCurve2(
-                    new paper.Point(params.margin + params.segmentLength / 2 + params.segmentLength * i, event.point.y), 
-                    new paper.Point(params.margin + params.segmentLength + params.segmentLength * i, getPaceLine(params, params.pace)));
-                p2 = getNicerCurve1(
-                    new paper.Point(params.margin + params.segmentLength * i, getPaceLine(params, params.pace)), 
-                    new paper.Point(params.margin + params.segmentLength / 2 + params.segmentLength * i, event.point.y));
+                curves[s].p1 = getNicerCurve2(
+                    new paper.Point(params.margin + params.segmentLength / 2 + params.segmentLength * s, event.point.y), 
+                    new paper.Point(params.margin + params.segmentLength + params.segmentLength * s, getPaceLine(params, params.pace)));
+                curves[s].p2 = getNicerCurve1(
+                    new paper.Point(params.margin + params.segmentLength * s, getPaceLine(params, params.pace)), 
+                    new paper.Point(params.margin + params.segmentLength / 2 + params.segmentLength * s, event.point.y));
             }
         
             pace.content = secondsToLabel(parseInt(params.fastestPace + (params.slowestPace - params.fastestPace) * ((event.point.y - params.margin) / (params.segmentHeight))));
@@ -344,17 +380,26 @@ function drawDefaultPaceLine(paper, params, averagePace) {
             currentPaceLine.lineTo(start2.add([params.segmentLength * params.segments, 0]));
             currentPaceLine.opacity = 0.4;
         
-            let s = getActiveSegment(event.point, params);
+            
             let activeCircle = circles[s];
             activeCircle.position = new paper.Point(activeCircle.position.x, event.point.y);
         }
         
 
         tool.onMouseDrag = function(event) {
+            
             doTheThing(event);
         }
 
+        tool.onMouseUp = function(event) {
+            canMove = true;
+            console.log("CAN MOVE NOW")
+        }
+
         tool.onMouseDown = function(event) {
+            // canMove = false;
+            console.log("CANTTT MOVE NOW")
+
             activateTool(paper, event.point, params);
 
             let s = getActiveSegment(event.point, params);
@@ -383,7 +428,7 @@ function drawDefaultPaceLine(paper, params, averagePace) {
                 circles[s].visible = true;
             }
 
-            // doTheThing(event);
+            doTheThing(event);
         }
     }
 }
