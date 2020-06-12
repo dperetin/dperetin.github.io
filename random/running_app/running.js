@@ -15,6 +15,8 @@ let supportedDistances = {
 function renderPacePlanningWidget() {
     let distanceElement = document.querySelector("#race-distance");
 
+    let availableWidth = document.querySelector("#canvas-holder").clientWidth;
+
     let selectedDistance = supportedDistances[distanceElement.options[distanceElement.selectedIndex].innerText];
 
     console.log(selectedDistance);
@@ -23,11 +25,17 @@ function renderPacePlanningWidget() {
     this.console.log(`Width: ${window.screen.availWidth}`);
     this.console.log(`devicePixelRatio: ${window.devicePixelRatio}`);
 
+    let margin = 50;
+
+    let segmentWidth = (availableWidth - 2 * margin) / selectedDistance > 100 ? 100 : (availableWidth - 2 * margin) / selectedDistance;
+
+    console.log("assad -> " + availableWidth)
+
     const params = {
         segments: selectedDistance,
-        segmentLength: 100,
-        segmentHeight: 180,
-        margin: 50,
+        segmentLength: segmentWidth,
+        segmentHeight: segmentWidth * 1.5,
+        margin: margin,
         pace: 270,
         fastestPace: 240,
         slowestPace: 300,
@@ -348,14 +356,32 @@ function drawDefaultPaceLine(paper, params, averagePace) {
 
         tool.onMouseDown = function(event) {
             activateTool(paper, event.point, params);
-            
-            let i = getActiveSegment(event.point, params);
+
+            let s = getActiveSegment(event.point, params);
 
             for (let i = 0; i < boxes.length; i++) {
                 boxes[i].fillColor = '#fff';
+                allPaces[i].fillColor = 'black';
+                allKms[i].fillColor = 'black';
+                circles[i].visible = false;
             }
 
-            boxes[i].fillColor = '#f7f7fa';
+            if (boxes[s]) {
+                boxes[s].fillColor = '#f7f7fa';
+            }
+
+            if (allPaces[s]) {
+                allPaces[s].fillColor = '#fc5200';
+            }
+            
+
+            if (allKms[s]) {
+                allKms[s].fillColor = '#fc5200';
+            }
+
+            if (circles[s]) {
+                circles[s].visible = true;
+            }
 
             doTheThing(event);
         }
