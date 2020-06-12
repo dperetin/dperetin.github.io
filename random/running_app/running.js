@@ -350,7 +350,7 @@ function drawDefaultPaceLine(paper, params, averagePace) {
                     new paper.Point(params.margin + params.segmentLength / 2 + params.segmentLength * s, event.point.y));
             }
         
-            pace.content = secondsToLabel(parseInt(params.fastestPace + (params.slowestPace - params.fastestPace) * ((event.point.y - params.margin) / (params.segmentHeight))));
+            allPaces[s].content = secondsToLabel(parseInt(params.fastestPace + (params.slowestPace - params.fastestPace) * ((event.point.y - params.margin) / (params.segmentHeight))));
         
             let overallTotalTime = 0;
         
