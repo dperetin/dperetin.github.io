@@ -25,7 +25,7 @@ function renderPacePlanningWidget() {
     this.console.log(`Width: ${window.screen.availWidth}`);
     this.console.log(`devicePixelRatio: ${window.devicePixelRatio}`);
 
-    let margin = 50;
+    let margin = 30;
 
     let segmentWidth = (availableWidth - 2 * margin) / selectedDistance > 100 ? 100 : (availableWidth - 2 * margin) / selectedDistance;
 
@@ -166,24 +166,24 @@ function drawPaceLabel(paper, params) {
     pace.content = 'PACE';
     pace.fontWeight = 'bold';
 
-    let fastestPace = new paper.PointText(new paper.Point(30, params.margin + 5));
-    fastestPace.justification = 'center';
+    let fastestPace = new paper.PointText(new paper.Point(0, params.margin + 5));
+    fastestPace.justification = 'left';
     fastestPace.fillColor = 'black';
     fastestPace.content = secondsToLabel(params.fastestPace);
 
-    let slowestPace = new paper.PointText(new paper.Point(30, params.margin + params.segmentHeight + 5));
-    slowestPace.justification = 'center';
+    let slowestPace = new paper.PointText(new paper.Point(0, params.margin + params.segmentHeight + 5));
+    slowestPace.justification = 'left';
     slowestPace.fillColor = 'black';
     slowestPace.content = secondsToLabel(params.slowestPace);
 
-    averagePace = new paper.PointText(new paper.Point(20 + params.margin + params.segments * params.segmentLength, getPaceLine(params, params.pace) + 5));
+    averagePace = new paper.PointText(new paper.Point(16 + params.margin + params.segments * params.segmentLength, getPaceLine(params, params.pace) + 5));
     averagePace.justification = 'center';
     averagePace.fillColor = '#fc5200';
     averagePace.content = secondsToLabel(params.pace);
     averagePace.fontWeight = 'bold';
 
-    let targetPace = new paper.PointText(new paper.Point(30, getPaceLine(params, params.pace) + 5));
-    targetPace.justification = 'center';
+    let targetPace = new paper.PointText(new paper.Point(0, getPaceLine(params, params.pace) + 5));
+    targetPace.justification = 'left';
     targetPace.fillColor = 'black';
     targetPace.content = secondsToLabel(params.pace);
     targetPace.fontWeight = 'bold';
@@ -329,7 +329,7 @@ function drawDefaultPaceLine(paper, params, averagePace) {
             averagePace.remove();
             currentPaceLine.remove();
         
-            averagePace = new paper.PointText(new paper.Point(20 + params.margin + params.segments * params.segmentLength, getPaceLine(params, overallAveragePace) + 5));
+            averagePace = new paper.PointText(new paper.Point(16 + params.margin + params.segments * params.segmentLength, getPaceLine(params, overallAveragePace) + 5));
             averagePace.justification = 'center';
             averagePace.fillColor = '#fc5200';
             averagePace.content = secondsToLabel(params.pace);
