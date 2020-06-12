@@ -162,3 +162,4 @@ function updateMoveCounter() {
     moveCounterElement.textContent = `Moves: ${moveCounter}`;
 }
 
+
