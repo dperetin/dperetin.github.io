@@ -10,19 +10,123 @@ let scopes = []
 
 let canMove;
 
+let distanceElement;
+let paceMinutesElement;
+let paceSecondsElement;
+let timeHoursElement;
+let timeMinutesElement;
+let timeSecondsElement;
+
+const DEFAULT_MIN_PACE = 4;
+const DEFAULT_SEC_PACE = 30;
+const DEFAULT_HOUR_TIME = 0;
+const DEFAULT_MIN_TIME = 22;
+const DEFAULT_SEC_TIME = 30;
+
 let supportedDistances = {
     "10k": 10,
     "5k": 5
 }
 
-function renderPacePlanningWidget() {
+function main() {
+    distanceElement = document.querySelector("#race-distance");
+
+    paceMinutesElement = document.querySelector("#pace-minutes");
+    paceSecondsElement = document.querySelector("#pace-seconds");
+
+    timeHoursElement = document.querySelector("#time-hours");
+    timeMinutesElement = document.querySelector("#time-minutes");
+    timeSecondsElement = document.querySelector("#time-seconds");
+
+    paceMinutesElement.onchange = onPaceChange;
+    paceSecondsElement.onchange = onPaceChange;
+
+    timeHoursElement.onchange = onTimeChange;
+    timeMinutesElement.onchange = onTimeChange;
+    timeSecondsElement.onchange = onTimeChange;
+
+    distanceElement.onchange = function() {
+        renderPacePlanningWidget();
+
+        setTime(getSelectedPace(), getDistance());
+        renderPacePlanningWidget();
+    }
+
+    renderPacePlanningWidget();
+};
+
+function onPaceChange() {
+    setTime(getSelectedPace(), getDistance());
+    renderPacePlanningWidget();
+}
+
+function onTimeChange() {
+    setPace(getSelectedTime(), getDistance());
+    renderPacePlanningWidget();
+}
+
+function setTime(pace, distance) {
+    let time = pace * distance;
+
+    let h = Math.floor(time / (60 * 60));
+    timeHoursElement.value = h;
+
+    let m = Math.floor((time - h * 60 * 60) / (60));
+    timeMinutesElement.value = m;
+
+    let s = time % (60);
+    timeSecondsElement.value = s;
+}
+
+function setExactTime(time) {
+    let h = Math.floor(time / (60 * 60));
+    timeHoursElement.value = h;
+
+    let m = Math.floor((time - h * 60 * 60) / (60));
+    timeMinutesElement.value = m;
+
+    let s = time % (60);
+    timeSecondsElement.value = s;
+}
+
+function setPace(time, distance) {
+    let pace = (time / distance);
+
+    let m = Math.floor((pace) / (60));
+    paceMinutesElement.value = m;
+
+    let s = (pace % (60)).toFixed(1);
+    paceSecondsElement.value = s;
+}
+
+function getSelectedPace() {
+    
+    let currentSelectedPaceMin = isNaN(parseFloat(paceMinutesElement.value)) ? DEFAULT_MIN_PACE : parseFloat(paceMinutesElement.value);
+    let currentSelectedPaceSec = isNaN(parseFloat(paceSecondsElement.value)) ? DEFAULT_SEC_PACE : parseFloat(paceSecondsElement.value);
+
+    return currentSelectedPaceMin * 60 + currentSelectedPaceSec;
+}
+
+function getSelectedTime() {
+    let currentSelectedTimeHour = isNaN(parseFloat(timeHoursElement.value)) ? DEFAULT_HOUR_TIME : parseFloat(timeHoursElement.value);
+    let currentSelectedTimeMin = isNaN(parseFloat(timeMinutesElement.value)) ? DEFAULT_MIN_TIME : parseFloat(timeMinutesElement.value);
+    let currentSelectedTimeSec = isNaN(parseFloat(timeSecondsElement.value)) ? DEFAULT_SEC_TIME : parseFloat(timeSecondsElement.value);
+
+    return currentSelectedTimeHour * 60 * 60 + currentSelectedTimeMin * 60 + currentSelectedTimeSec;
+}
+
+function getDistance() {
     let distanceElement = document.querySelector("#race-distance");
 
+    return supportedDistances[distanceElement.options[distanceElement.selectedIndex].innerText];
+}
+
+main();
+
+function renderPacePlanningWidget() {
     let availableWidth = document.querySelector("#canvas-holder").clientWidth;
 
-    let selectedDistance = supportedDistances[distanceElement.options[distanceElement.selectedIndex].innerText];
-
-    console.log(selectedDistance);
+    let selectedDistance = getDistance();
 
     this.console.log(`Height: ${window.screen.availHeight}`);
     this.console.log(`Width: ${window.screen.availWidth}`);
@@ -30,18 +134,16 @@ function renderPacePlanningWidget() {
 
     let margin = 30;
 
-    let segmentWidth = (availableWidth - 2 * margin) / selectedDistance > 100 ? 100 : (availableWidth - 2 * margin) / selectedDistance;
-
-    console.log("assad -> " + availableWidth)
+    let segmentWidth = (availableWidth - 2 * margin) / selectedDistance > 140 ? 140 : (availableWidth - 2 * margin) / selectedDistance;
 
     const params = {
         segments: selectedDistance,
         segmentLength: segmentWidth,
         segmentHeight: segmentWidth * 1.5,
         margin: margin,
-        pace: 270,
-        fastestPace: 240,
-        slowestPace: 300,
+        pace: getSelectedPace(),
+        fastestPace: getSelectedPace() - 60,
+        slowestPace: getSelectedPace() + 90,
         distance: selectedDistance,
         scalingFactor: 1
     }
@@ -90,7 +192,7 @@ function createPacePlanningWidget(params) {
 
 function secondsToLabel(pace) {
     let m = Math.floor(pace / 60);
-    let s = pace % 60;
+    let s = Math.round(pace % 60);
 
     let ss = `${s}`.padStart(2, '0');
 
@@ -111,14 +213,6 @@ function init(params) {
     scope.activate();
 
     scopes.push(scope);
-
-    // for (let i = 0; i < scopes.length; i++) {
-    //     console.log(scopes[i].);
-    // }
-
-    console.log(scopes);
-
-    // paper.setup(canvas);
 
     return scope;
 }
@@ -221,7 +315,7 @@ function drawDefaultPaceLine(paper, params, averagePace) {
             radius: 4,
             center: new paper.Point(
                 params.margin + params.segmentLength / 2 + params.segmentLength * i, 
-                params.margin + params.segmentHeight / 2),
+                getPaceLine(params, params.pace)),
                 onMouseEnter: function() {
                     document.getElementById('myCanvas').style.setProperty('cursor', 'pointer');
                 }
@@ -383,23 +477,18 @@ function drawDefaultPaceLine(paper, params, averagePace) {
             
             let activeCircle = circles[s];
             activeCircle.position = new paper.Point(activeCircle.position.x, event.point.y);
+
+            setExactTime(overallTotalTime);
+            setPace(getSelectedTime(), getDistance());
+            
         }
         
 
         tool.onMouseDrag = function(event) {
-            
             doTheThing(event);
         }
 
-        tool.onMouseUp = function(event) {
-            canMove = true;
-            console.log("CAN MOVE NOW")
-        }
-
         tool.onMouseDown = function(event) {
-            // canMove = false;
-            console.log("CANTTT MOVE NOW")
-
             activateTool(paper, event.point, params);
 
             let s = getActiveSegment(event.point, params);
