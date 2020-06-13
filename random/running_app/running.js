@@ -25,7 +25,10 @@ const DEFAULT_SEC_TIME = 30;
 
 let supportedDistances = {
     "10k": 10,
-    "5k": 5
+    "5k": 5,
+    "4k": 4,
+    "3k": 3,
+    "2k": 2
 }
 
 function main() {
@@ -452,7 +455,7 @@ function drawDefaultPaceLine(paper, params, averagePace) {
                 overallTotalTime += paceFromLabel(allPaces[i].content);
             }
         
-            let overallAveragePace = parseInt(overallTotalTime / params.distance);
+            let overallAveragePace = parseFloat(overallTotalTime / params.distance);
         
             
         
