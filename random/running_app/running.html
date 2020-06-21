@@ -2,6 +2,16 @@
 <html lang="en">
 
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-170111199-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-170111199-1');
+</script>
+
     <meta charset="UTF-8">
     <title>Running App</title>
 
@@ -20,12 +30,12 @@
         <div class="row">
           <div class="col-sm">
 
-            <h1>Race pace planner</h1>
+            <h1>Race Pace Planner</h1>
 
               <div class="form-group">
                 <label for="race-distance">Race distance</label>
                 <select class="form-control" id="race-distance">
-                    <option value="1">1000m</option>
+                    <!-- <option value="1">1000m</option> -->
                     <option value="1.5">1500m</option>
                     <option value="1.6">1600m</option>
                     <option value="1.60934">Mile</option>
@@ -90,6 +100,11 @@
                   </div>
               </div>
 
+              <br />
+
+              <label for="file-selector">Upload Strava route (GPX)</label>
+              <input type="file" class="form-control-file" id="file-selector" accept=".gpx">
+
               
               <!-- <br /> -->
 
@@ -107,10 +122,11 @@
             <div class="canvas" id="canvas-holder"></div>
             <!-- <canvas id="myCanvas"></canvas> -->
 
-            <br />
+            
 
-              <button type="button" class="btn btn-primary" id="upload-strava">Upload Strava route (GPX)</button>
-
+              
+              <br />
+              <!-- <button type="button" class="btn btn-primary" id="upload-strava" >Upload Strava route (GPX)</button> -->
                 </div>
             
         </div>

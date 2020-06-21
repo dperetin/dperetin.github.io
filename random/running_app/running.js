@@ -1,8 +1,23 @@
+// todo: 
+// 1. url that can save the state
+// refator to react ...
+// fix the scaling issue
+// fix the resize issue
+// add support for miles
+
+let elevationTitleLabel = {};
+let minElevationLabel = {};
+let maxElevationLabel = {}
+
 let boxes;
 let allPaces;
 let allKms;
 let circles;
 let curves;
+
+let elevationPath = {};
+
+// let paper;
 
 let averagePace;
 let currentPaceLine;
@@ -23,6 +38,13 @@ const DEFAULT_SEC_PACE = 30;
 const DEFAULT_HOUR_TIME = 0;
 const DEFAULT_MIN_TIME = 22;
 const DEFAULT_SEC_TIME = 30;
+
+let route = []
+let prettyRoute = []
+let maxElevation;
+let minElevation;
+
+let elevation = {};
 
 function initState(params) {
     boxes = {}
@@ -63,17 +85,181 @@ function main() {
     timeMinutesElement.onchange = onTimeChange;
     timeSecondsElement.onchange = onTimeChange;
 
+    let fileSelector = document.querySelector("#file-selector");
+
+    fileSelector.onchange = loadRoute;
+
+
+
+    // uploadStravaButton.onclick = f
+
     distanceElement.onchange = function() {
-        renderPacePlanningWidget(getParams());
+        
 
         setTime(getSelectedPace(), getDistance());
         renderPacePlanningWidget(getParams());
+
+        loadRoute();
     }
 
     initState(getParams());
 
     renderPacePlanningWidget(getParams());
 };
+
+function loadRoute() {
+    route = []
+    prettyRoute = []
+    elevation = {}
+    let fileSelector = document.querySelector("#file-selector");
+
+    if (fileSelector.files.length === 0) {
+        return;
+    }
+
+    const reader = new FileReader();
+    reader.addEventListener('load', (event) => {
+
+        let parser = new DOMParser();
+        let xmlDoc = parser.parseFromString(event.target.result, "text/xml");
+
+        let childNodes = xmlDoc.getElementsByTagName("trkseg")[0].children;
+
+        for (let i = 0; i < childNodes.length; i++) {
+            let child = childNodes[i];
+
+            route.push({
+                lat: parseFloat(child.attributes.lat.nodeValue),
+                lon: parseFloat(child.attributes.lon.nodeValue),
+                ele: parseFloat(child.childNodes[1].textContent)
+            })
+
+
+        }
+
+        let routeDistance = 0;
+
+        let a = route[0];
+        minElevation = a.ele;
+        maxElevation = a.ele;
+
+        let localMin = a.ele;
+        let localMax = a.ele;
+        let cumulativeUp = 0;
+        let cumulativeDown = 0;
+
+        let currentK = 0;
+
+        for (let i = 1; i < route.length; i++) {
+            let b = route[i];
+            let d = calculateDistance(a.lat, a.lon, b.lat, b.lon);
+
+            // let r = Math.sqrt(Math.pow(d, 2) + Math.pow(a.ele - b.ele, 2))
+            
+            prettyRoute.push({
+                distance: routeDistance,
+                elevation: a.ele
+            });
+
+            
+            routeDistance += d;
+
+            if (routeDistance > (currentK + 1) * 1000) {
+                // save per k stats
+                elevation[`${currentK}`] = {
+                    min: localMin,
+                    max: localMax,
+                    up: cumulativeUp,
+                    down: cumulativeDown
+                }
+
+                localMin = a.ele;
+                localMax = a.ele;
+                cumulativeUp = 0;
+                cumulativeDown = 0;
+
+                
+                let start = routeDistance - d;
+                let startElevation = a.ele;
+
+                let end = routeDistance;
+                let endElevation = b.ele;
+
+                prettyRoute.push({
+                    distance: (currentK + 1) * 1000,
+                    elevation: line(start, end, startElevation, endElevation, (currentK + 1) * 1000)
+                });
+
+                currentK += 1;
+            }
+
+            if (a.ele > b.ele) {
+                cumulativeDown += (a.ele - b.ele)
+            }
+
+            if (b.ele > a.ele) {
+                cumulativeUp += (b.ele - a.ele)
+            }
+
+            a = route[i];
+
+            if (a.ele > maxElevation) {
+                maxElevation = a.ele;
+            }
+
+            if (a.ele < minElevation) {
+                minElevation = a.ele;
+            }
+
+            if (a.ele > localMax) {
+                localMax = a.ele;
+            }
+
+            if (a.ele < localMin) {
+                localMin = a.ele;
+            }
+        }
+
+        prettyRoute.push({
+            distance: routeDistance,
+            elevation: a.ele
+        });
+
+        elevation[`${currentK}`] = {
+            min: localMin,
+            max: localMax,
+            up: cumulativeUp,
+            down: cumulativeDown
+        }
+
+        plotPath(getParams(), prettyRoute);
+
+    });
+    reader.readAsText(fileSelector.files[0]);
+}
+
+function line(x1, x2, y1, y2, x) {
+    return ((y2 - y1) / (x2 - x1)) * (x - x1) + y1;
+}
+
+function distance(a, b) {
+    return Math.sqrt(Math.pow(a.lat - b.lat, 2) + Math.pow(a.lon - b.lon, 2) + Math.pow(a.ele - b.ele, 2));
+}
+
+function calculateDistance(lat1, lon1, lat2, lon2) {
+    var R = 6371; // km
+    var dLat = (lat2 - lat1).toRad();
+    var dLon = (lon2 - lon1).toRad(); 
+    var a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+            Math.cos(lat1.toRad()) * Math.cos(lat2.toRad()) * 
+            Math.sin(dLon / 2) * Math.sin(dLon / 2); 
+    var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a)); 
+    var d = R * c;
+    return d * 1000;
+  }
+  Number.prototype.toRad = function() {
+    return this * Math.PI / 180;
+  }
 
 function getParams() {
     let availableWidth = document.querySelector("#canvas-holder").clientWidth;
@@ -104,11 +290,15 @@ function getParams() {
 function onPaceChange() {
     setTime(getSelectedPace(), getDistance());
     renderPacePlanningWidget(getParams());
+
+    loadRoute();
 }
 
 function onTimeChange() {
     setPace(getSelectedTime(), getDistance());
     renderPacePlanningWidget(getParams());
+
+    loadRoute();
 }
 
 function setTime(pace, distance) {
@@ -176,7 +366,7 @@ function renderPacePlanningWidget(params) {
 function clearCanvas(paper) {
     if (paper.project) {
         paper.project.activeLayer.removeChildren();
-    }   
+    }
 
     initState(getParams());
 }
@@ -196,7 +386,7 @@ function createPacePlanningWidget(params) {
 
     canvasDiv.appendChild(canvas);
 
-    let paper = init(params);
+    paper = init(params);
 
     for (let i = 0; i < params.rows; i++) {
         drawMainRectangle(paper, params, i);
@@ -206,6 +396,89 @@ function createPacePlanningWidget(params) {
     }
 
     display(paper);
+}
+
+function plotPath(params, route) {
+    for (let r = 0; r < params.rows; r++) {
+
+        let lastX = params.margin;
+
+        let segments = getSegmentsForRow(getParams(), r);
+
+        if (elevationPath[row(r)]) {
+            elevationPath[row(r)].closed = false;
+            elevationPath[row(r)].remove()
+        }
+        
+        elevationPath[row(r)] = new paper.Path();
+        elevationPath[row(r)].strokeColor = 'black';
+        elevationPath[row(r)].add(new paper.Point(params.margin, params.segmentHeight + params.margin + (2 * params.margin + params.segmentHeight) * r));
+        
+        let d = segments//params.maxElementsPerLine;
+
+        if (params.rows > 1 && r === params.rows - 1) {
+            d = (params.segments % params.maxElementsPerLine);
+        }
+        
+        for (let i = 0; i < route.length; i++) {
+
+            if (route[i].distance < r * params.maxElementsPerLine * 1000) {
+                continue;
+            }
+
+            if (route[i].distance <= (r * params.maxElementsPerLine + d) * 1000) {
+
+                elevationPath[row(r)].add(
+                    new paper.Point(
+                        params.margin + ((route[i].distance - r * params.maxElementsPerLine * 1000) / (d * 1000)) * params.segmentLength * d, 
+                        params.margin + params.segmentHeight - ((route[i].elevation - minElevation) / (maxElevation - minElevation)) * params.segmentHeight + (2 * params.margin + params.segmentHeight) * r));
+                lastX = params.margin + ((route[i].distance - r * params.maxElementsPerLine * 1000) / (d * 1000)) * params.segmentLength * d
+            }
+        }
+
+        // elevationPath[row(r)].add(new paper.Point(
+        //     params.margin + params.segmentLength * d, 
+        //     params.margin + params.segmentHeight - ((route[route.length - 1].elevation - minElevation) / (maxElevation - minElevation)) * params.segmentHeight + (2 * params.margin + params.segmentHeight) * r));
+
+        elevationPath[row(r)].add(new paper.Point(
+            lastX, 
+            params.segmentHeight + params.margin + (2 * params.margin + params.segmentHeight) * r));
+
+
+        elevationPath[row(r)].fillColor = 'black';
+        elevationPath[row(r)].opacity = 0.1
+        elevationPath[row(r)].sendToBack();
+
+        elevationPath[row(r)].closed = true;
+
+        if (maxElevationLabel[row(r)]) {
+            maxElevationLabel[row(r)].remove();
+        }
+
+        maxElevationLabel[row(r)] = new paper.PointText(new paper.Point(params.margin * 2 + segments * params.segmentLength, params.margin + 5 + (params.margin * 2 + params.segmentHeight) * r));
+        maxElevationLabel[row(r)].justification = 'right';
+        maxElevationLabel[row(r)].fillColor = 'black';
+        maxElevationLabel[row(r)].content = `${Math.round(maxElevation)}`;
+
+        if (minElevationLabel[row(r)]) {
+            minElevationLabel[row(r)].remove();
+        }
+
+        minElevationLabel[row(r)] = new paper.PointText(new paper.Point(params.margin * 2 + segments * params.segmentLength, params.margin + params.segmentHeight + 5 + (params.margin * 2 + params.segmentHeight) * r));
+        minElevationLabel[row(r)].justification = 'right';
+        minElevationLabel[row(r)].fillColor = 'black';
+        minElevationLabel[row(r)].content = `${Math.round(minElevation)}`;
+
+        if (elevationTitleLabel[row(r)]) {
+            elevationTitleLabel[row(r)].remove();
+        }
+
+        elevationTitleLabel[row(r)] = new paper.PointText(new paper.Point(params.margin * 2 + segments * params.segmentLength, params.margin - 15 + (params.margin * 2 + params.segmentHeight) * r));
+        elevationTitleLabel[row(r)].justification = 'right';
+        elevationTitleLabel[row(r)].fillColor = 'black';
+        elevationTitleLabel[row(r)].content = 'ELEVATION (m)';
+        elevationTitleLabel[row(r)].fontWeight = 'bold';
+    }
 }
 
 function secondsToLabel(pace) {
@@ -255,6 +528,7 @@ function drawMainRectangle(paper, params, r) {
     path.strokeColor = '#000000';
     path.selected = false;
     path.strokeWidth = params.scalingFactor;
+    path.opacity = 0;
 }
 
 function drawPerSegmentRectangle(paper, params, r) {
@@ -286,6 +560,12 @@ function drawPerSegmentRectangle(paper, params, r) {
                 allKms[row(path.row)][i].fillColor = 'black';
                 circles[row(path.row)][i].visible = false;
             }
+            let k = path.row * params.maxElementsPerLine + path.column;
+
+            if (elevation[`${k}`] && elevation[`${k}`].upText) {
+                elevation[`${k}`].upText.visible = false;
+                elevation[`${k}`].downText.visible = false;
+            }
         }
 
         path.onMouseEnter = function(event) {
@@ -301,6 +581,8 @@ function drawPerSegmentRectangle(paper, params, r) {
         }
 
         boxes[row(r)].push(path);
+
+        path.opacity = 0.2;
     }
 }
 
@@ -308,7 +590,7 @@ function highlightBox(path) {
     let s = path.column;
 
     if (boxes[row(path.row)][s]) {
-        boxes[row(path.row)][s].fillColor = '#f7f7fa';
+        boxes[row(path.row)][s].fillColor = 'lightgray';
     }
 
     if (allPaces[row(path.row)][s]) {
@@ -323,6 +605,8 @@ function highlightBox(path) {
     if (circles[row(path.row)][s]) {
         circles[row(path.row)][s].visible = true;
     }
+
+    showElevationData(getParams(), path.row, s);
 }
 
 function drawPaceLabel(paper, params, r) {
@@ -335,11 +619,13 @@ function drawPaceLabel(paper, params, r) {
     text.content = 'KM';
     text.fontWeight = 'bold';
 
-    let pace = new paper.PointText(new paper.Point(30, params.margin - 15 + (params.margin * 2 + params.segmentHeight) * r));
-    pace.justification = 'center';
+    let pace = new paper.PointText(new paper.Point(0, params.margin - 15 + (params.margin * 2 + params.segmentHeight) * r));
+    pace.justification = 'left';
     pace.fillColor = 'black';
-    pace.content = 'PACE';
+    pace.content = 'PACE (m/km)';
     pace.fontWeight = 'bold';
+
+    
 
     let fastestPace = new paper.PointText(new paper.Point(0, params.margin + 5 + (params.margin * 2 + params.segmentHeight) * r));
     fastestPace.justification = 'left';
@@ -351,24 +637,26 @@ function drawPaceLabel(paper, params, r) {
     slowestPace.fillColor = 'black';
     slowestPace.content = secondsToLabel(params.slowestPace);
 
-    averagePace[row(r)] = new paper.PointText(new paper.Point(16 + params.margin + segments * params.segmentLength, getPaceLine(params, params.pace) + 5+ (params.margin * 2 + params.segmentHeight) * r));
-    averagePace[row(r)].justification = 'center';
-    averagePace[row(r)].fillColor = '#fc5200';
-    averagePace[row(r)].content = secondsToLabel(params.pace);
-    averagePace[row(r)].fontWeight = 'bold';
-
-    let targetPace = new paper.PointText(new paper.Point(0, getPaceLine(params, params.pace)  + (params.margin * 2 + params.segmentHeight) * r));
+    let targetPace = new paper.PointText(new paper.Point(0, getPaceLine(params, params.pace)  + 5 + (params.margin * 2 + params.segmentHeight) * r));
     targetPace.justification = 'left';
     targetPace.fillColor = 'black';
     targetPace.content = secondsToLabel(params.pace);
     targetPace.fontWeight = 'bold';
+    targetPace.opacity = 0.2;
+
+    averagePace[row(r)] = new paper.PointText(new paper.Point(0, getPaceLine(params, params.pace) + 5 + (params.margin * 2 + params.segmentHeight) * r));
+    averagePace[row(r)].justification = 'left';
+    averagePace[row(r)].fillColor = '#fc5200';
+    averagePace[row(r)].content = secondsToLabel(params.pace);
+    averagePace[row(r)].fontWeight = 'bold';
 
     let targetPaceLine = new paper.Path();
     targetPaceLine.strokeColor = 'black';
-    let start = new paper.Point(params.margin, getPaceLine(params, params.pace)+  (params.margin * 2 + params.segmentHeight) * r);
+    let start = new paper.Point(params.margin, getPaceLine(params, params.pace) + (params.margin * 2 + params.segmentHeight) * r);
     targetPaceLine.moveTo(start);
     targetPaceLine.lineTo(start.add([params.segmentLength * segments, 0]));
-    targetPaceLine.opacity = 0.4;
+    targetPaceLine.opacity = 0.2;
+    targetPaceLine.sendToBack();
 
     // enableHighlightingAndDragging
 
@@ -378,6 +666,7 @@ function drawPaceLabel(paper, params, r) {
     currentPaceLine[row(r)].moveTo(start2);
     currentPaceLine[row(r)].lineTo(start2.add([params.segmentLength * segments, 0]));
     currentPaceLine[row(r)].opacity = 0.4;
+    currentPaceLine[row(r)].sendToBack();
 }
 
 function getPaceLine(params, pace) {
@@ -456,11 +745,12 @@ function doTheThing(event, params, box) {
         averagePace[row(j)].remove();
         currentPaceLine[row(j)].remove();
 
-        averagePace[row(j)] = new paper.PointText(new paper.Point(16 + params.margin + segments * params.segmentLength, getPaceLine(params, overallAveragePace) + 5+  (params.margin * 2 + params.segmentHeight) * j));
-        averagePace[row(j)].justification = 'center';
+        averagePace[row(j)] = new paper.PointText(new paper.Point(0, getPaceLine(params, overallAveragePace) + 5+  (params.margin * 2 + params.segmentHeight) * j));
+        averagePace[row(j)].justification = 'left';
         averagePace[row(j)].fillColor = '#fc5200';
         averagePace[row(j)].content = secondsToLabel(params.pace);
         averagePace[row(j)].fontWeight = 'bold';
+        // averagePace[row(j)].opacity = 0.4;
 
         averagePace[row(j)].content = secondsToLabel(overallAveragePace);
 
@@ -470,6 +760,7 @@ function doTheThing(event, params, box) {
         currentPaceLine[row(j)].moveTo(start2);
         currentPaceLine[row(j)].lineTo(start2.add([params.segmentLength * segments, 0]));
         currentPaceLine[row(j)].opacity = 0.4;
+        currentPaceLine[row(j)].sendToBack();
     }
         
     let activeCircle = circles[row(r)][s];
@@ -477,6 +768,29 @@ function doTheThing(event, params, box) {
     
     setExactTime(overallTotalTime);
     setPace(getSelectedTime(), getDistance());
+}
+
+function showElevationData(params, r, c) {
+    let k = r * params.maxElementsPerLine + c;
+
+    if (elevation[`${k}`] && !elevation[`${k}`].upText) {
+        let up = new paper.PointText(new paper.Point(20 + params.margin + (params.segmentLength * c) + params.segmentLength / 2, (2*params.margin + params.segmentHeight) * r+ params.segmentHeight / 1.2));
+        up.justification = 'right';
+        up.fillColor = 'black';
+        up.content = `${Math.round(elevation[`${k}`].up)} m ➚`;
+        up.sendToBack();
+        elevation[`${k}`].upText = up;
+
+        let down = new paper.PointText(new paper.Point(20 + params.margin + (params.segmentLength * c) + params.segmentLength / 2, 10 + (2*params.margin + params.segmentHeight ) * r+ params.segmentHeight / 1.2));
+        down.justification = 'right';
+        down.fillColor = 'black';
+        down.content = `${Math.round(elevation[`${k}`].down)} m ➘`;
+        down.sendToBack();
+        elevation[`${k}`].downText = down;
+    } else if (elevation[`${k}`] && elevation[`${k}`].upText) {
+        elevation[`${k}`].downText.visible = true;
+        elevation[`${k}`].upText.visible = true;
+    }
 }
 
 function drawDefaultPaceLine(paper, params, r) {
