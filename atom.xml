@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title> - Articles</title>
-    <description>Writing things down so I don't forget. SDE at AWS. Opinions expressed are my own.</description>
+    <description>Writing things down so I don't forget. Software Engineer at Pinterest. Opinions expressed are my own.</description>
     <link>
     https://dejanperetin.com</link>
     
@@ -16,7 +16,7 @@ up and generate some graphs. Which I did. And here is the winner of the election
 
 </description>
         
-        <pubDate>Sun, 05 Jan 2020 10:33:37 +0000</pubDate>
+        <pubDate>Sun, 05 Jan 2020 11:33:37 +0100</pubDate>
         <link>
         https://dejanperetin.com/why-i-dont-vote</link>
         <guid isPermaLink="true">https://dejanperetin.com/why-i-dont-vote</guid>
@@ -37,7 +37,7 @@ own. Blog that I didn’t look at for more than 5 years.&lt;/p&gt;
 
 </description>
         
-        <pubDate>Mon, 16 Dec 2019 11:28:37 +0000</pubDate>
+        <pubDate>Mon, 16 Dec 2019 12:28:37 +0100</pubDate>
         <link>
         https://dejanperetin.com/nobody-reads-shit</link>
         <guid isPermaLink="true">https://dejanperetin.com/nobody-reads-shit</guid>
@@ -52,7 +52,7 @@ own. Blog that I didn’t look at for more than 5 years.&lt;/p&gt;
 
 </description>
         
-        <pubDate>Sun, 23 Mar 2014 10:33:37 +0000</pubDate>
+        <pubDate>Sun, 23 Mar 2014 11:33:37 +0100</pubDate>
         <link>
         https://dejanperetin.com/cvs_merge</link>
         <guid isPermaLink="true">https://dejanperetin.com/cvs_merge</guid>
@@ -69,7 +69,7 @@ njima niti nije mogao napraviti build. Detaljnija i korisnija uputsva su očito 
 
 </description>
         
-        <pubDate>Thu, 10 Oct 2013 11:33:37 +0100</pubDate>
+        <pubDate>Thu, 10 Oct 2013 12:33:37 +0200</pubDate>
         <link>
         https://dejanperetin.com/lzs-app-build-howto</link>
         <guid isPermaLink="true">https://dejanperetin.com/lzs-app-build-howto</guid>
@@ -84,7 +84,7 @@ njima niti nije mogao napraviti build. Detaljnija i korisnija uputsva su očito 
 
 </description>
         
-        <pubDate>Mon, 08 Apr 2013 11:33:37 +0100</pubDate>
+        <pubDate>Mon, 08 Apr 2013 12:33:37 +0200</pubDate>
         <link>
         https://dejanperetin.com/kdm-grub-listings-hr</link>
         <guid isPermaLink="true">https://dejanperetin.com/kdm-grub-listings-hr</guid>
@@ -99,7 +99,7 @@ njima niti nije mogao napraviti build. Detaljnija i korisnija uputsva su očito 
 
 </description>
         
-        <pubDate>Sun, 27 Jan 2013 10:33:37 +0000</pubDate>
+        <pubDate>Sun, 27 Jan 2013 11:33:37 +0100</pubDate>
         <link>
         https://dejanperetin.com/android-42-developer-options-hr</link>
         <guid isPermaLink="true">https://dejanperetin.com/android-42-developer-options-hr</guid>
@@ -114,7 +114,7 @@ njima niti nije mogao napraviti build. Detaljnija i korisnija uputsva su očito 
 
 </description>
         
-        <pubDate>Wed, 06 Jun 2012 11:33:37 +0100</pubDate>
+        <pubDate>Wed, 06 Jun 2012 12:33:37 +0200</pubDate>
         <link>
         https://dejanperetin.com/rpi-prvi-dojmovi-hr</link>
         <guid isPermaLink="true">https://dejanperetin.com/rpi-prvi-dojmovi-hr</guid>
