@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
+  <link href="https://dejanperetin.com/tag/astronomy/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://dejanperetin.com/" rel="alternate" type="text/html" />
+  <updated>2020-10-04T23:46:13+01:00</updated>
+  <id>https://dejanperetin.com/tag/astronomy/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">dejanperetin.com | </title>
+  
+
+  
+    <subtitle>Writing things down so I don't forget. Software Engineer at Pinterest. Opinions expressed are my own.</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">Light Pollution</title>
+      <link href="https://dejanperetin.com/light-pollution" rel="alternate" type="text/html" title="Light Pollution" />
+      <published>2020-01-05T10:33:37+00:00</published>
+      <updated>2020-01-05T10:33:37+00:00</updated>
+      <id>https://dejanperetin.com/light-pollution</id>
+      <content type="html" xml:base="https://dejanperetin.com/light-pollution">&lt;p&gt;Cover image is showing a piece of the night sky containing the Andromeda Galaxy. 
+Andromeda is supposed to be visible with the naked eye. So if you’ve never seen
+it before and you can’t find it in the photo, read on.&lt;/p&gt;
+
+&lt;h2 id=&quot;international-dark-sky-parks&quot;&gt;International Dark Sky Parks&lt;/h2&gt;
+
+&lt;p&gt;I spent the summer of 2020 messing around with my dubsonian telescope. Daily ritual was to bring the 
+telescope out in the early evening and check the collimation and adjust the finder scope. I used the &lt;a href=&quot;https://en.wikipedia.org/wiki/Monument_to_the_uprising_of_the_people_of_Kordun_and_Banija&quot;&gt;Petrova Gora Monument&lt;/a&gt; as a convenient target and every evening, just after sunset, a looming red figure would show up just next to it. We didn’t know what it was and dubbed it the Eye of Sauron.&lt;/p&gt;
+
+&lt;p&gt;We later &lt;a href=&quot;https://www.index.hr/vijesti/clanak/drzavna-firma-unistila-rijedak-park-nedaleko-od-zagreba-znanstvenici-u-soku/2215155.aspx&quot;&gt;discovered&lt;/a&gt; the Eye of Sauron was actually some kind of communications tower installed not for from the monument, in the middle of the &lt;a href=&quot;https://www.darksky.org/our-work/conservation/idsp/parks/petrova-gora-biljeg/&quot;&gt;Petrova Gora International Dark Sky Park&lt;/a&gt;!&lt;/p&gt;
+
+&lt;p&gt;There is only &lt;a href=&quot;https://www.darksky.org/our-work/conservation/idsp/parks/&quot;&gt;80&lt;/a&gt; Dark Sky Parks in the world and two of them are in Croatia:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.darksky.org/our-work/conservation/idsp/parks/petrova-gora-biljeg/&quot;&gt;Petrova Gora - Biljeg&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.darksky.org/our-work/conservation/idsp/parks/vrani-kamen-croatia/&quot;&gt;Vrani Kamen&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Here’s the breakdown by country:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  57 U.S.
+   3 Hungary
+   2 Scotland
+   2 Netherlands
+   2 Germany
+   2 Croatia
+   1 Wales
+   1 Taiwan, R.O.C.
+   1 Spain
+   1 South Korea
+   1 New Zealand
+   1 Japan
+   1 Israel
+   1 Ireland
+   1 England
+   1 Denmark
+   1 Canada/U.S.
+   1 Unknown
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;To blatantly devastate one of them like this is a very big deal.&lt;/p&gt;
+
+&lt;h2 id=&quot;light-pollution&quot;&gt;Light Pollution&lt;/h2&gt;
+
+&lt;p&gt;To illustrate how big of an issue light pollution can be when it comes to astronomy I took two photos 
+of the night sky from two locations with a very different extent of pollution.&lt;/p&gt;
+
+&lt;p&gt;Donji Ostri Vrh, Croatia, is classified as class 4 on the &lt;a href=&quot;https://en.wikipedia.org/wiki/Bortle_scale&quot;&gt;Bortle scale&lt;/a&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.lightpollutionmap.info/#zoom=10.16&amp;amp;lat=45.6602&amp;amp;lon=15.4305&amp;amp;layers=B0FFFFFTFFFFFFFFF&quot;&gt;&lt;img src=&quot;assets/images/light_pollution/dov_5km_annotation.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Dublin, Ireland, is classified between classes 8 and 9 on the same scale:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.lightpollutionmap.info/#zoom=10.00&amp;amp;lat=53.3441&amp;amp;lon=-6.2675&amp;amp;layers=B0FFFFFTFFFFFFFFF&quot;&gt;&lt;img src=&quot;assets/images/light_pollution/dublin_5km_annotation.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Here is a difference between two photos of the night sky. Photos were taken:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;On a clear night.&lt;/li&gt;
+  &lt;li&gt;With 13 second exposure.&lt;/li&gt;
+  &lt;li&gt;With a 30 mm lense.&lt;/li&gt;
+  &lt;li&gt;ISO setting of 800.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Photos are not of the same part of the sky. I’ll let you guess which side is taken on which location. I 
+only chose Dublin because I live there, not because Dublin is particularly bad in this regard. Zagreb, for example, is worse.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/light_pollution/dov_vs_dublin.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;So sign the &lt;a href=&quot;https://www.change.org/p/oda%C5%A1ilja%C4%8Di-i-veze-spasimo-no%C4%87no-nebo-u-me%C4%91unarodnom-parku-tamnog-neba-petrova-gora-biljeg&quot;&gt;petition to save the night sky at Petrova Gora&lt;/a&gt;!&lt;/p&gt;
+
+&lt;h2 id=&quot;andromeda&quot;&gt;Andromeda&lt;/h2&gt;
+
+&lt;p&gt;If you were able to find Andromeda on the cover photo, congratulations on being an amazing Andromeda spotter. And for those of you who just want to enjoy the show, here is the photo overlaid against the night sky:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.worldwidetelescope.org/wwtweb/ShowImage.aspx?reverseparity=False&amp;amp;scale=119.124281&amp;amp;name=night_sky.png&amp;amp;imageurl=http://nova.astrometry.net/image/9296532&amp;amp;credits=Astrometry.net+User+(All+Rights+Reserved)&amp;amp;creditsUrl=&amp;amp;ra=9.413133&amp;amp;dec=40.607256&amp;amp;x=644.7&amp;amp;y=349.1&amp;amp;rotation=127.11&amp;amp;thumb=http://nova.astrometry.net/image/9296534&quot;&gt;&lt;img src=&quot;assets/images/light_pollution/andromeda-v1.gif&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Dejan Peretin</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="Astronomy" />
+      
+
+      
+        <summary type="html">Cover image is showing a piece of the night sky containing the Andromeda Galaxy. Andromeda is supposed to be visible with the naked eye. So if you’ve never seen it before and you can’t find it in the photo, read on.</summary>
+      
+
+      
+      
+    </entry>
+  
+</feed>
