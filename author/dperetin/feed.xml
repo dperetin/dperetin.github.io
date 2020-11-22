@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://dejanperetin.com/author/dperetin/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://dejanperetin.com/" rel="alternate" type="text/html" />
-  <updated>2020-11-20T09:55:40+00:00</updated>
+  <updated>2020-11-22T07:05:37+00:00</updated>
   <id>https://dejanperetin.com/author/dperetin/feed.xml</id>
 
   
@@ -37,14 +37,16 @@
       <published>2020-01-05T10:33:37+00:00</published>
       <updated>2020-01-05T10:33:37+00:00</updated>
       <id>https://dejanperetin.com/light-pollution</id>
-      <content type="html" xml:base="https://dejanperetin.com/light-pollution">&lt;p&gt;Cover image is showing a piece of the night sky containing the Andromeda Galaxy. 
-Andromeda is supposed to be visible with the naked eye. So if you’ve never seen
+      <content type="html" xml:base="https://dejanperetin.com/light-pollution">&lt;p&gt;The cover image is showing a piece of the night sky containing the Andromeda Galaxy. 
+Andromeda is supposed to be visible with the naked eye.&lt;/p&gt;
+
+&lt;p&gt;So if you’ve never seen
 it before and you can’t find it in the photo, read on.&lt;/p&gt;
 
 &lt;h2 id=&quot;international-dark-sky-parks&quot;&gt;International Dark Sky Parks&lt;/h2&gt;
 
-&lt;p&gt;I spent the summer of 2020 messing around with my dubsonian telescope. Daily ritual was to bring the 
-telescope out in the early evening and check the collimation and adjust the finder scope. I used the &lt;a href=&quot;https://en.wikipedia.org/wiki/Monument_to_the_uprising_of_the_people_of_Kordun_and_Banija&quot;&gt;Petrova Gora Monument&lt;/a&gt; as a convenient target and every evening, just after sunset, a looming red figure would show up just next to it. We didn’t know what it was and dubbed it the Eye of Sauron.&lt;/p&gt;
+&lt;p&gt;I spent the summer of 2020 messing around with my dubsonian telescope. The daily ritual was to bring the 
+telescope out in the early evening and check the collimation and adjust the finder scope. I used the &lt;a href=&quot;https://en.wikipedia.org/wiki/Monument_to_the_uprising_of_the_people_of_Kordun_and_Banija&quot;&gt;Petrova Gora Monument&lt;/a&gt; as a convenient target and every evening, just after sunset, a looming, red figure would show up just next to it. We didn’t know what it was and dubbed it the Eye of Sauron.&lt;/p&gt;
 
 &lt;p&gt;We later &lt;a href=&quot;https://www.index.hr/vijesti/clanak/drzavna-firma-unistila-rijedak-park-nedaleko-od-zagreba-znanstvenici-u-soku/2215155.aspx&quot;&gt;discovered&lt;/a&gt; the Eye of Sauron was actually some kind of communications tower installed not for from the monument, in the middle of the &lt;a href=&quot;https://www.darksky.org/our-work/conservation/idsp/parks/petrova-gora-biljeg/&quot;&gt;Petrova Gora International Dark Sky Park&lt;/a&gt;!&lt;/p&gt;
 
@@ -91,10 +93,10 @@ of the night sky from two locations with a very different extent of pollution.&l
 
 &lt;p&gt;&lt;a href=&quot;https://www.lightpollutionmap.info/#zoom=10.00&amp;amp;lat=53.3441&amp;amp;lon=-6.2675&amp;amp;layers=B0FFFFFTFFFFFFFFF&quot;&gt;&lt;img src=&quot;assets/images/light_pollution/dublin_5km_annotation.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Here is a difference between two photos of the night sky. Photos were taken:&lt;/p&gt;
+&lt;p&gt;Here is a difference between the two photos of the night sky. Photos were taken:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;On a clear night.&lt;/li&gt;
-  &lt;li&gt;With 13 second exposure.&lt;/li&gt;
+  &lt;li&gt;With 13-second exposure.&lt;/li&gt;
   &lt;li&gt;With a 30 mm lense.&lt;/li&gt;
   &lt;li&gt;ISO setting of 800.&lt;/li&gt;
 &lt;/ul&gt;
@@ -131,7 +133,7 @@ only chose Dublin because I live there, not because Dublin is particularly bad i
       
 
       
-        <summary type="html">Cover image is showing a piece of the night sky containing the Andromeda Galaxy. Andromeda is supposed to be visible with the naked eye. So if you’ve never seen it before and you can’t find it in the photo, read on.</summary>
+        <summary type="html">The cover image is showing a piece of the night sky containing the Andromeda Galaxy. Andromeda is supposed to be visible with the naked eye.</summary>
       
 
       
@@ -145,7 +147,9 @@ only chose Dublin because I live there, not because Dublin is particularly bad i
       <updated>2020-01-05T10:33:37+00:00</updated>
       <id>https://dejanperetin.com/why-i-dont-vote</id>
       <content type="html" xml:base="https://dejanperetin.com/why-i-dont-vote">&lt;p&gt;Wolfram Mathematica is an amazing software that I love using, but the choice to use it for any meaningful application is 
-difficult to justify due to its cost and licence. Presidential elections in Croatia seemed like a good excuse to fire it
+difficult to justify due to its cost and licence.&lt;/p&gt;
+
+&lt;p&gt;Presidential elections in Croatia seemed like a good excuse to fire it
 up and generate some graphs. Which I did. And here is the winner of the election per administrative subdivisions: &lt;img src=&quot;assets/images/why_i_dont_vote/finalni_rezultati_po_opcinama.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;assets/images/why_i_dont_vote/milanovic_drugi_krug.png&quot; alt=&quot;&quot; width=&quot;365px&quot; /&gt; &lt;img src=&quot;assets/images/why_i_dont_vote/kolinda_drugi_krug.png&quot; alt=&quot;&quot; width=&quot;365px&amp;quot;&quot; /&gt;&lt;/p&gt;
@@ -231,7 +235,7 @@ GeoListPlot[Values[adminDivisions2[&quot;KARLOVAČKA ŽUPANIJA&quot;]],
       
 
       
-        <summary type="html">Wolfram Mathematica is an amazing software that I love using, but the choice to use it for any meaningful application is difficult to justify due to its cost and licence. Presidential elections in Croatia seemed like a good excuse to fire it up and generate some graphs. Which I did. And here is the winner of the election per administrative subdivisions:</summary>
+        <summary type="html">Wolfram Mathematica is an amazing software that I love using, but the choice to use it for any meaningful application is difficult to justify due to its cost and licence.</summary>
       
 
       
@@ -246,8 +250,9 @@ GeoListPlot[Values[adminDivisions2[&quot;KARLOVAČKA ŽUPANIJA&quot;]],
       <id>https://dejanperetin.com/nobody-reads-shit</id>
       <content type="html" xml:base="https://dejanperetin.com/nobody-reads-shit">&lt;p&gt;Watched an &lt;a href=&quot;https://www.youtube.com/watch?v=UE-6zvdRapY&amp;amp;feature=youtu.be&amp;amp;t=391&quot;&gt;H3 podcast&lt;/a&gt; 
 episode yesterday and they were commenting 
-on how YouTube is announcing policy changes on a blog instead of via video. 
-Comments were premised by the fact that YouTube is
+on how YouTube is announcing policy changes on a blog instead of via video.&lt;/p&gt;
+
+&lt;p&gt;Comments were premised by the fact that YouTube is
 a video company, but the question of who reads blogs (or anything for that matter) was raised. 
 This reminded me that I have a blog of my
 own. Blog that I didn’t look at for more than 5 years.&lt;/p&gt;
@@ -308,7 +313,7 @@ of the blog. For that I setup a &lt;a href=&quot;https://docs.aws.amazon.com/Ama
       
 
       
-        <summary type="html">Watched an H3 podcast episode yesterday and they were commenting on how YouTube is announcing policy changes on a blog instead of via video. Comments were premised by the fact that YouTube is a video company, but the question of who reads blogs (or anything for that matter) was raised. This reminded me that I have a blog of my own. Blog that I didn’t look at for more than 5 years.</summary>
+        <summary type="html">Watched an H3 podcast episode yesterday and they were commenting on how YouTube is announcing policy changes on a blog instead of via video.</summary>
       
 
       
@@ -321,7 +326,9 @@ of the blog. For that I setup a &lt;a href=&quot;https://docs.aws.amazon.com/Ama
       <published>2014-03-23T10:33:37+00:00</published>
       <updated>2014-03-23T10:33:37+00:00</updated>
       <id>https://dejanperetin.com/cvs_merge</id>
-      <content type="html" xml:base="https://dejanperetin.com/cvs_merge">&lt;p&gt;Ever so often a need for merging CVS branches arises  and since the task can be a bit touchy, writing down some basic concepts seems like a good idea. So here are a few basic steps the process boils down to.&lt;/p&gt;
+      <content type="html" xml:base="https://dejanperetin.com/cvs_merge">&lt;p&gt;Ever so often a need for merging CVS branches arises and since the task can be a bit touchy, writing down some basic concepts seems like a good idea.&lt;/p&gt;
+
+&lt;p&gt;So here are a few basic steps the process boils down to.&lt;/p&gt;
 
 &lt;h1 id=&quot;branching&quot;&gt;Branching&lt;/h1&gt;
 &lt;p&gt;Creating a branch is done with &lt;em&gt;right clicking on a project -&amp;gt; Team -&amp;gt; Branch&lt;/em&gt;. Leave &lt;em&gt;Start working in the branch&lt;/em&gt; checked so newly created branch will be checked out automatically. Common scenario is that people make some changes on their local version of the code and then realize that they do not want to commit it to the main branch. If you create a branch with uncommitted changes in your workspace, those changes will be available for committing to the branch.&lt;/p&gt;
@@ -383,7 +390,7 @@ of the blog. For that I setup a &lt;a href=&quot;https://docs.aws.amazon.com/Ama
       
 
       
-        <summary type="html">Ever so often a need for merging CVS branches arises and since the task can be a bit touchy, writing down some basic concepts seems like a good idea. So here are a few basic steps the process boils down to.</summary>
+        <summary type="html">Ever so often a need for merging CVS branches arises and since the task can be a bit touchy, writing down some basic concepts seems like a good idea.</summary>
       
 
       
@@ -396,8 +403,9 @@ of the blog. For that I setup a &lt;a href=&quot;https://docs.aws.amazon.com/Ama
       <published>2013-10-10T11:33:37+01:00</published>
       <updated>2013-10-10T11:33:37+01:00</updated>
       <id>https://dejanperetin.com/lzs-app-build-howto</id>
-      <content type="html" xml:base="https://dejanperetin.com/lzs-app-build-howto">&lt;p&gt;Dobio sam nekoliko mailova od ljudi koji su pokušali sami napraviti build aplikacije prema uputama na wiki stranicama te naišli na probleme. 
-Te upute su dosta stare i grube pa se bez nekog iskustva s eclipsom po 
+      <content type="html" xml:base="https://dejanperetin.com/lzs-app-build-howto">&lt;p&gt;Dobio sam nekoliko mailova od ljudi koji su pokušali sami napraviti build aplikacije prema uputama na wiki stranicama te naišli na probleme.&lt;/p&gt;
+
+&lt;p&gt;Te upute su dosta stare i grube pa se bez nekog iskustva s eclipsom po 
 njima niti nije mogao napraviti build. Detaljnija i korisnija uputsva su očito potrebna pa sam ih odlučio i napisati.&lt;/p&gt;
 
 &lt;h2 id=&quot;instalacija-i-konfiguracija-softvera&quot;&gt;Instalacija i konfiguracija softvera&lt;/h2&gt;
@@ -474,7 +482,7 @@ git checkout 4.4.0
       
 
       
-        <summary type="html">Dobio sam nekoliko mailova od ljudi koji su pokušali sami napraviti build aplikacije prema uputama na wiki stranicama te naišli na probleme. Te upute su dosta stare i grube pa se bez nekog iskustva s eclipsom po njima niti nije mogao napraviti build. Detaljnija i korisnija uputsva su očito potrebna pa sam ih odlučio i napisati.</summary>
+        <summary type="html">Dobio sam nekoliko mailova od ljudi koji su pokušali sami napraviti build aplikacije prema uputama na wiki stranicama te naišli na probleme.</summary>
       
 
       
@@ -487,7 +495,9 @@ git checkout 4.4.0
       <published>2013-04-08T11:33:37+01:00</published>
       <updated>2013-04-08T11:33:37+01:00</updated>
       <id>https://dejanperetin.com/kdm-grub-listings-hr</id>
-      <content type="html" xml:base="https://dejanperetin.com/kdm-grub-listings-hr">&lt;p&gt;Za ljude koji imaju više stavki na GRUB izborniku i često ih koriste. U datoteci &lt;code class=&quot;highlighter-rouge&quot;&gt;/usr/share/kde4/config/kdm/kdmrc&lt;/code&gt; postoji linija koja se odnosi na &lt;code class=&quot;highlighter-rouge&quot;&gt;BootManager&lt;/code&gt; (zadnja u donjem kodu):&lt;/p&gt;
+      <content type="html" xml:base="https://dejanperetin.com/kdm-grub-listings-hr">&lt;p&gt;Za ljude koji imaju više stavki na GRUB izborniku i često ih koriste.&lt;/p&gt;
+
+&lt;p&gt;U datoteci &lt;code class=&quot;highlighter-rouge&quot;&gt;/usr/share/kde4/config/kdm/kdmrc&lt;/code&gt; postoji linija koja se odnosi na &lt;code class=&quot;highlighter-rouge&quot;&gt;BootManager&lt;/code&gt; (zadnja u donjem kodu):&lt;/p&gt;
 
 &lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ cat /usr/share/kde4/config/kdm/kdmrc | grep -i &quot;boot\s*manager&quot;
 # The boot manager KDM should use for offering boot options in the
@@ -522,7 +532,7 @@ git checkout 4.4.0
       
 
       
-        <summary type="html">Za ljude koji imaju više stavki na GRUB izborniku i često ih koriste. U datoteci /usr/share/kde4/config/kdm/kdmrc postoji linija koja se odnosi na BootManager (zadnja u donjem kodu):</summary>
+        <summary type="html">Za ljude koji imaju više stavki na GRUB izborniku i često ih koriste.</summary>
       
 
       
@@ -535,7 +545,9 @@ git checkout 4.4.0
       <published>2013-01-27T10:33:37+00:00</published>
       <updated>2013-01-27T10:33:37+00:00</updated>
       <id>https://dejanperetin.com/android-42-developer-options-hr</id>
-      <content type="html" xml:base="https://dejanperetin.com/android-42-developer-options-hr">&lt;p&gt;Nedavno sam ulovio vremena da na svoj Galaxy S mudrofon konačno stavim Android 4.2.1 i to kao &lt;a href=&quot;http://www.cyanogenmod.org/blog/cm-10-1-m-series-builds-have-arrived&quot;&gt;CM 10.1 M&lt;/a&gt;.Stvar radi savšeno i za sad nisam naišao na probleme u svakodnevnom korištenju. No, kad sam pokušao vidjeti kako se &lt;a href=&quot;https://github.com/linuxzasve/androidApp&quot;&gt;Linux za sve android app&lt;/a&gt; ponaša na novoj verziji Androida, nisam uspio uključiti debugging mod. Naime, Android 4.2 nema u &lt;code class=&quot;highlighter-rouge&quot;&gt;Settings&lt;/code&gt; izborniku stavke &lt;code class=&quot;highlighter-rouge&quot;&gt;Developer options&lt;/code&gt;, gdje se uključuje &lt;code class=&quot;highlighter-rouge&quot;&gt;Android debugging&lt;/code&gt; opcija koja omogućava debugiranje android aplikacija direktno na uređaju koji je USB-om spojen na računalo, umjesto da se koristi emulator.&lt;/p&gt;
+      <content type="html" xml:base="https://dejanperetin.com/android-42-developer-options-hr">&lt;p&gt;Nedavno sam ulovio vremena da na svoj Galaxy S mudrofon konačno stavim Android 4.2.1 i to kao &lt;a href=&quot;http://www.cyanogenmod.org/blog/cm-10-1-m-series-builds-have-arrived&quot;&gt;CM 10.1 M&lt;/a&gt;.Stvar radi savšeno i za sad nisam naišao na probleme u svakodnevnom korištenju.&lt;/p&gt;
+
+&lt;p&gt;No, kad sam pokušao vidjeti kako se &lt;a href=&quot;https://github.com/linuxzasve/androidApp&quot;&gt;Linux za sve android app&lt;/a&gt; ponaša na novoj verziji Androida, nisam uspio uključiti debugging mod. Naime, Android 4.2 nema u &lt;code class=&quot;highlighter-rouge&quot;&gt;Settings&lt;/code&gt; izborniku stavke &lt;code class=&quot;highlighter-rouge&quot;&gt;Developer options&lt;/code&gt;, gdje se uključuje &lt;code class=&quot;highlighter-rouge&quot;&gt;Android debugging&lt;/code&gt; opcija koja omogućava debugiranje android aplikacija direktno na uređaju koji je USB-om spojen na računalo, umjesto da se koristi emulator.&lt;/p&gt;
 
 &lt;p&gt;Radi se o tome da je Google namjerno isključio tu stavku pod izlikom da ne treba nikome osim developerima, a ovi pak znaju kako riješiti takve problemčiće.&lt;/p&gt;
 
@@ -587,7 +599,7 @@ git checkout 4.4.0
       
 
       
-        <summary type="html">Nedavno sam ulovio vremena da na svoj Galaxy S mudrofon konačno stavim Android 4.2.1 i to kao CM 10.1 M.Stvar radi savšeno i za sad nisam naišao na probleme u svakodnevnom korištenju. No, kad sam pokušao vidjeti kako se Linux za sve android app ponaša na novoj verziji Androida, nisam uspio uključiti debugging mod. Naime, Android 4.2 nema u Settings izborniku stavke Developer options, gdje se uključuje Android debugging opcija koja omogućava debugiranje android aplikacija direktno na uređaju koji je USB-om spojen na računalo, umjesto da se koristi emulator.</summary>
+        <summary type="html">Nedavno sam ulovio vremena da na svoj Galaxy S mudrofon konačno stavim Android 4.2.1 i to kao CM 10.1 M.Stvar radi savšeno i za sad nisam naišao na probleme u svakodnevnom korištenju.</summary>
       
 
       

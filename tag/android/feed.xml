@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://dejanperetin.com/tag/android/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://dejanperetin.com/" rel="alternate" type="text/html" />
-  <updated>2020-11-20T09:55:40+00:00</updated>
+  <updated>2020-11-22T07:05:37+00:00</updated>
   <id>https://dejanperetin.com/tag/android/feed.xml</id>
 
   
@@ -37,8 +37,9 @@
       <published>2013-10-10T11:33:37+01:00</published>
       <updated>2013-10-10T11:33:37+01:00</updated>
       <id>https://dejanperetin.com/lzs-app-build-howto</id>
-      <content type="html" xml:base="https://dejanperetin.com/lzs-app-build-howto">&lt;p&gt;Dobio sam nekoliko mailova od ljudi koji su pokušali sami napraviti build aplikacije prema uputama na wiki stranicama te naišli na probleme. 
-Te upute su dosta stare i grube pa se bez nekog iskustva s eclipsom po 
+      <content type="html" xml:base="https://dejanperetin.com/lzs-app-build-howto">&lt;p&gt;Dobio sam nekoliko mailova od ljudi koji su pokušali sami napraviti build aplikacije prema uputama na wiki stranicama te naišli na probleme.&lt;/p&gt;
+
+&lt;p&gt;Te upute su dosta stare i grube pa se bez nekog iskustva s eclipsom po 
 njima niti nije mogao napraviti build. Detaljnija i korisnija uputsva su očito potrebna pa sam ih odlučio i napisati.&lt;/p&gt;
 
 &lt;h2 id=&quot;instalacija-i-konfiguracija-softvera&quot;&gt;Instalacija i konfiguracija softvera&lt;/h2&gt;
@@ -115,7 +116,7 @@ git checkout 4.4.0
       
 
       
-        <summary type="html">Dobio sam nekoliko mailova od ljudi koji su pokušali sami napraviti build aplikacije prema uputama na wiki stranicama te naišli na probleme. Te upute su dosta stare i grube pa se bez nekog iskustva s eclipsom po njima niti nije mogao napraviti build. Detaljnija i korisnija uputsva su očito potrebna pa sam ih odlučio i napisati.</summary>
+        <summary type="html">Dobio sam nekoliko mailova od ljudi koji su pokušali sami napraviti build aplikacije prema uputama na wiki stranicama te naišli na probleme.</summary>
       
 
       
@@ -128,7 +129,9 @@ git checkout 4.4.0
       <published>2013-04-08T11:33:37+01:00</published>
       <updated>2013-04-08T11:33:37+01:00</updated>
       <id>https://dejanperetin.com/kdm-grub-listings-hr</id>
-      <content type="html" xml:base="https://dejanperetin.com/kdm-grub-listings-hr">&lt;p&gt;Za ljude koji imaju više stavki na GRUB izborniku i često ih koriste. U datoteci &lt;code class=&quot;highlighter-rouge&quot;&gt;/usr/share/kde4/config/kdm/kdmrc&lt;/code&gt; postoji linija koja se odnosi na &lt;code class=&quot;highlighter-rouge&quot;&gt;BootManager&lt;/code&gt; (zadnja u donjem kodu):&lt;/p&gt;
+      <content type="html" xml:base="https://dejanperetin.com/kdm-grub-listings-hr">&lt;p&gt;Za ljude koji imaju više stavki na GRUB izborniku i često ih koriste.&lt;/p&gt;
+
+&lt;p&gt;U datoteci &lt;code class=&quot;highlighter-rouge&quot;&gt;/usr/share/kde4/config/kdm/kdmrc&lt;/code&gt; postoji linija koja se odnosi na &lt;code class=&quot;highlighter-rouge&quot;&gt;BootManager&lt;/code&gt; (zadnja u donjem kodu):&lt;/p&gt;
 
 &lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ cat /usr/share/kde4/config/kdm/kdmrc | grep -i &quot;boot\s*manager&quot;
 # The boot manager KDM should use for offering boot options in the
@@ -163,7 +166,7 @@ git checkout 4.4.0
       
 
       
-        <summary type="html">Za ljude koji imaju više stavki na GRUB izborniku i često ih koriste. U datoteci /usr/share/kde4/config/kdm/kdmrc postoji linija koja se odnosi na BootManager (zadnja u donjem kodu):</summary>
+        <summary type="html">Za ljude koji imaju više stavki na GRUB izborniku i često ih koriste.</summary>
       
 
       
@@ -176,7 +179,9 @@ git checkout 4.4.0
       <published>2013-01-27T10:33:37+00:00</published>
       <updated>2013-01-27T10:33:37+00:00</updated>
       <id>https://dejanperetin.com/android-42-developer-options-hr</id>
-      <content type="html" xml:base="https://dejanperetin.com/android-42-developer-options-hr">&lt;p&gt;Nedavno sam ulovio vremena da na svoj Galaxy S mudrofon konačno stavim Android 4.2.1 i to kao &lt;a href=&quot;http://www.cyanogenmod.org/blog/cm-10-1-m-series-builds-have-arrived&quot;&gt;CM 10.1 M&lt;/a&gt;.Stvar radi savšeno i za sad nisam naišao na probleme u svakodnevnom korištenju. No, kad sam pokušao vidjeti kako se &lt;a href=&quot;https://github.com/linuxzasve/androidApp&quot;&gt;Linux za sve android app&lt;/a&gt; ponaša na novoj verziji Androida, nisam uspio uključiti debugging mod. Naime, Android 4.2 nema u &lt;code class=&quot;highlighter-rouge&quot;&gt;Settings&lt;/code&gt; izborniku stavke &lt;code class=&quot;highlighter-rouge&quot;&gt;Developer options&lt;/code&gt;, gdje se uključuje &lt;code class=&quot;highlighter-rouge&quot;&gt;Android debugging&lt;/code&gt; opcija koja omogućava debugiranje android aplikacija direktno na uređaju koji je USB-om spojen na računalo, umjesto da se koristi emulator.&lt;/p&gt;
+      <content type="html" xml:base="https://dejanperetin.com/android-42-developer-options-hr">&lt;p&gt;Nedavno sam ulovio vremena da na svoj Galaxy S mudrofon konačno stavim Android 4.2.1 i to kao &lt;a href=&quot;http://www.cyanogenmod.org/blog/cm-10-1-m-series-builds-have-arrived&quot;&gt;CM 10.1 M&lt;/a&gt;.Stvar radi savšeno i za sad nisam naišao na probleme u svakodnevnom korištenju.&lt;/p&gt;
+
+&lt;p&gt;No, kad sam pokušao vidjeti kako se &lt;a href=&quot;https://github.com/linuxzasve/androidApp&quot;&gt;Linux za sve android app&lt;/a&gt; ponaša na novoj verziji Androida, nisam uspio uključiti debugging mod. Naime, Android 4.2 nema u &lt;code class=&quot;highlighter-rouge&quot;&gt;Settings&lt;/code&gt; izborniku stavke &lt;code class=&quot;highlighter-rouge&quot;&gt;Developer options&lt;/code&gt;, gdje se uključuje &lt;code class=&quot;highlighter-rouge&quot;&gt;Android debugging&lt;/code&gt; opcija koja omogućava debugiranje android aplikacija direktno na uređaju koji je USB-om spojen na računalo, umjesto da se koristi emulator.&lt;/p&gt;
 
 &lt;p&gt;Radi se o tome da je Google namjerno isključio tu stavku pod izlikom da ne treba nikome osim developerima, a ovi pak znaju kako riješiti takve problemčiće.&lt;/p&gt;
 
@@ -228,7 +233,7 @@ git checkout 4.4.0
       
 
       
-        <summary type="html">Nedavno sam ulovio vremena da na svoj Galaxy S mudrofon konačno stavim Android 4.2.1 i to kao CM 10.1 M.Stvar radi savšeno i za sad nisam naišao na probleme u svakodnevnom korištenju. No, kad sam pokušao vidjeti kako se Linux za sve android app ponaša na novoj verziji Androida, nisam uspio uključiti debugging mod. Naime, Android 4.2 nema u Settings izborniku stavke Developer options, gdje se uključuje Android debugging opcija koja omogućava debugiranje android aplikacija direktno na uređaju koji je USB-om spojen na računalo, umjesto da se koristi emulator.</summary>
+        <summary type="html">Nedavno sam ulovio vremena da na svoj Galaxy S mudrofon konačno stavim Android 4.2.1 i to kao CM 10.1 M.Stvar radi savšeno i za sad nisam naišao na probleme u svakodnevnom korištenju.</summary>
       
 
       

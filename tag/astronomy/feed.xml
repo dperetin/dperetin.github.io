@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://dejanperetin.com/tag/astronomy/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://dejanperetin.com/" rel="alternate" type="text/html" />
-  <updated>2020-11-20T09:55:40+00:00</updated>
+  <updated>2020-11-22T07:05:37+00:00</updated>
   <id>https://dejanperetin.com/tag/astronomy/feed.xml</id>
 
   
@@ -37,14 +37,16 @@
       <published>2020-01-05T10:33:37+00:00</published>
       <updated>2020-01-05T10:33:37+00:00</updated>
       <id>https://dejanperetin.com/light-pollution</id>
-      <content type="html" xml:base="https://dejanperetin.com/light-pollution">&lt;p&gt;Cover image is showing a piece of the night sky containing the Andromeda Galaxy. 
-Andromeda is supposed to be visible with the naked eye. So if you’ve never seen
+      <content type="html" xml:base="https://dejanperetin.com/light-pollution">&lt;p&gt;The cover image is showing a piece of the night sky containing the Andromeda Galaxy. 
+Andromeda is supposed to be visible with the naked eye.&lt;/p&gt;
+
+&lt;p&gt;So if you’ve never seen
 it before and you can’t find it in the photo, read on.&lt;/p&gt;
 
 &lt;h2 id=&quot;international-dark-sky-parks&quot;&gt;International Dark Sky Parks&lt;/h2&gt;
 
-&lt;p&gt;I spent the summer of 2020 messing around with my dubsonian telescope. Daily ritual was to bring the 
-telescope out in the early evening and check the collimation and adjust the finder scope. I used the &lt;a href=&quot;https://en.wikipedia.org/wiki/Monument_to_the_uprising_of_the_people_of_Kordun_and_Banija&quot;&gt;Petrova Gora Monument&lt;/a&gt; as a convenient target and every evening, just after sunset, a looming red figure would show up just next to it. We didn’t know what it was and dubbed it the Eye of Sauron.&lt;/p&gt;
+&lt;p&gt;I spent the summer of 2020 messing around with my dubsonian telescope. The daily ritual was to bring the 
+telescope out in the early evening and check the collimation and adjust the finder scope. I used the &lt;a href=&quot;https://en.wikipedia.org/wiki/Monument_to_the_uprising_of_the_people_of_Kordun_and_Banija&quot;&gt;Petrova Gora Monument&lt;/a&gt; as a convenient target and every evening, just after sunset, a looming, red figure would show up just next to it. We didn’t know what it was and dubbed it the Eye of Sauron.&lt;/p&gt;
 
 &lt;p&gt;We later &lt;a href=&quot;https://www.index.hr/vijesti/clanak/drzavna-firma-unistila-rijedak-park-nedaleko-od-zagreba-znanstvenici-u-soku/2215155.aspx&quot;&gt;discovered&lt;/a&gt; the Eye of Sauron was actually some kind of communications tower installed not for from the monument, in the middle of the &lt;a href=&quot;https://www.darksky.org/our-work/conservation/idsp/parks/petrova-gora-biljeg/&quot;&gt;Petrova Gora International Dark Sky Park&lt;/a&gt;!&lt;/p&gt;
 
@@ -91,10 +93,10 @@ of the night sky from two locations with a very different extent of pollution.&l
 
 &lt;p&gt;&lt;a href=&quot;https://www.lightpollutionmap.info/#zoom=10.00&amp;amp;lat=53.3441&amp;amp;lon=-6.2675&amp;amp;layers=B0FFFFFTFFFFFFFFF&quot;&gt;&lt;img src=&quot;assets/images/light_pollution/dublin_5km_annotation.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Here is a difference between two photos of the night sky. Photos were taken:&lt;/p&gt;
+&lt;p&gt;Here is a difference between the two photos of the night sky. Photos were taken:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;On a clear night.&lt;/li&gt;
-  &lt;li&gt;With 13 second exposure.&lt;/li&gt;
+  &lt;li&gt;With 13-second exposure.&lt;/li&gt;
   &lt;li&gt;With a 30 mm lense.&lt;/li&gt;
   &lt;li&gt;ISO setting of 800.&lt;/li&gt;
 &lt;/ul&gt;
@@ -131,7 +133,7 @@ only chose Dublin because I live there, not because Dublin is particularly bad i
       
 
       
-        <summary type="html">Cover image is showing a piece of the night sky containing the Andromeda Galaxy. Andromeda is supposed to be visible with the naked eye. So if you’ve never seen it before and you can’t find it in the photo, read on.</summary>
+        <summary type="html">The cover image is showing a piece of the night sky containing the Andromeda Galaxy. Andromeda is supposed to be visible with the naked eye.</summary>
       
 
       
