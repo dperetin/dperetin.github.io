@@ -2,9 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title> - Articles</title>
-    <description>Writing things down so I don't forget. Software Engineer at Pinterest. Opinions expressed are my own.</description>
+    <description>Writing things down so I don&apos;t forget. Software Engineer at Pinterest. Opinions expressed are my own.</description>
     <link>
     https://dejanperetin.com</link>
+    
+      
+      <item>
+        <title>Lego Infinity Cube</title>
+        
+          <description>&lt;p&gt;Instruction for builing a lego infinity cube.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sat, 02 Aug 2025 11:33:37 +0100</pubDate>
+        <link>
+        https://dejanperetin.com/lego-infinity-cube</link>
+        <guid isPermaLink="true">https://dejanperetin.com/lego-infinity-cube</guid>
+      </item>
+      
     
       
       <item>
@@ -15,16 +30,16 @@ Andromeda is supposed to be visible with the naked eye.&lt;/p&gt;
 
 </description>
         
-        <pubDate>Sun, 05 Jan 2020 10:33:37 +0000</pubDate>
+        <pubDate>Sat, 03 Oct 2020 11:33:37 +0100</pubDate>
         <link>
-        https://dejanperetin.com/light-pollution</link>
-        <guid isPermaLink="true">https://dejanperetin.com/light-pollution</guid>
+        https://dejanperetin.com/light-pollution-copy</link>
+        <guid isPermaLink="true">https://dejanperetin.com/light-pollution-copy</guid>
       </item>
       
     
       
       <item>
-        <title>Why I Don't Vote</title>
+        <title>Why I Don&apos;t Vote</title>
         
           <description>&lt;p&gt;Wolfram Mathematica is an amazing software that I love using, but the choice to use it for any meaningful application is 
 difficult to justify due to its cost and licence.&lt;/p&gt;

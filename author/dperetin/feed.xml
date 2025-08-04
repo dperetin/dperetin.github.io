@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
-  <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
+  <generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator>
   <link href="https://dejanperetin.com/author/dperetin/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://dejanperetin.com/" rel="alternate" type="text/html" />
-  <updated>2021-05-28T06:04:01+01:00</updated>
+  <updated>2025-08-04T08:09:58+01:00</updated>
   <id>https://dejanperetin.com/author/dperetin/feed.xml</id>
 
   
@@ -16,7 +16,7 @@
   
 
   
-    <subtitle>Writing things down so I don't forget. Software Engineer at Pinterest. Opinions expressed are my own.</subtitle>
+    <subtitle>Writing things down so I don&apos;t forget. Software Engineer at Pinterest. Opinions expressed are my own.</subtitle>
   
 
   
@@ -32,12 +32,102 @@
 
   
     <entry>
+      <title type="html">Lego Infinity Cube</title>
+      <link href="https://dejanperetin.com/lego-infinity-cube" rel="alternate" type="text/html" title="Lego Infinity Cube" />
+      <published>2025-08-02T11:33:37+01:00</published>
+      <updated>2025-08-02T11:33:37+01:00</updated>
+      <id>https://dejanperetin.com/lego-infinity-cube</id>
+      <content type="html" xml:base="https://dejanperetin.com/lego-infinity-cube">&lt;p&gt;Instruction for builing a lego infinity cube.&lt;/p&gt;
+
+&lt;p&gt;There’s a couple of videos on youtube showing how to build the cude. Instructions are based on this one: &lt;a href=&quot;https://www.youtube.com/watch?v=G3IW6K5JKHA&quot;&gt;https://www.youtube.com/watch?v=G3IW6K5JKHA&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;parts&quot;&gt;Parts&lt;/h2&gt;
+
+&lt;p&gt;Parts cost around 6 euro, when purchesed through the &lt;a href=&quot;https://www.lego.com/en-ie/pick-and-build/pick-a-brick&quot;&gt;LEGO’s pick a brick&lt;/a&gt;.
+List of parts, not taking the color into account.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;24 x &lt;a href=&quot;https://www.bricklink.com/v2/catalog/catalogitem.page?P=3023#T=C&quot;&gt;Plate 1x2 (3023)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;8 x &lt;a href=&quot;https://www.bricklink.com/v2/catalog/catalogitem.page?P=2429c01&quot;&gt;Hinge Plate 1x4 (6458397)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;8 x &lt;a href=&quot;https://www.bricklink.com/v2/catalog/catalogitem.page?P=99207&quot;&gt;Inverted Bracket 1x2-2x2 (99207)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;8 x &lt;a href=&quot;https://www.bricklink.com/v2/catalog/catalogitem.page?P=3068&quot;&gt;Tile 2x2 (3068)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;8 x &lt;a href=&quot;https://www.bricklink.com/v2/catalog/catalogitem.page?P=3069&quot;&gt;Tile 1x2 (3069)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;instructions&quot;&gt;Instructions&lt;/h2&gt;
+
+&lt;p&gt;Instructions in different formats&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;assets/images/lego_infinity_cube/infinity_cube.io&quot;&gt;Bricklink studio file&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;assets/images/lego_infinity_cube/infinity_cube.pdf&quot;&gt;Pdf&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/lego_infinity_cube/1_2x.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;assets/images/lego_infinity_cube/2_2x.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;assets/images/lego_infinity_cube/3_2x.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;assets/images/lego_infinity_cube/4_2x.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;assets/images/lego_infinity_cube/5_2x.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;assets/images/lego_infinity_cube/6_2x.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;assets/images/lego_infinity_cube/7_2x.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;assets/images/lego_infinity_cube/8_2x.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;assets/images/lego_infinity_cube/9_2x.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;assets/images/lego_infinity_cube/10_2x.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;assets/images/lego_infinity_cube/11_2x.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;assets/images/lego_infinity_cube/12_2x.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;assets/images/lego_infinity_cube/13_2x.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;assets/images/lego_infinity_cube/14_2x.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;assets/images/lego_infinity_cube/15_2x.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;assets/images/lego_infinity_cube/16_2x.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;assets/images/lego_infinity_cube/17_2x.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;assets/images/lego_infinity_cube/18_2x.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;assets/images/lego_infinity_cube/19_2x.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;assets/images/lego_infinity_cube/20_2x.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;assets/images/lego_infinity_cube/21_2x.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;assets/images/lego_infinity_cube/22_2x.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;assets/images/lego_infinity_cube/23_2x.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;assets/images/lego_infinity_cube/24_2x.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;assets/images/lego_infinity_cube/25_2x.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;assets/images/lego_infinity_cube/26_2x.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;assets/images/lego_infinity_cube/27_2x.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;assets/images/lego_infinity_cube/28_2x.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;assets/images/lego_infinity_cube/29_2x.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;assets/images/lego_infinity_cube/30_2x.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;assets/images/lego_infinity_cube/31_2x.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Dejan Peretin</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="Lego" />
+      
+
+      
+        <summary type="html">Instruction for builing a lego infinity cube.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
       <title type="html">Light Pollution</title>
-      <link href="https://dejanperetin.com/light-pollution" rel="alternate" type="text/html" title="Light Pollution" />
-      <published>2020-01-05T10:33:37+00:00</published>
-      <updated>2020-01-05T10:33:37+00:00</updated>
-      <id>https://dejanperetin.com/light-pollution</id>
-      <content type="html" xml:base="https://dejanperetin.com/light-pollution">&lt;p&gt;The cover image is showing a piece of the night sky containing the Andromeda Galaxy. 
+      <link href="https://dejanperetin.com/light-pollution-copy" rel="alternate" type="text/html" title="Light Pollution" />
+      <published>2020-10-03T11:33:37+01:00</published>
+      <updated>2020-10-03T11:33:37+01:00</updated>
+      <id>https://dejanperetin.com/light-pollution%20copy</id>
+      <content type="html" xml:base="https://dejanperetin.com/light-pollution-copy">&lt;p&gt;The cover image is showing a piece of the night sky containing the Andromeda Galaxy. 
 Andromeda is supposed to be visible with the naked eye.&lt;/p&gt;
 
 &lt;p&gt;So if you’ve never seen
@@ -58,7 +148,7 @@ telescope out in the early evening and check the collimation and adjust the find
 
 &lt;p&gt;Here’s the breakdown by country:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  57 U.S.
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  57 U.S.
    3 Hungary
    2 Scotland
    2 Netherlands
@@ -142,7 +232,7 @@ only chose Dublin because I live there, not because Dublin is particularly bad i
   
     <entry>
       <title type="html">Why I Don’t Vote</title>
-      <link href="https://dejanperetin.com/why-i-dont-vote" rel="alternate" type="text/html" title="Why I Don't Vote" />
+      <link href="https://dejanperetin.com/why-i-dont-vote" rel="alternate" type="text/html" title="Why I Don&apos;t Vote" />
       <published>2020-01-05T10:33:37+00:00</published>
       <updated>2020-01-05T10:33:37+00:00</updated>
       <id>https://dejanperetin.com/why-i-dont-vote</id>
@@ -169,19 +259,19 @@ showing results of the elections, broken down by Croatian administrative subdivi
 
 &lt;p&gt;To use it you simply checkout the package, import entities with:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&quot;language-mathematica&quot;&gt;NotebookEvaluate[&quot;PATH_TO_CHECKOUT_REPO/MathematicaCroatianGeoEntities/\
-croatian_admin_subdivisions.wl&quot;]
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;language-mathematica highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;NotebookEvaluate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;PATH_TO_CHECKOUT_REPO/MathematicaCroatianGeoEntities/\
+croatian_admin_subdivisions.wl&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;You can then generate the graphs with:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&quot;language-mathematica&quot;&gt;GeoListPlot[Values[adminDivisions1]]
-GeoListPlot[
- Flatten[Values[
-   Join[adminDivisions2[#] &amp;amp; /@ Keys[adminDivisions2]]]]]
-GeoListPlot[Values[adminDivisions2[&quot;KARLOVAČKA ŽUPANIJA&quot;]], 
- GeoBackground -&amp;gt; GeoStyling[&quot;StreetMap&quot;]]
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;language-mathematica highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;GeoListPlot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;Values&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;adminDivisions1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;GeoListPlot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;Flatten&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;Values&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+   &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;Join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;adminDivisions2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/@&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;Keys&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;adminDivisions2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]]]]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;GeoListPlot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;Values&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;adminDivisions2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;KARLOVAČKA ŽUPANIJA&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; 
+ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;GeoBackground&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;GeoStyling&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;StreetMap&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;This will create maps with all subdivision borders:&lt;/p&gt;
 
@@ -343,7 +433,7 @@ of the blog. For that I setup a &lt;a href=&quot;https://docs.aws.amazon.com/Ama
     &lt;p&gt;Checkout the source branch, do a sync, make sure there are no changes between your local version of the source branch and the remote version.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;Tag the source branch. Give the tag a name that will provide information about the date of merging and branches that were involved in the merge. (eg. &lt;code class=&quot;highlighter-rouge&quot;&gt;M_yyyymmdd_HEAD_FEATURE&lt;/code&gt;). Tagging is done with &lt;em&gt;right clicking on the project -&amp;gt; Team -&amp;gt; tag as new version&lt;/em&gt;. The purpose of tagging at this point in the process is to avoid situations where somebody makes a commit while you are merging. If this happens, CVS will not be aware of the changes made in that commit.&lt;/p&gt;
+    &lt;p&gt;Tag the source branch. Give the tag a name that will provide information about the date of merging and branches that were involved in the merge. (eg. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;M_yyyymmdd_HEAD_FEATURE&lt;/code&gt;). Tagging is done with &lt;em&gt;right clicking on the project -&amp;gt; Team -&amp;gt; tag as new version&lt;/em&gt;. The purpose of tagging at this point in the process is to avoid situations where somebody makes a commit while you are merging. If this happens, CVS will not be aware of the changes made in that commit.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;Checkout the target branch (&lt;em&gt;right click on the project -&amp;gt; Team -&amp;gt; Switch to Another Branch or Version&lt;/em&gt;).&lt;/p&gt;
@@ -364,7 +454,7 @@ of the blog. For that I setup a &lt;a href=&quot;https://docs.aws.amazon.com/Ama
   &lt;/li&gt;
   &lt;li&gt;Commit all new changes. Make the commit message something like:
     &lt;ul&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;- merge changes HEAD -&amp;gt; FEATURE&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;- merge changes HEAD -&amp;gt; FEATURE&lt;/code&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
@@ -415,9 +505,9 @@ njima niti nije mogao napraviti build. Detaljnija i korisnija uputsva su očito 
 &lt;ol&gt;
   &lt;li&gt;Skinuti &lt;a href=&quot;http://developer.android.com/sdk/index.html&quot;&gt;Android SDK&lt;/a&gt;.&lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;Raspakirati arhivu i pokrenuti eclipse (&lt;code class=&quot;highlighter-rouge&quot;&gt;eclipse/eclipse&lt;/code&gt;).&lt;/p&gt;
+    &lt;p&gt;Raspakirati arhivu i pokrenuti eclipse (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;eclipse/eclipse&lt;/code&gt;).&lt;/p&gt;
 
-    &lt;p&gt;Ako imate 64 bitan linux i koristite 64 bitan ADT dobit ćete error da se ne može pokrenuti &lt;code class=&quot;highlighter-rouge&quot;&gt;sdk/platform-tools/adb&lt;/code&gt;. Kako bi se to zaobišlo na ubuntuu i derivatima, dovoljno je instalirati paket &lt;code class=&quot;highlighter-rouge&quot;&gt;ia32-libs&lt;/code&gt;. Za detalje pogledati &lt;a href=&quot;http://stackoverflow.com/questions/2710499/android-sdk-on-a-64-bit-linux-machine&quot;&gt;ovaj stackoverflow thread&lt;/a&gt; i &lt;a href=&quot;http://developer.android.com/sdk/installing/index.html#troubleshooting&quot;&gt;android upute za instalaciju SDK-a&lt;/a&gt;.&lt;/p&gt;
+    &lt;p&gt;Ako imate 64 bitan linux i koristite 64 bitan ADT dobit ćete error da se ne može pokrenuti &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sdk/platform-tools/adb&lt;/code&gt;. Kako bi se to zaobišlo na ubuntuu i derivatima, dovoljno je instalirati paket &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ia32-libs&lt;/code&gt;. Za detalje pogledati &lt;a href=&quot;http://stackoverflow.com/questions/2710499/android-sdk-on-a-64-bit-linux-machine&quot;&gt;ovaj stackoverflow thread&lt;/a&gt; i &lt;a href=&quot;http://developer.android.com/sdk/installing/index.html#troubleshooting&quot;&gt;android upute za instalaciju SDK-a&lt;/a&gt;.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;Iz eclipsa pokrenuti &lt;em&gt;Android SDK Manager&lt;/em&gt; (&lt;em&gt;Window -&amp;gt; Android SDK Manager&lt;/em&gt;) i instalirati potrebne pakete. Treba nam zadnja verzija &lt;em&gt;SDK Platform&lt;/em&gt; paketa (najsvježija verzija je obična instalirana po defaultu). Budući da app koristi ActionBarSherlock library &lt;em&gt;SDK Platform&lt;/em&gt; paket treba instalirati i u Android 4.0 varijanti (API 14). Također nam treba i Android Support Library, ali taj paket je instaliran po defaultu.&lt;/li&gt;
 &lt;/ol&gt;
@@ -444,10 +534,10 @@ git checkout 4.4.0
 
     &lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; File -&amp;gt; Import -&amp;gt; Android -&amp;gt; Existing Android Code into workspace
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-    &lt;p&gt;U slučaju LZS appa za root direktorij odabrati &lt;code class=&quot;highlighter-rouge&quot;&gt;androidApp/LinuxZaSve_mobile&lt;/code&gt; direktorij. Kod ActionBarSherlock projekta odabrati &lt;code class=&quot;highlighter-rouge&quot;&gt;ActionBarSherlock/actionbarsherlock&lt;/code&gt; direktorij.&lt;/p&gt;
+    &lt;p&gt;U slučaju LZS appa za root direktorij odabrati &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;androidApp/LinuxZaSve_mobile&lt;/code&gt; direktorij. Kod ActionBarSherlock projekta odabrati &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ActionBarSherlock/actionbarsherlock&lt;/code&gt; direktorij.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;Skinuti sljedeće jarove u &lt;code class=&quot;highlighter-rouge&quot;&gt;androidApp/LinuxZaSve_mobile/libs&lt;/code&gt; direktorij (ako direktorij ne postoji potrebno ga je kreirati):&lt;/p&gt;
+    &lt;p&gt;Skinuti sljedeće jarove u &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;androidApp/LinuxZaSve_mobile/libs&lt;/code&gt; direktorij (ako direktorij ne postoji potrebno ga je kreirati):&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;&lt;a href=&quot;http://repository.sonatype.org/service/local/artifact/maven/redirect?r=central-proxy&amp;amp;g=com.koushikdutta.urlimageviewhelper&amp;amp;a=urlimageviewhelper&amp;amp;v=LATEST&quot;&gt;UrlImageViewHelper&lt;/a&gt;&lt;/p&gt;
@@ -461,7 +551,7 @@ git checkout 4.4.0
 
 &lt;h2 id=&quot;izrada-apk-datoteke&quot;&gt;Izrada apk datoteke&lt;/h2&gt;
 
-&lt;p&gt;Najsvježija verzija aplikacije je commitana u projekt i nalazi se u &lt;code class=&quot;highlighter-rouge&quot;&gt;LinuxZaSve_mobile\bin&lt;/code&gt; direktoriju. Da bi se riješili te datoteke i ujedno provjerili prolazi li build prvo je potrebno napraviti &lt;em&gt;clean&lt;/em&gt; (&lt;em&gt;Build -&amp;gt; Clean -&amp;gt; Clean all projects&lt;/em&gt;). Ovo neće kreirati novi apk. Nova apk datoteka se može kreirati na nekoliko načina, najjednostavnije je &lt;a href=&quot;http://developer.android.com/tools/devices/index.html&quot;&gt;pokrenuti Android Virtual Device&lt;/a&gt; ili &lt;a href=&quot;http://developer.android.com/tools/device.html&quot;&gt;spojiti na računalo neki android device&lt;/a&gt; i kliknuti na run.&lt;/p&gt;</content>
+&lt;p&gt;Najsvježija verzija aplikacije je commitana u projekt i nalazi se u &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;LinuxZaSve_mobile\bin&lt;/code&gt; direktoriju. Da bi se riješili te datoteke i ujedno provjerili prolazi li build prvo je potrebno napraviti &lt;em&gt;clean&lt;/em&gt; (&lt;em&gt;Build -&amp;gt; Clean -&amp;gt; Clean all projects&lt;/em&gt;). Ovo neće kreirati novi apk. Nova apk datoteka se može kreirati na nekoliko načina, najjednostavnije je &lt;a href=&quot;http://developer.android.com/tools/devices/index.html&quot;&gt;pokrenuti Android Virtual Device&lt;/a&gt; ili &lt;a href=&quot;http://developer.android.com/tools/device.html&quot;&gt;spojiti na računalo neki android device&lt;/a&gt; i kliknuti na run.&lt;/p&gt;</content>
 
       
       
@@ -497,7 +587,7 @@ git checkout 4.4.0
       <id>https://dejanperetin.com/kdm-grub-listings-hr</id>
       <content type="html" xml:base="https://dejanperetin.com/kdm-grub-listings-hr">&lt;p&gt;Za ljude koji imaju više stavki na GRUB izborniku i često ih koriste.&lt;/p&gt;
 
-&lt;p&gt;U datoteci &lt;code class=&quot;highlighter-rouge&quot;&gt;/usr/share/kde4/config/kdm/kdmrc&lt;/code&gt; postoji linija koja se odnosi na &lt;code class=&quot;highlighter-rouge&quot;&gt;BootManager&lt;/code&gt; (zadnja u donjem kodu):&lt;/p&gt;
+&lt;p&gt;U datoteci &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/usr/share/kde4/config/kdm/kdmrc&lt;/code&gt; postoji linija koja se odnosi na &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;BootManager&lt;/code&gt; (zadnja u donjem kodu):&lt;/p&gt;
 
 &lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ cat /usr/share/kde4/config/kdm/kdmrc | grep -i &quot;boot\s*manager&quot;
 # The boot manager KDM should use for offering boot options in the
@@ -509,7 +599,7 @@ git checkout 4.4.0
 #BootManager=Grub
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Ako se otkomentira i umjesto &lt;code class=&quot;highlighter-rouge&quot;&gt;Grub&lt;/code&gt; stavi boot manager koji je instaliran (default kod opensuse-a 12.3 je &lt;code class=&quot;highlighter-rouge&quot;&gt;Grub2&lt;/code&gt;), kod restarta se dobije izbornik sa stavkama Gruba, sustav se boota u ono sto se izabere. Pri restartu izbor izgleda kao na slici ispod.&lt;/p&gt;
+&lt;p&gt;Ako se otkomentira i umjesto &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Grub&lt;/code&gt; stavi boot manager koji je instaliran (default kod opensuse-a 12.3 je &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Grub2&lt;/code&gt;), kod restarta se dobije izbornik sa stavkama Gruba, sustav se boota u ono sto se izabere. Pri restartu izbor izgleda kao na slici ispod.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;assets/images/restart_grub_items_large.png&quot; alt=&quot;restart_grub_items_large.png&quot; /&gt;&lt;/p&gt;</content>
 
@@ -547,13 +637,13 @@ git checkout 4.4.0
       <id>https://dejanperetin.com/android-42-developer-options-hr</id>
       <content type="html" xml:base="https://dejanperetin.com/android-42-developer-options-hr">&lt;p&gt;Nedavno sam ulovio vremena da na svoj Galaxy S mudrofon konačno stavim Android 4.2.1 i to kao &lt;a href=&quot;http://www.cyanogenmod.org/blog/cm-10-1-m-series-builds-have-arrived&quot;&gt;CM 10.1 M&lt;/a&gt;.Stvar radi savšeno i za sad nisam naišao na probleme u svakodnevnom korištenju.&lt;/p&gt;
 
-&lt;p&gt;No, kad sam pokušao vidjeti kako se &lt;a href=&quot;https://github.com/linuxzasve/androidApp&quot;&gt;Linux za sve android app&lt;/a&gt; ponaša na novoj verziji Androida, nisam uspio uključiti debugging mod. Naime, Android 4.2 nema u &lt;code class=&quot;highlighter-rouge&quot;&gt;Settings&lt;/code&gt; izborniku stavke &lt;code class=&quot;highlighter-rouge&quot;&gt;Developer options&lt;/code&gt;, gdje se uključuje &lt;code class=&quot;highlighter-rouge&quot;&gt;Android debugging&lt;/code&gt; opcija koja omogućava debugiranje android aplikacija direktno na uređaju koji je USB-om spojen na računalo, umjesto da se koristi emulator.&lt;/p&gt;
+&lt;p&gt;No, kad sam pokušao vidjeti kako se &lt;a href=&quot;https://github.com/linuxzasve/androidApp&quot;&gt;Linux za sve android app&lt;/a&gt; ponaša na novoj verziji Androida, nisam uspio uključiti debugging mod. Naime, Android 4.2 nema u &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Settings&lt;/code&gt; izborniku stavke &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Developer options&lt;/code&gt;, gdje se uključuje &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Android debugging&lt;/code&gt; opcija koja omogućava debugiranje android aplikacija direktno na uređaju koji je USB-om spojen na računalo, umjesto da se koristi emulator.&lt;/p&gt;
 
 &lt;p&gt;Radi se o tome da je Google namjerno isključio tu stavku pod izlikom da ne treba nikome osim developerima, a ovi pak znaju kako riješiti takve problemčiće.&lt;/p&gt;
 
-&lt;p&gt;Da bi se omogućila stavka &lt;code class=&quot;highlighter-rouge&quot;&gt;Developer options&lt;/code&gt; potrebno je sedam puta kliknuti na &lt;code class=&quot;highlighter-rouge&quot;&gt;Build number&lt;/code&gt; stavku u &lt;code class=&quot;highlighter-rouge&quot;&gt;Settings -&amp;gt; About phone&lt;/code&gt; izborniku.&lt;/p&gt;
+&lt;p&gt;Da bi se omogućila stavka &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Developer options&lt;/code&gt; potrebno je sedam puta kliknuti na &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Build number&lt;/code&gt; stavku u &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Settings -&amp;gt; About phone&lt;/code&gt; izborniku.&lt;/p&gt;
 
-&lt;p&gt;Čak se pojavi i zgodan &lt;a href=&quot;http://developer.android.com/guide/topics/ui/notifiers/toasts.html&quot;&gt;toast&lt;/a&gt; popup koji odbrojava klikove, odnosono ispiše poruku ako se klikne na &lt;code class=&quot;highlighter-rouge&quot;&gt;Build number&lt;/code&gt; kad je već stavka uključena.&lt;/p&gt;
+&lt;p&gt;Čak se pojavi i zgodan &lt;a href=&quot;http://developer.android.com/guide/topics/ui/notifiers/toasts.html&quot;&gt;toast&lt;/a&gt; popup koji odbrojava klikove, odnosono ispiše poruku ako se klikne na &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Build number&lt;/code&gt; kad je već stavka uključena.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;assets/images/android_42_enable_developer_options_large.png&quot; alt=&quot;android_42_enable_developer_options_large.png&quot; /&gt;&lt;/p&gt;
 
@@ -576,7 +666,7 @@ git checkout 4.4.0
 
 &lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;SUBSYSTEM==&quot;usb&quot;, ATTR{idVendor}==&quot;04e8&quot;, MODE=&quot;0666&quot;, GROUP=&quot;users&quot;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;Uređaj još uvijek nije prepoznat jer je &lt;code class=&quot;highlighter-rouge&quot;&gt;04e8&lt;/code&gt; Samsung oznaka. Budući da je na mobitel sada instaliran CyanogenMod, radi se o Google uređaju, pa je za vendor vrijednost potrebno staviti &lt;code class=&quot;highlighter-rouge&quot;&gt;18d1&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Uređaj još uvijek nije prepoznat jer je &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;04e8&lt;/code&gt; Samsung oznaka. Budući da je na mobitel sada instaliran CyanogenMod, radi se o Google uređaju, pa je za vendor vrijednost potrebno staviti &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;18d1&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;Uređaj je sada uredno prepoznat.&lt;/p&gt;</content>
 
@@ -632,16 +722,16 @@ git checkout 4.4.0
 
 &lt;h2 id=&quot;instalacija-slike&quot;&gt;Instalacija slike&lt;/h2&gt;
 
-&lt;p&gt;Prvo je potrebno skinuti ISO sliku koju planiramo staviti na SD karticu. U ovom slučaju to je &lt;code class=&quot;highlighter-rouge&quot;&gt;debian6-19-04-2012.zip&lt;/code&gt; koja se nalazi na &lt;a href=&quot;http://www.raspberrypi.org/downloads&quot;&gt;službenoj download stranici&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Prvo je potrebno skinuti ISO sliku koju planiramo staviti na SD karticu. U ovom slučaju to je &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;debian6-19-04-2012.zip&lt;/code&gt; koja se nalazi na &lt;a href=&quot;http://www.raspberrypi.org/downloads&quot;&gt;službenoj download stranici&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Zatim sliku treba otpakirati&lt;/p&gt;
 
 &lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ unzip debian6-19-04-2012.zip
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Time se dobije &lt;code class=&quot;highlighter-rouge&quot;&gt;debian6-19-04-2012.img&lt;/code&gt; datoteka koja sadrži sliku.&lt;/p&gt;
+&lt;p&gt;Time se dobije &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;debian6-19-04-2012.img&lt;/code&gt; datoteka koja sadrži sliku.&lt;/p&gt;
 
-&lt;p&gt;Da bi na SD karticu stavili sliku, potrebno je imati neki čitač kartica i spojiti karticu na računalo. Zatim moramo utvrditi pod kojim imenom je kartica prepoznata: Naredbom &lt;code class=&quot;highlighter-rouge&quot;&gt;df -h&lt;/code&gt; možemo vidjeti novo mountane diskove te prepoznati našu SD karticu. Ako izvršimo tu naredbu prije i poslije umetanja kartice možemo uočiti nove zapise i prepoznati karticu&lt;/p&gt;
+&lt;p&gt;Da bi na SD karticu stavili sliku, potrebno je imati neki čitač kartica i spojiti karticu na računalo. Zatim moramo utvrditi pod kojim imenom je kartica prepoznata: Naredbom &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;df -h&lt;/code&gt; možemo vidjeti novo mountane diskove te prepoznati našu SD karticu. Ako izvršimo tu naredbu prije i poslije umetanja kartice možemo uočiti nove zapise i prepoznati karticu&lt;/p&gt;
 
 &lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ df -h
 Filesystem      Size  Used Avail Use% Mounted on
@@ -660,9 +750,9 @@ tmpfs           2.0G     0  2.0G   0% /media
 /dev/sdd3       7.2G  1.6G  5.2G  24% /media/14fa9af4-552a-4f53-88ad-3259f189fccf
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Vidimo da je kartica prepoznata kao &lt;code class=&quot;highlighter-rouge&quot;&gt;/dev/sdd&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Vidimo da je kartica prepoznata kao &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/dev/sdd&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;Prije nastavka potrebno je unmountati sve particije koje se nalaze na kartici, u ovom slučaju to su &lt;code class=&quot;highlighter-rouge&quot;&gt;/dev/sdd1&lt;/code&gt; i &lt;code class=&quot;highlighter-rouge&quot;&gt;/dev/sdd3&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Prije nastavka potrebno je unmountati sve particije koje se nalaze na kartici, u ovom slučaju to su &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/dev/sdd1&lt;/code&gt; i &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/dev/sdd3&lt;/code&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ umount /dev/sdd1
 $ umount /dev/sdd3
@@ -680,7 +770,7 @@ $ umount /dev/sdd3
 
 &lt;p&gt;Ovako pripremljena kartica je dovoljna da se RPi boota. Nema on/off gumba, stvar se ušteka i radi. RPi s ovom Debian slikom se boota u terminal i prvi boot traje oko 4.5 minute, a svaki sljedeći oko jedne minute.&lt;/p&gt;
 
-&lt;p&gt;Defaultni username za ovu sliku je &lt;code class=&quot;highlighter-rouge&quot;&gt;pi&lt;/code&gt; i pripadni password je &lt;code class=&quot;highlighter-rouge&quot;&gt;raspberry&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Defaultni username za ovu sliku je &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pi&lt;/code&gt; i pripadni password je &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;raspberry&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;Prvo što upada u oči nakon boota je činjenica da ovakav način pripremanja kartice koristi samo onaj dio kartice koji je predviđen slikom, odnosno 2 GB. Iako je moja testna kartica kapaciteta 8 GB, RPi vidi i koristi samo 2 GB, što korisniku ostavlja na koristenje cijelih 298 MB. Neke druge slike kao primjerice raspbmc pobrinu se da je cijela kartica raspoloživa. Nakon prvog boota diskovna situacija izgleda ovako:&lt;/p&gt;
 
@@ -695,14 +785,14 @@ rootfs                1.6G  1.2G  298M  80% /
 
 &lt;p&gt;Da bi doskočili ovom problemu potrebno je promijeniti veličinu root particije: (&lt;a href=&quot;https://www.youtube.com/watch?v=R4VovMDnsIE&quot;&gt;izvor&lt;/a&gt;).&lt;/p&gt;
 
-&lt;p&gt;Disk na kojem je particija kojoj želimo promijeniti veličinu je &lt;code class=&quot;highlighter-rouge&quot;&gt;/dev/mmcblk0&lt;/code&gt;, sufiksi &lt;code class=&quot;highlighter-rouge&quot;&gt;p1&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;p2&lt;/code&gt; itd. su oznake particije.&lt;/p&gt;
+&lt;p&gt;Disk na kojem je particija kojoj želimo promijeniti veličinu je &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/dev/mmcblk0&lt;/code&gt;, sufiksi &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;p1&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;p2&lt;/code&gt; itd. su oznake particije.&lt;/p&gt;
 
 &lt;p&gt;Sve ovo radimo direktno na RPi-u:&lt;/p&gt;
 
 &lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# fdisk -uc /dev/mmcblk0
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;naredbom &lt;code class=&quot;highlighter-rouge&quot;&gt;p&lt;/code&gt; izlistamo informacije o particijama.&lt;/p&gt;
+&lt;p&gt;naredbom &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;p&lt;/code&gt; izlistamo informacije o particijama.&lt;/p&gt;
 
 &lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Command (m for help): p
 
@@ -719,8 +809,8 @@ Disk identifier: 0x000ee283
 /dev/mmcblk0p3         3416064     3807231      195584   82  Liswap / Solaris
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Mijenjamo veličinu particiji &lt;code class=&quot;highlighter-rouge&quot;&gt;/dev/mmcblk0p2&lt;/code&gt;. 
-Prvo izbrišemo particiju komandom &lt;code class=&quot;highlighter-rouge&quot;&gt;d&lt;/code&gt; i damo mu broj particije (2 i 3 u ovom slučaju)&lt;/p&gt;
+&lt;p&gt;Mijenjamo veličinu particiji &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/dev/mmcblk0p2&lt;/code&gt;. 
+Prvo izbrišemo particiju komandom &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;d&lt;/code&gt; i damo mu broj particije (2 i 3 u ovom slučaju)&lt;/p&gt;
 
 &lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Command (m for help): d
 Partition number (1-4): 2
@@ -730,7 +820,7 @@ Partition number (1-4): 3
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Sada napravimo particiju
-(&lt;code class=&quot;highlighter-rouge&quot;&gt;n p 2&lt;/code&gt;) i za početak sektora stavimo početak stare particije te za veličinu izaberemo defaultnu ponuđenu vrijednost, kako bi se particija proširila na ostatak diska:&lt;/p&gt;
+(&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;n p 2&lt;/code&gt;) i za početak sektora stavimo početak stare particije te za veličinu izaberemo defaultnu ponuđenu vrijednost, kako bi se particija proširila na ostatak diska:&lt;/p&gt;
 
 &lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;        Device Boot      Start         End      Blocks   Id  System
 /dev/mmcblk0p1            2048      155647       76800    c  W95 FAT32 (LBA)
@@ -753,11 +843,11 @@ Partition number (1-4): 2
 First sector (155648-15564799, default 155648): 157696
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Naredbom &lt;code class=&quot;highlighter-rouge&quot;&gt;w&lt;/code&gt; snimimo promjene. Također je potrebno ponovno pokrenutu RPi.&lt;/p&gt;
+&lt;p&gt;Naredbom &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;w&lt;/code&gt; snimimo promjene. Također je potrebno ponovno pokrenutu RPi.&lt;/p&gt;
 
 &lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# reboot
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;Nakon ponovnog ulogiravanja napravimo &lt;code class=&quot;highlighter-rouge&quot;&gt;resize&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Nakon ponovnog ulogiravanja napravimo &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;resize&lt;/code&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# resize2fs /dev/mmcblk0p2
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -781,7 +871,7 @@ rootfs                7.3G  1.2G  5.8G  17% /
 # reboot
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Editirati datoteku: &lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/fstab&lt;/code&gt; iz ovog:&lt;/p&gt;
+&lt;p&gt;Editirati datoteku: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/etc/fstab&lt;/code&gt; iz ovog:&lt;/p&gt;
 
 &lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;proc            /proc           proc    defaults        0       0
 /dev/mmcblk0p1  /boot           vfat    defaults        0       0
@@ -810,7 +900,7 @@ rootfs                7.3G  1.2G  5.8G  17% /
 
 &lt;p&gt;Multimedija radi iznenađujuće dobro. RPi je dovoljno snažan da glatko vrti filmove HD kvalitete. Mali bug primjećen je kod reprodukcije glazbe. Naime, ako pjesma ne odsvira do kraja već prebacimo na drugu, ona neće svirati.&lt;/p&gt;
 
-&lt;p&gt;XBMC povremeno u terminal zapiše neku poruku (najčešće opis neke greške zapiše na &lt;code class=&quot;highlighter-rouge&quot;&gt;stderr&lt;/code&gt;). Ako se u tom trenutku reproducira neki film, koji je takvog formata da slika nije prikazana preko cijelog ekrana, onda se ta poruka vidi u crnom predjelu ispod i iznad slike.&lt;/p&gt;
+&lt;p&gt;XBMC povremeno u terminal zapiše neku poruku (najčešće opis neke greške zapiše na &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;stderr&lt;/code&gt;). Ako se u tom trenutku reproducira neki film, koji je takvog formata da slika nije prikazana preko cijelog ekrana, onda se ta poruka vidi u crnom predjelu ispod i iznad slike.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;assets/images/RPi_stderr_large.jpg&quot; alt=&quot;RPi_stderr_large.jpg&quot; /&gt;&lt;/p&gt;
 

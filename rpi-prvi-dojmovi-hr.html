@@ -20,7 +20,7 @@
     <link rel="stylesheet" type="text/css" href="/assets/built/screen.edited.css" />
     <link rel="stylesheet" type="text/css" href="/assets/built/syntax.css" />
     <!-- highlight.js -->
-    <link rel="stylesheet" href="/assets/css/highlight.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
     <style>.hljs { background: none; }</style>
 
     <!--[if IE]>
@@ -61,8 +61,8 @@
     <meta name="twitter:data1" content="dejanperetin.com" />
     <meta name="twitter:label2" content="Filed under" />
     <meta name="twitter:data2" content="Raspberrypi" />
-    <meta name="twitter:site" content="@dperetin" />
-    <meta name="twitter:creator" content="@dperetin" />
+    <meta name="twitter:site" content="@" />
+    <meta name="twitter:creator" content="@" />
     <meta property="og:image:width" content="1400" />
     <meta property="og:image:height" content="933" />
 
@@ -124,9 +124,6 @@ into the {body} of the default.hbs template -->
     <div class="site-nav-right">
         <div class="social-links">
             
-            
-                <a class="social-link social-link-tw" href="https://twitter.com/dperetin" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
-</a>
             
             
                 <a class="social-link social-link-tw" href="https://www.linkedin.com/in/dperetin" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
@@ -247,16 +244,16 @@ into the {body} of the default.hbs template -->
 
 <h2 id="instalacija-slike">Instalacija slike</h2>
 
-<p>Prvo je potrebno skinuti ISO sliku koju planiramo staviti na SD karticu. U ovom slučaju to je <code class="highlighter-rouge">debian6-19-04-2012.zip</code> koja se nalazi na <a href="http://www.raspberrypi.org/downloads">službenoj download stranici</a>.</p>
+<p>Prvo je potrebno skinuti ISO sliku koju planiramo staviti na SD karticu. U ovom slučaju to je <code class="language-plaintext highlighter-rouge">debian6-19-04-2012.zip</code> koja se nalazi na <a href="http://www.raspberrypi.org/downloads">službenoj download stranici</a>.</p>
 
 <p>Zatim sliku treba otpakirati</p>
 
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ unzip debian6-19-04-2012.zip
 </code></pre></div></div>
 
-<p>Time se dobije <code class="highlighter-rouge">debian6-19-04-2012.img</code> datoteka koja sadrži sliku.</p>
+<p>Time se dobije <code class="language-plaintext highlighter-rouge">debian6-19-04-2012.img</code> datoteka koja sadrži sliku.</p>
 
-<p>Da bi na SD karticu stavili sliku, potrebno je imati neki čitač kartica i spojiti karticu na računalo. Zatim moramo utvrditi pod kojim imenom je kartica prepoznata: Naredbom <code class="highlighter-rouge">df -h</code> možemo vidjeti novo mountane diskove te prepoznati našu SD karticu. Ako izvršimo tu naredbu prije i poslije umetanja kartice možemo uočiti nove zapise i prepoznati karticu</p>
+<p>Da bi na SD karticu stavili sliku, potrebno je imati neki čitač kartica i spojiti karticu na računalo. Zatim moramo utvrditi pod kojim imenom je kartica prepoznata: Naredbom <code class="language-plaintext highlighter-rouge">df -h</code> možemo vidjeti novo mountane diskove te prepoznati našu SD karticu. Ako izvršimo tu naredbu prije i poslije umetanja kartice možemo uočiti nove zapise i prepoznati karticu</p>
 
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ df -h
 Filesystem      Size  Used Avail Use% Mounted on
@@ -275,9 +272,9 @@ tmpfs           2.0G     0  2.0G   0% /media
 /dev/sdd3       7.2G  1.6G  5.2G  24% /media/14fa9af4-552a-4f53-88ad-3259f189fccf
 </code></pre></div></div>
 
-<p>Vidimo da je kartica prepoznata kao <code class="highlighter-rouge">/dev/sdd</code></p>
+<p>Vidimo da je kartica prepoznata kao <code class="language-plaintext highlighter-rouge">/dev/sdd</code></p>
 
-<p>Prije nastavka potrebno je unmountati sve particije koje se nalaze na kartici, u ovom slučaju to su <code class="highlighter-rouge">/dev/sdd1</code> i <code class="highlighter-rouge">/dev/sdd3</code></p>
+<p>Prije nastavka potrebno je unmountati sve particije koje se nalaze na kartici, u ovom slučaju to su <code class="language-plaintext highlighter-rouge">/dev/sdd1</code> i <code class="language-plaintext highlighter-rouge">/dev/sdd3</code></p>
 
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ umount /dev/sdd1
 $ umount /dev/sdd3
@@ -295,7 +292,7 @@ $ umount /dev/sdd3
 
 <p>Ovako pripremljena kartica je dovoljna da se RPi boota. Nema on/off gumba, stvar se ušteka i radi. RPi s ovom Debian slikom se boota u terminal i prvi boot traje oko 4.5 minute, a svaki sljedeći oko jedne minute.</p>
 
-<p>Defaultni username za ovu sliku je <code class="highlighter-rouge">pi</code> i pripadni password je <code class="highlighter-rouge">raspberry</code>.</p>
+<p>Defaultni username za ovu sliku je <code class="language-plaintext highlighter-rouge">pi</code> i pripadni password je <code class="language-plaintext highlighter-rouge">raspberry</code>.</p>
 
 <p>Prvo što upada u oči nakon boota je činjenica da ovakav način pripremanja kartice koristi samo onaj dio kartice koji je predviđen slikom, odnosno 2 GB. Iako je moja testna kartica kapaciteta 8 GB, RPi vidi i koristi samo 2 GB, što korisniku ostavlja na koristenje cijelih 298 MB. Neke druge slike kao primjerice raspbmc pobrinu se da je cijela kartica raspoloživa. Nakon prvog boota diskovna situacija izgleda ovako:</p>
 
@@ -310,14 +307,14 @@ rootfs                1.6G  1.2G  298M  80% /
 
 <p>Da bi doskočili ovom problemu potrebno je promijeniti veličinu root particije: (<a href="https://www.youtube.com/watch?v=R4VovMDnsIE">izvor</a>).</p>
 
-<p>Disk na kojem je particija kojoj želimo promijeniti veličinu je <code class="highlighter-rouge">/dev/mmcblk0</code>, sufiksi <code class="highlighter-rouge">p1</code>, <code class="highlighter-rouge">p2</code> itd. su oznake particije.</p>
+<p>Disk na kojem je particija kojoj želimo promijeniti veličinu je <code class="language-plaintext highlighter-rouge">/dev/mmcblk0</code>, sufiksi <code class="language-plaintext highlighter-rouge">p1</code>, <code class="language-plaintext highlighter-rouge">p2</code> itd. su oznake particije.</p>
 
 <p>Sve ovo radimo direktno na RPi-u:</p>
 
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code># fdisk -uc /dev/mmcblk0
 </code></pre></div></div>
 
-<p>naredbom <code class="highlighter-rouge">p</code> izlistamo informacije o particijama.</p>
+<p>naredbom <code class="language-plaintext highlighter-rouge">p</code> izlistamo informacije o particijama.</p>
 
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Command (m for help): p
 
@@ -334,8 +331,8 @@ Disk identifier: 0x000ee283
 /dev/mmcblk0p3         3416064     3807231      195584   82  Liswap / Solaris
 </code></pre></div></div>
 
-<p>Mijenjamo veličinu particiji <code class="highlighter-rouge">/dev/mmcblk0p2</code>. 
-Prvo izbrišemo particiju komandom <code class="highlighter-rouge">d</code> i damo mu broj particije (2 i 3 u ovom slučaju)</p>
+<p>Mijenjamo veličinu particiji <code class="language-plaintext highlighter-rouge">/dev/mmcblk0p2</code>. 
+Prvo izbrišemo particiju komandom <code class="language-plaintext highlighter-rouge">d</code> i damo mu broj particije (2 i 3 u ovom slučaju)</p>
 
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Command (m for help): d
 Partition number (1-4): 2
@@ -345,7 +342,7 @@ Partition number (1-4): 3
 </code></pre></div></div>
 
 <p>Sada napravimo particiju
-(<code class="highlighter-rouge">n p 2</code>) i za početak sektora stavimo početak stare particije te za veličinu izaberemo defaultnu ponuđenu vrijednost, kako bi se particija proširila na ostatak diska:</p>
+(<code class="language-plaintext highlighter-rouge">n p 2</code>) i za početak sektora stavimo početak stare particije te za veličinu izaberemo defaultnu ponuđenu vrijednost, kako bi se particija proširila na ostatak diska:</p>
 
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        Device Boot      Start         End      Blocks   Id  System
 /dev/mmcblk0p1            2048      155647       76800    c  W95 FAT32 (LBA)
@@ -368,11 +365,11 @@ Partition number (1-4): 2
 First sector (155648-15564799, default 155648): 157696
 </code></pre></div></div>
 
-<p>Naredbom <code class="highlighter-rouge">w</code> snimimo promjene. Također je potrebno ponovno pokrenutu RPi.</p>
+<p>Naredbom <code class="language-plaintext highlighter-rouge">w</code> snimimo promjene. Također je potrebno ponovno pokrenutu RPi.</p>
 
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code># reboot
 </code></pre></div></div>
-<p>Nakon ponovnog ulogiravanja napravimo <code class="highlighter-rouge">resize</code></p>
+<p>Nakon ponovnog ulogiravanja napravimo <code class="language-plaintext highlighter-rouge">resize</code></p>
 
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code># resize2fs /dev/mmcblk0p2
 </code></pre></div></div>
@@ -396,7 +393,7 @@ rootfs                7.3G  1.2G  5.8G  17% /
 # reboot
 </code></pre></div></div>
 
-<p>Editirati datoteku: <code class="highlighter-rouge">/etc/fstab</code> iz ovog:</p>
+<p>Editirati datoteku: <code class="language-plaintext highlighter-rouge">/etc/fstab</code> iz ovog:</p>
 
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>proc            /proc           proc    defaults        0       0
 /dev/mmcblk0p1  /boot           vfat    defaults        0       0
@@ -425,7 +422,7 @@ rootfs                7.3G  1.2G  5.8G  17% /
 
 <p>Multimedija radi iznenađujuće dobro. RPi je dovoljno snažan da glatko vrti filmove HD kvalitete. Mali bug primjećen je kod reprodukcije glazbe. Naime, ako pjesma ne odsvira do kraja već prebacimo na drugu, ona neće svirati.</p>
 
-<p>XBMC povremeno u terminal zapiše neku poruku (najčešće opis neke greške zapiše na <code class="highlighter-rouge">stderr</code>). Ako se u tom trenutku reproducira neki film, koji je takvog formata da slika nije prikazana preko cijelog ekrana, onda se ta poruka vidi u crnom predjelu ispod i iznad slike.</p>
+<p>XBMC povremeno u terminal zapiše neku poruku (najčešće opis neke greške zapiše na <code class="language-plaintext highlighter-rouge">stderr</code>). Ako se u tom trenutku reproducira neki film, koji je takvog formata da slika nije prikazana preko cijelog ekrana, onda se ta poruka vidi u crnom predjelu ispod i iznad slike.</p>
 
 <p><img src="assets/images/RPi_stderr_large.jpg" alt="RPi_stderr_large.jpg" /></p>
 
@@ -465,7 +462,7 @@ rootfs                7.3G  1.2G  5.8G  17% /
                             <section class="author-card-content">
                                 <h4 class="author-card-name"><a href="/author/dperetin">Dejan Peretin</a></h4>
                                 
-                                    <p>Writing things down so I don't forget. Software Engineer at Pinterest. Opinions expressed are my own.</p>
+                                    <p>Writing things down so I don't forget. SDE at AWS. Opinions expressed are my own.</p>
                                 
                             </section>
                         </section>
@@ -480,22 +477,6 @@ rootfs                7.3G  1.2G  5.8G  17% /
             <!-- If you use Disqus comments, just uncomment this block.
             The only thing you need to change is "test-apkdzgmqhj" - which
             should be replaced with your own Disqus site-id. -->
-            
-                <section class="post-full-comments">
-                    <div id="disqus_thread"></div>
-                    <script>
-                        var disqus_config = function () {
-                            this.page.url = 'https://dejanperetin.com/';
-                            this.page.identifier = 'dejanperetin.com';
-                        };
-                        (function() {
-                            var d = document, s = d.createElement('script');
-                            s.src = 'https://dperetin.disqus.com/embed.js';
-                            s.setAttribute('data-timestamp', +new Date());
-                            (d.head || d.body).appendChild(s);
-                        })();
-                    </script>
-                </section>
             
 
         </article>
@@ -618,14 +599,14 @@ rootfs                7.3G  1.2G  5.8G  17% /
         <!-- The footer at the very bottom of the screen -->
         <footer class="site-footer outer">
             <div class="site-footer-content inner">
-                <section class="copyright"><a href="https://dejanperetin.com/">dejanperetin.com</a> &copy; 2021</section>
+                <section class="copyright"><a href="https://dejanperetin.com/">dejanperetin.com</a> &copy; 2025</section>
                 <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> &
                     <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> using
                     <a href="https://github.com/jekyller/jasper2" target="_blank" rel="noopener">Jasper2</a></section>
                 <nav class="site-footer-nav">
                     <a href="/">Latest Posts</a>
                     
-                    <a href="https://twitter.com/dperetin" target="_blank" rel="noopener">Twitter</a>
+                    
                     <a href="https://www.linkedin.com/in/dperetin" target="_blank" rel="noopener">LinkedIn</a>
                     <a href="https://stackoverflow.com/users/1803990" target="_blank" rel="noopener">StackOverflow</a>
                     <a href="https://github.com/dperetin" target="_blank" rel="noopener">GitHub</a>
@@ -639,20 +620,21 @@ rootfs                7.3G  1.2G  5.8G  17% /
     
 
     <!-- highlight.js -->
-    <!-- <script src="/assets/js/prism-abap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.10.0/components/prism-abap.min.js"></script>
     <script>$(document).ready(function() {
       $('pre code').each(function(i, block) {
         hljs.highlightBlock(block);
       });
-    });</script> -->
+    });</script>
 
     <!-- jQuery + Fitvids, which makes all video embeds responsive -->
     <script
-        src="/assets/js/jquery-3.2.1.min.js"
-        >
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous">
     </script>
     <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
-    <!-- <script type="text/javascript" src="https://demo.ghost.io/assets/js/jquery.fitvids.js?v=724281a32e"></script> -->
+    <script type="text/javascript" src="https://demo.ghost.io/assets/js/jquery.fitvids.js?v=724281a32e"></script>
 
 
     <!-- Paginator increased to "infinit" in _config.yml -->
