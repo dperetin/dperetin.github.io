@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator>
   <link href="https://dejanperetin.com/author/dperetin/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://dejanperetin.com/" rel="alternate" type="text/html" />
-  <updated>2025-09-19T07:14:06+02:00</updated>
+  <updated>2025-11-08T09:10:21+00:00</updated>
   <id>https://dejanperetin.com/author/dperetin/feed.xml</id>
 
   
@@ -34,8 +34,8 @@
     <entry>
       <title type="html">Lego Infinity Cube</title>
       <link href="https://dejanperetin.com/lego-infinity-cube" rel="alternate" type="text/html" title="Lego Infinity Cube" />
-      <published>2025-08-02T12:33:37+02:00</published>
-      <updated>2025-08-02T12:33:37+02:00</updated>
+      <published>2025-08-02T11:33:37+01:00</published>
+      <updated>2025-08-02T11:33:37+01:00</updated>
       <id>https://dejanperetin.com/lego-infinity-cube</id>
       <content type="html" xml:base="https://dejanperetin.com/lego-infinity-cube">&lt;p&gt;Instructions for building a LEGO infinity cube.&lt;/p&gt;
 
@@ -61,39 +61,7 @@ List of parts, not taking the color into account.&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;assets/images/lego_infinity_cube/infinity_cube.io&quot;&gt;Bricklink studio file&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;assets/images/lego_infinity_cube/infinity_cube.pdf&quot;&gt;Pdf&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/images/lego_infinity_cube/1_2x.png&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;assets/images/lego_infinity_cube/2_2x.png&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;assets/images/lego_infinity_cube/3_2x.png&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;assets/images/lego_infinity_cube/4_2x.png&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;assets/images/lego_infinity_cube/5_2x.png&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;assets/images/lego_infinity_cube/6_2x.png&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;assets/images/lego_infinity_cube/7_2x.png&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;assets/images/lego_infinity_cube/8_2x.png&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;assets/images/lego_infinity_cube/9_2x.png&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;assets/images/lego_infinity_cube/10_2x.png&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;assets/images/lego_infinity_cube/11_2x.png&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;assets/images/lego_infinity_cube/12_2x.png&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;assets/images/lego_infinity_cube/13_2x.png&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;assets/images/lego_infinity_cube/14_2x.png&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;assets/images/lego_infinity_cube/15_2x.png&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;assets/images/lego_infinity_cube/16_2x.png&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;assets/images/lego_infinity_cube/17_2x.png&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;assets/images/lego_infinity_cube/18_2x.png&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;assets/images/lego_infinity_cube/19_2x.png&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;assets/images/lego_infinity_cube/20_2x.png&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;assets/images/lego_infinity_cube/21_2x.png&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;assets/images/lego_infinity_cube/22_2x.png&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;assets/images/lego_infinity_cube/23_2x.png&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;assets/images/lego_infinity_cube/24_2x.png&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;assets/images/lego_infinity_cube/25_2x.png&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;assets/images/lego_infinity_cube/26_2x.png&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;assets/images/lego_infinity_cube/27_2x.png&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;assets/images/lego_infinity_cube/28_2x.png&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;assets/images/lego_infinity_cube/29_2x.png&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;assets/images/lego_infinity_cube/30_2x.png&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;assets/images/lego_infinity_cube/31_2x.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content>
+&lt;/ul&gt;</content>
 
       
       
@@ -124,8 +92,8 @@ List of parts, not taking the color into account.&lt;/p&gt;
     <entry>
       <title type="html">Light Pollution</title>
       <link href="https://dejanperetin.com/light-pollution-copy" rel="alternate" type="text/html" title="Light Pollution" />
-      <published>2020-10-03T12:33:37+02:00</published>
-      <updated>2020-10-03T12:33:37+02:00</updated>
+      <published>2020-10-03T11:33:37+01:00</published>
+      <updated>2020-10-03T11:33:37+01:00</updated>
       <id>https://dejanperetin.com/light-pollution%20copy</id>
       <content type="html" xml:base="https://dejanperetin.com/light-pollution-copy">&lt;p&gt;The cover image is showing a piece of the night sky containing the Andromeda Galaxy. 
 Andromeda is supposed to be visible with the naked eye.&lt;/p&gt;
@@ -233,8 +201,8 @@ only chose Dublin because I live there, not because Dublin is particularly bad i
     <entry>
       <title type="html">Why I Don’t Vote</title>
       <link href="https://dejanperetin.com/why-i-dont-vote" rel="alternate" type="text/html" title="Why I Don&apos;t Vote" />
-      <published>2020-01-05T11:33:37+01:00</published>
-      <updated>2020-01-05T11:33:37+01:00</updated>
+      <published>2020-01-05T10:33:37+00:00</published>
+      <updated>2020-01-05T10:33:37+00:00</updated>
       <id>https://dejanperetin.com/why-i-dont-vote</id>
       <content type="html" xml:base="https://dejanperetin.com/why-i-dont-vote">&lt;p&gt;Wolfram Mathematica is an amazing software that I love using, but the choice to use it for any meaningful application is 
 difficult to justify due to its cost and licence.&lt;/p&gt;
@@ -335,8 +303,8 @@ croatian_admin_subdivisions.wl&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt
     <entry>
       <title type="html">Nobody Reads Shit</title>
       <link href="https://dejanperetin.com/nobody-reads-shit" rel="alternate" type="text/html" title="Nobody Reads Shit" />
-      <published>2019-12-16T12:28:37+01:00</published>
-      <updated>2019-12-16T12:28:37+01:00</updated>
+      <published>2019-12-16T11:28:37+00:00</published>
+      <updated>2019-12-16T11:28:37+00:00</updated>
       <id>https://dejanperetin.com/nobody-reads-shit</id>
       <content type="html" xml:base="https://dejanperetin.com/nobody-reads-shit">&lt;p&gt;Watched an &lt;a href=&quot;https://www.youtube.com/watch?v=UE-6zvdRapY&amp;amp;feature=youtu.be&amp;amp;t=391&quot;&gt;H3 podcast&lt;/a&gt; 
 episode yesterday and they were commenting 
@@ -413,8 +381,8 @@ of the blog. For that I setup a &lt;a href=&quot;https://docs.aws.amazon.com/Ama
     <entry>
       <title type="html">CVS merge in Eclipse</title>
       <link href="https://dejanperetin.com/cvs_merge" rel="alternate" type="text/html" title="CVS merge in Eclipse" />
-      <published>2014-03-23T11:33:37+01:00</published>
-      <updated>2014-03-23T11:33:37+01:00</updated>
+      <published>2014-03-23T10:33:37+00:00</published>
+      <updated>2014-03-23T10:33:37+00:00</updated>
       <id>https://dejanperetin.com/cvs_merge</id>
       <content type="html" xml:base="https://dejanperetin.com/cvs_merge">&lt;p&gt;Ever so often a need for merging CVS branches arises and since the task can be a bit touchy, writing down some basic concepts seems like a good idea.&lt;/p&gt;
 
@@ -490,8 +458,8 @@ of the blog. For that I setup a &lt;a href=&quot;https://docs.aws.amazon.com/Ama
     <entry>
       <title type="html">Kako napraviti svoj build LZS android aplikacije</title>
       <link href="https://dejanperetin.com/lzs-app-build-howto" rel="alternate" type="text/html" title="Kako napraviti svoj build LZS android aplikacije" />
-      <published>2013-10-10T12:33:37+02:00</published>
-      <updated>2013-10-10T12:33:37+02:00</updated>
+      <published>2013-10-10T11:33:37+01:00</published>
+      <updated>2013-10-10T11:33:37+01:00</updated>
       <id>https://dejanperetin.com/lzs-app-build-howto</id>
       <content type="html" xml:base="https://dejanperetin.com/lzs-app-build-howto">&lt;p&gt;Dobio sam nekoliko mailova od ljudi koji su pokušali sami napraviti build aplikacije prema uputama na wiki stranicama te naišli na probleme.&lt;/p&gt;
 
@@ -582,8 +550,8 @@ git checkout 4.4.0
     <entry>
       <title type="html">KDM i Grub stavke kod restarta</title>
       <link href="https://dejanperetin.com/kdm-grub-listings-hr" rel="alternate" type="text/html" title="KDM i Grub stavke kod restarta" />
-      <published>2013-04-08T12:33:37+02:00</published>
-      <updated>2013-04-08T12:33:37+02:00</updated>
+      <published>2013-04-08T11:33:37+01:00</published>
+      <updated>2013-04-08T11:33:37+01:00</updated>
       <id>https://dejanperetin.com/kdm-grub-listings-hr</id>
       <content type="html" xml:base="https://dejanperetin.com/kdm-grub-listings-hr">&lt;p&gt;Za ljude koji imaju više stavki na GRUB izborniku i često ih koriste.&lt;/p&gt;
 
@@ -632,8 +600,8 @@ git checkout 4.4.0
     <entry>
       <title type="html">Android 4.2 developer options</title>
       <link href="https://dejanperetin.com/android-42-developer-options-hr" rel="alternate" type="text/html" title="Android 4.2 developer options" />
-      <published>2013-01-27T11:33:37+01:00</published>
-      <updated>2013-01-27T11:33:37+01:00</updated>
+      <published>2013-01-27T10:33:37+00:00</published>
+      <updated>2013-01-27T10:33:37+00:00</updated>
       <id>https://dejanperetin.com/android-42-developer-options-hr</id>
       <content type="html" xml:base="https://dejanperetin.com/android-42-developer-options-hr">&lt;p&gt;Nedavno sam ulovio vremena da na svoj Galaxy S mudrofon konačno stavim Android 4.2.1 i to kao &lt;a href=&quot;http://www.cyanogenmod.org/blog/cm-10-1-m-series-builds-have-arrived&quot;&gt;CM 10.1 M&lt;/a&gt;.Stvar radi savšeno i za sad nisam naišao na probleme u svakodnevnom korištenju.&lt;/p&gt;
 
@@ -699,8 +667,8 @@ git checkout 4.4.0
     <entry>
       <title type="html">Raspberry Pi - prvi dojmovi</title>
       <link href="https://dejanperetin.com/rpi-prvi-dojmovi-hr" rel="alternate" type="text/html" title="Raspberry Pi - prvi dojmovi" />
-      <published>2012-06-06T12:33:37+02:00</published>
-      <updated>2012-06-06T12:33:37+02:00</updated>
+      <published>2012-06-06T11:33:37+01:00</published>
+      <updated>2012-06-06T11:33:37+01:00</updated>
       <id>https://dejanperetin.com/rpi-prvi-dojmovi-hr</id>
       <content type="html" xml:base="https://dejanperetin.com/rpi-prvi-dojmovi-hr">&lt;p&gt;Raspberry Pi (&lt;em&gt;u daljnjem tekstu RPi&lt;/em&gt;) je stigao. Malo računalo u maloj kutiji.&lt;/p&gt;
 
