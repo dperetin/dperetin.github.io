@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator>
-  <link href="https://dejanperetin.com/tag/astronomy/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="https://dejanperetin.com/" rel="alternate" type="text/html" />
-  <updated>2025-11-08T09:10:21+00:00</updated>
-  <id>https://dejanperetin.com/tag/astronomy/feed.xml</id>
+  <link href="http://localhost:4000/tag/astronomy/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2026-02-20T08:23:02+00:00</updated>
+  <id>http://localhost:4000/tag/astronomy/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">Light Pollution</title>
-      <link href="https://dejanperetin.com/light-pollution-copy" rel="alternate" type="text/html" title="Light Pollution" />
-      <published>2020-10-03T11:33:37+01:00</published>
-      <updated>2020-10-03T11:33:37+01:00</updated>
-      <id>https://dejanperetin.com/light-pollution%20copy</id>
-      <content type="html" xml:base="https://dejanperetin.com/light-pollution-copy">&lt;p&gt;The cover image is showing a piece of the night sky containing the Andromeda Galaxy. 
+      <link href="http://localhost:4000/light-pollution-copy" rel="alternate" type="text/html" title="Light Pollution" />
+      <published>2020-10-03T10:33:37+00:00</published>
+      <updated>2020-10-03T10:33:37+00:00</updated>
+      <id>http://localhost:4000/light-pollution%20copy</id>
+      <content type="html" xml:base="http://localhost:4000/light-pollution-copy">&lt;p&gt;The cover image is showing a piece of the night sky containing the Andromeda Galaxy. 
 Andromeda is supposed to be visible with the naked eye.&lt;/p&gt;
 
 &lt;p&gt;So if you’ve never seen

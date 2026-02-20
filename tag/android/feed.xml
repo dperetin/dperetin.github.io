@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator>
-  <link href="https://dejanperetin.com/tag/android/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="https://dejanperetin.com/" rel="alternate" type="text/html" />
-  <updated>2025-11-08T09:10:21+00:00</updated>
-  <id>https://dejanperetin.com/tag/android/feed.xml</id>
+  <link href="http://localhost:4000/tag/android/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2026-02-20T08:23:02+00:00</updated>
+  <id>http://localhost:4000/tag/android/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">Kako napraviti svoj build LZS android aplikacije</title>
-      <link href="https://dejanperetin.com/lzs-app-build-howto" rel="alternate" type="text/html" title="Kako napraviti svoj build LZS android aplikacije" />
-      <published>2013-10-10T11:33:37+01:00</published>
-      <updated>2013-10-10T11:33:37+01:00</updated>
-      <id>https://dejanperetin.com/lzs-app-build-howto</id>
-      <content type="html" xml:base="https://dejanperetin.com/lzs-app-build-howto">&lt;p&gt;Dobio sam nekoliko mailova od ljudi koji su pokušali sami napraviti build aplikacije prema uputama na wiki stranicama te naišli na probleme.&lt;/p&gt;
+      <link href="http://localhost:4000/lzs-app-build-howto" rel="alternate" type="text/html" title="Kako napraviti svoj build LZS android aplikacije" />
+      <published>2013-10-10T10:33:37+00:00</published>
+      <updated>2013-10-10T10:33:37+00:00</updated>
+      <id>http://localhost:4000/lzs-app-build-howto</id>
+      <content type="html" xml:base="http://localhost:4000/lzs-app-build-howto">&lt;p&gt;Dobio sam nekoliko mailova od ljudi koji su pokušali sami napraviti build aplikacije prema uputama na wiki stranicama te naišli na probleme.&lt;/p&gt;
 
 &lt;p&gt;Te upute su dosta stare i grube pa se bez nekog iskustva s eclipsom po 
 njima niti nije mogao napraviti build. Detaljnija i korisnija uputsva su očito potrebna pa sam ih odlučio i napisati.&lt;/p&gt;
@@ -125,11 +125,11 @@ git checkout 4.4.0
   
     <entry>
       <title type="html">KDM i Grub stavke kod restarta</title>
-      <link href="https://dejanperetin.com/kdm-grub-listings-hr" rel="alternate" type="text/html" title="KDM i Grub stavke kod restarta" />
-      <published>2013-04-08T11:33:37+01:00</published>
-      <updated>2013-04-08T11:33:37+01:00</updated>
-      <id>https://dejanperetin.com/kdm-grub-listings-hr</id>
-      <content type="html" xml:base="https://dejanperetin.com/kdm-grub-listings-hr">&lt;p&gt;Za ljude koji imaju više stavki na GRUB izborniku i često ih koriste.&lt;/p&gt;
+      <link href="http://localhost:4000/kdm-grub-listings-hr" rel="alternate" type="text/html" title="KDM i Grub stavke kod restarta" />
+      <published>2013-04-08T10:33:37+00:00</published>
+      <updated>2013-04-08T10:33:37+00:00</updated>
+      <id>http://localhost:4000/kdm-grub-listings-hr</id>
+      <content type="html" xml:base="http://localhost:4000/kdm-grub-listings-hr">&lt;p&gt;Za ljude koji imaju više stavki na GRUB izborniku i često ih koriste.&lt;/p&gt;
 
 &lt;p&gt;U datoteci &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/usr/share/kde4/config/kdm/kdmrc&lt;/code&gt; postoji linija koja se odnosi na &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;BootManager&lt;/code&gt; (zadnja u donjem kodu):&lt;/p&gt;
 
@@ -175,11 +175,11 @@ git checkout 4.4.0
   
     <entry>
       <title type="html">Android 4.2 developer options</title>
-      <link href="https://dejanperetin.com/android-42-developer-options-hr" rel="alternate" type="text/html" title="Android 4.2 developer options" />
+      <link href="http://localhost:4000/android-42-developer-options-hr" rel="alternate" type="text/html" title="Android 4.2 developer options" />
       <published>2013-01-27T10:33:37+00:00</published>
       <updated>2013-01-27T10:33:37+00:00</updated>
-      <id>https://dejanperetin.com/android-42-developer-options-hr</id>
-      <content type="html" xml:base="https://dejanperetin.com/android-42-developer-options-hr">&lt;p&gt;Nedavno sam ulovio vremena da na svoj Galaxy S mudrofon konačno stavim Android 4.2.1 i to kao &lt;a href=&quot;http://www.cyanogenmod.org/blog/cm-10-1-m-series-builds-have-arrived&quot;&gt;CM 10.1 M&lt;/a&gt;.Stvar radi savšeno i za sad nisam naišao na probleme u svakodnevnom korištenju.&lt;/p&gt;
+      <id>http://localhost:4000/android-42-developer-options-hr</id>
+      <content type="html" xml:base="http://localhost:4000/android-42-developer-options-hr">&lt;p&gt;Nedavno sam ulovio vremena da na svoj Galaxy S mudrofon konačno stavim Android 4.2.1 i to kao &lt;a href=&quot;http://www.cyanogenmod.org/blog/cm-10-1-m-series-builds-have-arrived&quot;&gt;CM 10.1 M&lt;/a&gt;.Stvar radi savšeno i za sad nisam naišao na probleme u svakodnevnom korištenju.&lt;/p&gt;
 
 &lt;p&gt;No, kad sam pokušao vidjeti kako se &lt;a href=&quot;https://github.com/linuxzasve/androidApp&quot;&gt;Linux za sve android app&lt;/a&gt; ponaša na novoj verziji Androida, nisam uspio uključiti debugging mod. Naime, Android 4.2 nema u &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Settings&lt;/code&gt; izborniku stavke &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Developer options&lt;/code&gt;, gdje se uključuje &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Android debugging&lt;/code&gt; opcija koja omogućava debugiranje android aplikacija direktno na uređaju koji je USB-om spojen na računalo, umjesto da se koristi emulator.&lt;/p&gt;
 

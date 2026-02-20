@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator>
-  <link href="https://dejanperetin.com/tag/raspberrypi/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="https://dejanperetin.com/" rel="alternate" type="text/html" />
-  <updated>2025-11-08T09:10:21+00:00</updated>
-  <id>https://dejanperetin.com/tag/raspberrypi/feed.xml</id>
+  <link href="http://localhost:4000/tag/raspberrypi/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2026-02-20T08:23:02+00:00</updated>
+  <id>http://localhost:4000/tag/raspberrypi/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">Raspberry Pi - prvi dojmovi</title>
-      <link href="https://dejanperetin.com/rpi-prvi-dojmovi-hr" rel="alternate" type="text/html" title="Raspberry Pi - prvi dojmovi" />
-      <published>2012-06-06T11:33:37+01:00</published>
-      <updated>2012-06-06T11:33:37+01:00</updated>
-      <id>https://dejanperetin.com/rpi-prvi-dojmovi-hr</id>
-      <content type="html" xml:base="https://dejanperetin.com/rpi-prvi-dojmovi-hr">&lt;p&gt;Raspberry Pi (&lt;em&gt;u daljnjem tekstu RPi&lt;/em&gt;) je stigao. Malo računalo u maloj kutiji.&lt;/p&gt;
+      <link href="http://localhost:4000/rpi-prvi-dojmovi-hr" rel="alternate" type="text/html" title="Raspberry Pi - prvi dojmovi" />
+      <published>2012-06-06T10:33:37+00:00</published>
+      <updated>2012-06-06T10:33:37+00:00</updated>
+      <id>http://localhost:4000/rpi-prvi-dojmovi-hr</id>
+      <content type="html" xml:base="http://localhost:4000/rpi-prvi-dojmovi-hr">&lt;p&gt;Raspberry Pi (&lt;em&gt;u daljnjem tekstu RPi&lt;/em&gt;) je stigao. Malo računalo u maloj kutiji.&lt;/p&gt;
 
 &lt;p&gt;Planirano je da RPi dolazi u dvije varijanete, Model A i Model B. Model A je jeftinija varijanta, zvanična cijena mu je 25 USD  no zasad se proizvodi samo model B i to po cijeni od 35 USD. Koliki su stvarni troškovi dok dođe na kućna vrata, saznajte u nastavku.&lt;/p&gt;
 

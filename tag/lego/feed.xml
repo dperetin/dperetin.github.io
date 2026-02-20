@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator>
-  <link href="https://dejanperetin.com/tag/lego/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="https://dejanperetin.com/" rel="alternate" type="text/html" />
-  <updated>2025-11-08T09:10:21+00:00</updated>
-  <id>https://dejanperetin.com/tag/lego/feed.xml</id>
+  <link href="http://localhost:4000/tag/lego/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2026-02-20T08:23:02+00:00</updated>
+  <id>http://localhost:4000/tag/lego/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">Lego Infinity Cube</title>
-      <link href="https://dejanperetin.com/lego-infinity-cube" rel="alternate" type="text/html" title="Lego Infinity Cube" />
-      <published>2025-08-02T11:33:37+01:00</published>
-      <updated>2025-08-02T11:33:37+01:00</updated>
-      <id>https://dejanperetin.com/lego-infinity-cube</id>
-      <content type="html" xml:base="https://dejanperetin.com/lego-infinity-cube">&lt;p&gt;Instructions for building a LEGO infinity cube.&lt;/p&gt;
+      <link href="http://localhost:4000/lego-infinity-cube" rel="alternate" type="text/html" title="Lego Infinity Cube" />
+      <published>2025-08-02T10:33:37+00:00</published>
+      <updated>2025-08-02T10:33:37+00:00</updated>
+      <id>http://localhost:4000/lego-infinity-cube</id>
+      <content type="html" xml:base="http://localhost:4000/lego-infinity-cube">&lt;p&gt;Instructions for building a LEGO infinity cube.&lt;/p&gt;
 
 &lt;p&gt;There are a couple of videos on YouTube showing how to build the cube. Instructions are based on this one: &lt;a href=&quot;https://www.youtube.com/watch?v=G3IW6K5JKHA&quot;&gt;https://www.youtube.com/watch?v=G3IW6K5JKHA&lt;/a&gt;&lt;/p&gt;
 
@@ -61,7 +61,39 @@ List of parts, not taking the color into account.&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;assets/images/lego_infinity_cube/infinity_cube.io&quot;&gt;Bricklink studio file&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;assets/images/lego_infinity_cube/infinity_cube.pdf&quot;&gt;Pdf&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/lego_infinity_cube/1_2x.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;assets/images/lego_infinity_cube/2_2x.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;assets/images/lego_infinity_cube/3_2x.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;assets/images/lego_infinity_cube/4_2x.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;assets/images/lego_infinity_cube/5_2x.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;assets/images/lego_infinity_cube/6_2x.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;assets/images/lego_infinity_cube/7_2x.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;assets/images/lego_infinity_cube/8_2x.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;assets/images/lego_infinity_cube/9_2x.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;assets/images/lego_infinity_cube/10_2x.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;assets/images/lego_infinity_cube/11_2x.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;assets/images/lego_infinity_cube/12_2x.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;assets/images/lego_infinity_cube/13_2x.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;assets/images/lego_infinity_cube/14_2x.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;assets/images/lego_infinity_cube/15_2x.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;assets/images/lego_infinity_cube/16_2x.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;assets/images/lego_infinity_cube/17_2x.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;assets/images/lego_infinity_cube/18_2x.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;assets/images/lego_infinity_cube/19_2x.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;assets/images/lego_infinity_cube/20_2x.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;assets/images/lego_infinity_cube/21_2x.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;assets/images/lego_infinity_cube/22_2x.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;assets/images/lego_infinity_cube/23_2x.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;assets/images/lego_infinity_cube/24_2x.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;assets/images/lego_infinity_cube/25_2x.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;assets/images/lego_infinity_cube/26_2x.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;assets/images/lego_infinity_cube/27_2x.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;assets/images/lego_infinity_cube/28_2x.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;assets/images/lego_infinity_cube/29_2x.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;assets/images/lego_infinity_cube/30_2x.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;assets/images/lego_infinity_cube/31_2x.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content>
 
       
       
